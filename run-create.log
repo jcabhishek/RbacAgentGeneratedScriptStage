@@ -1,0 +1,21 @@
+﻿
+Running 7 tests using 1 worker
+
+node.exe : (node:36212) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+At C:\Program Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:36212) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [bdd] › .features-gen\features\02-applications.feature.spec.js:17:7 › 2. Application › Add application (23.2s)
+  ok 2 [bdd] › .features-gen\features\03-pages.feature.spec.js:17:7 › 3. Pages › Add page mapped to application (17.2s)
+  ok 3 [bdd] › .features-gen\features\03-pages.feature.spec.js:31:7 › 3. Pages › Add a second page mapped to the same application (16.8s)
+  ok 4 [bdd] › .features-gen\features\03-pages.feature.spec.js:45:7 › 3. Pages › Both pages are listed under the application (10.2s)
+  ok 5 [bdd] › .features-gen\features\04-features.feature.spec.js:17:7 › 4. Features › Add feature mapped to page (14.9s)
+  ok 6 [bdd] › .features-gen\features\04-features.feature.spec.js:31:7 › 4. Features › Add feature mapped to the second page (14.7s)
+  ok 7 [bdd] › .features-gen\features\05-roles.feature.spec.js:17:7 › 5. Roles › Add role with page and feature access (20.1s)
+
+  7 passed (2.1m)
+EXIT 0

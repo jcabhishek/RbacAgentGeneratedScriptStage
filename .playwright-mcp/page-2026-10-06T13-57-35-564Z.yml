@@ -1,0 +1,19 @@
+- generic [ref=f2e3]:
+  - generic [ref=f2e5]:
+    - link [ref=f2e6] [cursor=pointer]:
+      - /url: /
+    - text: 
+  - generic [ref=f2e7]:
+    - img "command and control center" [ref=f2e9]
+    - generic [ref=f2e14]:
+      - heading "Login" [level=3] [ref=f2e16]
+      - generic [ref=f2e17]:
+        - generic [ref=f2e20]:
+          - generic [ref=f2e21]: 
+          - textbox "Enter Email ID" [ref=f2e24]
+        - generic [ref=f2e27]:
+          - generic [ref=f2e28]: 
+          - textbox "Enter Password" [ref=f2e31]:
+            - /placeholder: "Enter Password "
+        - button "LOGIN" [active] [ref=f2e33] [cursor=pointer]
+        - generic [ref=f2e34]: Privacy Policy

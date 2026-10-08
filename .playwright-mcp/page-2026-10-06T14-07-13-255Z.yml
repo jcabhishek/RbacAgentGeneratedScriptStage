@@ -1,0 +1,1690 @@
+- generic [ref=e1]:
+  - generic [ref=e41]:
+    - list [ref=e49]:
+      - generic [ref=e50]:
+        - list [ref=e51]:
+          - listitem [ref=e52]
+        - listitem [ref=e54]:
+          - link [ref=e5202] [cursor=pointer]:
+            - /url: /home/rbac-users
+            - generic [ref=e56]: 
+        - listitem [ref=e59]:
+          - link [ref=e5203] [cursor=pointer]:
+            - /url: /home/rbac-roles
+        - listitem [ref=e64]:
+          - link [ref=e5204] [cursor=pointer]:
+            - /url: /home/applications
+        - listitem [ref=e69]:
+          - link [ref=e5205] [cursor=pointer]:
+            - /url: /home/pages
+        - listitem [ref=e74]:
+          - link [ref=e5206] [cursor=pointer]:
+            - /url: /home/features
+        - listitem [ref=e79]:
+          - link [ref=e5207] [cursor=pointer]:
+            - /url: /home/rbac-logs
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - link [ref=e85] [cursor=pointer]:
+          - /url: "javascript:"
+        - link [ref=e87] [cursor=pointer]:
+          - /url: /home
+        - text: 
+      - list [ref=e90]:
+        - listitem [ref=e91]:
+          - generic [ref=e92]:
+            - text: RBAC Admin
+            - link [ref=e5208] [cursor=pointer]:
+              - /url: "javascript:"
+              - generic [ref=e94]: 
+            - text: 
+    - generic [ref=e11293]:
+      - button [ref=e11295] [cursor=pointer]: Add Role
+      - generic [ref=e11301]:
+        - button [ref=e11303] [cursor=pointer]:
+          - generic [ref=e11304]: 
+        - generic [ref=e11307]:
+          - text: Show
+          - combobox [ref=e11308]
+          - text: entries
+        - generic [ref=e11310]:
+          - text: "Search:"
+          - searchbox [ref=e11311]
+        - grid [ref=e11312]:
+          - rowgroup [ref=e11313]:
+            - row [ref=e11314]:
+              - columnheader [ref=e11315] [cursor=pointer]: Role Name
+              - columnheader [ref=e11316] [cursor=pointer]: Role Description
+              - columnheader [ref=e11317] [cursor=pointer]: Application
+              - columnheader [ref=e11318] [cursor=pointer]: Pages
+              - columnheader [ref=e11319] [cursor=pointer]: Features
+              - columnheader [ref=e11320] [cursor=pointer]: Created By
+              - columnheader [ref=e11321] [cursor=pointer]: Created Date
+              - columnheader [ref=e11322] [cursor=pointer]: Updated By
+              - columnheader [ref=e11323] [cursor=pointer]: Updated Date
+              - columnheader [ref=e11324] [cursor=pointer]: Status
+              - columnheader [ref=e11325] [cursor=pointer]: Action
+          - rowgroup [ref=e11326]:
+            - row [ref=e11327] [cursor=pointer]:
+              - gridcell [ref=e11328]: 2ndtestadminfulladminaccess
+              - gridcell [ref=e11329]: 2ndtestadminfulladminaccess
+              - gridcell [ref=e11330]: SM_SERVICE
+              - gridcell [ref=e11331]: SM_SERVICE_ADMIN
+              - gridcell [ref=e11332]: ADMIN_PROVISION(R & W) | ADMIN_USERLIST(R & W)
+              - gridcell [ref=e11333]: RBAC Admin
+              - gridcell [ref=e11334]: 21-09-2024 14:50:13
+              - gridcell [ref=e11335]: RBAC Admin
+              - gridcell [ref=e11336]: 21-09-2024 14:50:13
+              - gridcell [ref=e11337]: "true"
+              - gridcell [ref=e11338]:
+                - link [ref=e11339]:
+                  - /url: "javascript:"
+                  - generic [ref=e11340]: 
+                - generic [ref=e11341]: 
+            - row [ref=e11342] [cursor=pointer]:
+              - gridcell [ref=e11343]: 2ndtestadminuserlist
+              - gridcell [ref=e11344]: 2ndtestadminuserlist
+              - gridcell [ref=e11345]: SM_SERVICE
+              - gridcell [ref=e11346]: SM_SERVICE_ADMIN
+              - gridcell [ref=e11347]: ADMIN_USERLIST(R)
+              - gridcell [ref=e11348]: RBAC Admin
+              - gridcell [ref=e11349]: 21-09-2024 14:31:31
+              - gridcell [ref=e11350]
+              - gridcell [ref=e11351]: 07-01-2025 14:17:13
+              - gridcell [ref=e11352]: "true"
+              - gridcell [ref=e11353]:
+                - link [ref=e11354]:
+                  - /url: "javascript:"
+                  - generic [ref=e11355]: 
+                - generic [ref=e11356]: 
+            - row [ref=e11357] [cursor=pointer]:
+              - gridcell [ref=e11358]: 2ndtestadminuserlistWrite
+              - gridcell [ref=e11359]: 2ndtestadminuserlistWrite
+              - gridcell [ref=e11360]: SM_SERVICE
+              - gridcell [ref=e11361]: SM_SERVICE_ADMIN
+              - gridcell [ref=e11362]: ADMIN_USERLIST(R & W)
+              - gridcell [ref=e11363]: RBAC Admin
+              - gridcell [ref=e11364]: 21-09-2024 14:36:36
+              - gridcell [ref=e11365]: RBAC Admin
+              - gridcell [ref=e11366]: 21-09-2024 14:36:36
+              - gridcell [ref=e11367]: "true"
+              - gridcell [ref=e11368]:
+                - link [ref=e11369]:
+                  - /url: "javascript:"
+                  - generic [ref=e11370]: 
+                - generic [ref=e11371]: 
+            - row [ref=e11372] [cursor=pointer]:
+              - gridcell [ref=e11373]: 2ndtestbatteryissue
+              - gridcell [ref=e11374]: 2ndtestbatteryissue
+              - gridcell [ref=e11375]: SM_SERVICE
+              - gridcell [ref=e11376]: SM_SERVICE_BATTERY_ISSUING
+              - gridcell [ref=e11377]: BATTERY_ISSUING_ONBOARDING(R & W)
+              - gridcell [ref=e11378]: RBAC Admin
+              - gridcell [ref=e11379]: 21-09-2024 22:58:19
+              - gridcell [ref=e11380]: RBAC Admin
+              - gridcell [ref=e11381]: 21-09-2024 22:58:19
+              - gridcell [ref=e11382]: "true"
+              - gridcell [ref=e11383]:
+                - link [ref=e11384]:
+                  - /url: "javascript:"
+                  - generic [ref=e11385]: 
+                - generic [ref=e11386]: 
+            - row [ref=e11387] [cursor=pointer]:
+              - gridcell [ref=e11388]: 2ndtestrishabh
+              - gridcell [ref=e11389]: 2ndtestrishabh
+              - gridcell [ref=e11390]: SM_SERVICE
+              - gridcell [ref=e11391]: SM_SERVICE_ADMIN
+              - gridcell [ref=e11392]: ADMIN_PROVISION(R)
+              - gridcell [ref=e11393]: RBAC Admin
+              - gridcell [ref=e11394]: 21-09-2024 14:11:32
+              - gridcell [ref=e11395]: RBAC Admin
+              - gridcell [ref=e11396]: 21-09-2024 14:11:32
+              - gridcell [ref=e11397]: "true"
+              - gridcell [ref=e11398]:
+                - link [ref=e11399]:
+                  - /url: "javascript:"
+                  - generic [ref=e11400]: 
+                - generic [ref=e11401]: 
+            - row [ref=e11402] [cursor=pointer]:
+              - gridcell [ref=e11403]: 2ndtestrishabhadminwriteaccessProvision
+              - gridcell [ref=e11404]: 2ndtestrishabhadminwriteaccessProvision
+              - gridcell [ref=e11405]: SM_SERVICE
+              - gridcell [ref=e11406]: SM_SERVICE_ADMIN
+              - gridcell [ref=e11407]: ADMIN_PROVISION(R & W)
+              - gridcell [ref=e11408]: RBAC Admin
+              - gridcell [ref=e11409]: 21-09-2024 14:17:48
+              - gridcell [ref=e11410]: RBAC Admin
+              - gridcell [ref=e11411]: 21-09-2024 14:17:48
+              - gridcell [ref=e11412]: "true"
+              - gridcell [ref=e11413]:
+                - link [ref=e11414]:
+                  - /url: "javascript:"
+                  - generic [ref=e11415]: 
+                - generic [ref=e11416]: 
+            - row [ref=e11417] [cursor=pointer]:
+              - gridcell [ref=e11418]: AdminCheck
+              - gridcell [ref=e11419]: AdminCheck
+              - gridcell [ref=e11420]: SM_SERVICE
+              - gridcell [ref=e11421]: SM_SERVICE_ADMIN
+              - gridcell [ref=e11422]: ADMIN_PROVISION(R) | ADMIN_USERLIST(R)
+              - gridcell [ref=e11423]: RBAC Admin
+              - gridcell [ref=e11424]: 01-10-2024 12:25:32
+              - gridcell [ref=e11425]: RBAC Admin
+              - gridcell [ref=e11426]: 01-10-2024 12:25:32
+              - gridcell [ref=e11427]: "true"
+              - gridcell [ref=e11428]:
+                - link [ref=e11429]:
+                  - /url: "javascript:"
+                  - generic [ref=e11430]: 
+                - generic [ref=e11431]: 
+            - row [ref=e11432] [cursor=pointer]:
+              - gridcell [ref=e11433]: AdminProvision
+              - gridcell [ref=e11434]: AdminProvision
+              - gridcell [ref=e11435]: SM_SERVICE
+              - gridcell [ref=e11436]: SM_SERVICE_ADMIN
+              - gridcell [ref=e11437]: ADMIN_PROVISION(R & W) | ADMIN_USERLIST(R & W)
+              - gridcell [ref=e11438]: RBAC Admin
+              - gridcell [ref=e11439]: 01-10-2024 12:26:01
+              - gridcell [ref=e11440]: RBAC Admin
+              - gridcell [ref=e11441]: 01-10-2024 12:26:01
+              - gridcell [ref=e11442]: "true"
+              - gridcell [ref=e11443]:
+                - link [ref=e11444]:
+                  - /url: "javascript:"
+                  - generic [ref=e11445]: 
+                - generic [ref=e11446]: 
+            - row [ref=e11447] [cursor=pointer]:
+              - gridcell [ref=e11448]: ADMINROLEFORMYNUMBER
+              - gridcell [ref=e11449]: ADMINROLEFORMYNUMBER
+              - gridcell [ref=e11450]: SM_SERVICE
+              - gridcell [ref=e11451]: SM_SERVICE_ADMIN SM_SERVICE_ASSISTANCE SM_SERVICE_BATTERY_ISSUING SM_SERVICE_BATTERY_ONBOARDING SM_SERVICE_NOTIFICATION SM_SERVICE_TICKET
+              - gridcell [ref=e11452]: ADMIN_PROVISION(R & W) | ADMIN_USERLIST(R & W) | ASSISTANCE_BLE_UNLOCK_START(R) | ASSISTANCE_KEYFOB_READ(R) | REMOVE1(R) | BATTERY_ISSUING_ONBOARDING(R & W) | BATTERY_ONBOARDING_ACCESS(R & W) | NOTIFICATION_FORCE_LOGOUT(R) | NOTIFICATION_PUSH_NOTIFICATION(R) | TICKET_CREATE(R & W) | TICKET_SUPPORT(R & W)
+              - gridcell [ref=e11453]: RBAC Admin
+              - gridcell [ref=e11454]: 24-09-2024 11:52:12
+              - gridcell [ref=e11455]
+              - gridcell [ref=e11456]: 08-01-2025 16:57:55
+              - gridcell [ref=e11457]: "true"
+              - gridcell [ref=e11458]:
+                - link [ref=e11459]:
+                  - /url: "javascript:"
+                  - generic [ref=e11460]: 
+                - generic [ref=e11461]: 
+            - row [ref=e11462] [cursor=pointer]:
+              - gridcell [ref=e11463]: AgentAdmin
+              - gridcell [ref=e11464]: AgentAdmin
+              - gridcell [ref=e11465]: AgentApplication
+              - gridcell [ref=e11466]: AgentKeyfob1
+              - gridcell [ref=e11467]: AgentCheckKeyfob(R)
+              - gridcell [ref=e11468]: RBAC Admin
+              - gridcell [ref=e11469]: 29-08-2024 11:48:31
+              - gridcell [ref=e11470]: RBAC Admin
+              - gridcell [ref=e11471]: 13-09-2024 14:35:58
+              - gridcell [ref=e11472]: "true"
+              - gridcell [ref=e11473]:
+                - link [ref=e11474]:
+                  - /url: "javascript:"
+                  - generic [ref=e11475]: 
+                - generic [ref=e11476]: 
+            - row [ref=e11477] [cursor=pointer]:
+              - gridcell [ref=e11478]: AgentAdminTest1
+              - gridcell [ref=e11479]: AgentAdminTest1
+              - gridcell [ref=e11480]: AgentApplicationTest
+              - gridcell [ref=e11481]: AgentkeyfobTest1
+              - gridcell [ref=e11482]: AgentCheckKeyfobTest1sfsdfsddfsggggggggggggggggggg(R & W)
+              - gridcell [ref=e11483]: RBAC Admin
+              - gridcell [ref=e11484]: 30-08-2024 15:04:02
+              - gridcell [ref=e11485]: RBAC Admin
+              - gridcell [ref=e11486]: 30-08-2024 15:04:02
+              - gridcell [ref=e11487]: "true"
+              - gridcell [ref=e11488]:
+                - link [ref=e11489]:
+                  - /url: "javascript:"
+                  - generic [ref=e11490]: 
+                - generic [ref=e11491]: 
+            - row [ref=e11492] [cursor=pointer]:
+              - gridcell [ref=e11493]: AGNET_APAR_TEST_2
+              - gridcell [ref=e11494]: AGNET_APAR_TEST_2
+              - gridcell [ref=e11495]: SM_AGENT
+              - gridcell [ref=e11496]: SM_AGENT_VEHICLE SM_AGENT_NOTIFICATION SM_AGENT_WALLET
+              - gridcell [ref=e11497]: CUSTOMER_PROVISION(R) | CUSTOMER_SEARCH(R) | FORCE_LOGOUT(R) | TRANSFER(R)
+              - gridcell [ref=e11498]: RBAC Admin
+              - gridcell [ref=e11499]: 30-08-2024 21:04:12
+              - gridcell [ref=e11500]: RBAC Admin
+              - gridcell [ref=e11501]: 30-08-2024 21:04:12
+              - gridcell [ref=e11502]: "true"
+              - gridcell [ref=e11503]:
+                - link [ref=e11504]:
+                  - /url: "javascript:"
+                  - generic [ref=e11505]: 
+                - generic [ref=e11506]: 
+            - row [ref=e11507] [cursor=pointer]:
+              - gridcell [ref=e11508]: APAR_LAKSHMI_TEST
+              - gridcell [ref=e11509]: APAR_LAKSHMI_TEST
+              - gridcell [ref=e11510]: SM_AGENT
+              - gridcell [ref=e11511]: SM_AGENT_VEHICLE SM_AGENT_TICKET SM_AGENT_WALLET
+              - gridcell [ref=e11512]: CUSTOMER_PROVISION(R & W) | CUSTOMER_SEARCH(R & W) | KEYFOB_READ(R & W) | REMOVE2(R & W) | TICKET_KEYFOB(R & W) | TICKET_STATION(R) | TICKET_VEHICLE(R & W) | TRANSFER(R) | WALLET_SEARCH(R & W)
+              - gridcell [ref=e11513]: RBAC Admin
+              - gridcell [ref=e11514]: 06-09-2024 12:18:06
+              - gridcell [ref=e11515]
+              - gridcell [ref=e11516]: 09-01-2025 14:47:34
+              - gridcell [ref=e11517]: "true"
+              - gridcell [ref=e11518]:
+                - link [ref=e11519]:
+                  - /url: "javascript:"
+                  - generic [ref=e11520]: 
+                - generic [ref=e11521]: 
+            - row [ref=e11522] [cursor=pointer]:
+              - gridcell [ref=e11523]: auditrole
+              - gridcell [ref=e11524]: auditroleniranjan
+              - gridcell [ref=e11525]: SM_ESV
+              - gridcell [ref=e11526]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_DASHBOARD
+              - gridcell [ref=e11527]: AUDIT_CHOOSE_DATE(R) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e11528]: RBAC Admin
+              - gridcell [ref=e11529]: 08-10-2024 15:15:23
+              - gridcell [ref=e11530]: RBAC Admin
+              - gridcell [ref=e11531]: 24-09-2026 15:15:35
+              - gridcell [ref=e11532]: "true"
+              - gridcell [ref=e11533]:
+                - link [ref=e11534]:
+                  - /url: "javascript:"
+                  - generic [ref=e11535]: 
+                - generic [ref=e11536]: 
+            - row [ref=e11537] [cursor=pointer]:
+              - gridcell [ref=e11538]: BLEUNLOCK_KEYFOB_WRITE
+              - gridcell [ref=e11539]: BLEUNLOCK_KEYFOB_WRITE
+              - gridcell [ref=e11540]: SM_SERVICE
+              - gridcell [ref=e11541]: SM_SERVICE_ASSISTANCE
+              - gridcell [ref=e11542]: ASSISTANCE_BLE_UNLOCK_START(R & W) | ASSISTANCE_KEYFOB_READ(R & W)
+              - gridcell [ref=e11543]: RBAC Admin
+              - gridcell [ref=e11544]: 18-09-2024 18:59:07
+              - gridcell [ref=e11545]: RBAC Admin
+              - gridcell [ref=e11546]: 18-09-2024 18:59:07
+              - gridcell [ref=e11547]: "true"
+              - gridcell [ref=e11548]:
+                - link [ref=e11549]:
+                  - /url: "javascript:"
+                  - generic [ref=e11550]: 
+                - generic [ref=e11551]: 
+            - row [ref=e11552] [cursor=pointer]:
+              - gridcell [ref=e11553]: BLEunlockRoadsideassitance
+              - gridcell [ref=e11554]: BLEunlockRoadsideassitance
+              - gridcell [ref=e11555]: SM_SERVICE
+              - gridcell [ref=e11556]: SM_SERVICE_ASSISTANCE
+              - gridcell [ref=e11557]: ASSISTANCE_BLE_UNLOCK_START(R & W) | ASSISTANCE_KEYFOB_READ(R & W)
+              - gridcell [ref=e11558]: RBAC Admin
+              - gridcell [ref=e11559]: 01-10-2024 12:27:06
+              - gridcell [ref=e11560]: RBAC Admin
+              - gridcell [ref=e11561]: 01-10-2024 12:27:06
+              - gridcell [ref=e11562]: "true"
+              - gridcell [ref=e11563]:
+                - link [ref=e11564]:
+                  - /url: "javascript:"
+                  - generic [ref=e11565]: 
+                - generic [ref=e11566]: 
+            - row [ref=e11567] [cursor=pointer]:
+              - gridcell [ref=e11568]: CUSTOMER_ADMIN
+              - gridcell [ref=e11569]: CUSTOMER_ADMIN
+              - gridcell [ref=e11570]: SM_AGENT
+              - gridcell [ref=e11571]: SM_AGENT_WALLET
+              - gridcell [ref=e11572]: TRANSFER(R & W) | WALLET_SEARCH(R & W)
+              - gridcell [ref=e11573]: RBAC Admin
+              - gridcell [ref=e11574]: 06-09-2024 14:54:09
+              - gridcell [ref=e11575]
+              - gridcell [ref=e11576]: 13-01-2025 17:16:18
+              - gridcell [ref=e11577]: "true"
+              - gridcell [ref=e11578]:
+                - link [ref=e11579]:
+                  - /url: "javascript:"
+                  - generic [ref=e11580]: 
+                - generic [ref=e11581]: 
+            - row [ref=e11582] [cursor=pointer]:
+              - gridcell [ref=e11583]: CustomerKeyfob
+              - gridcell [ref=e11584]: CustomerKeyfob
+              - gridcell [ref=e11585]: SM_AGENT
+              - gridcell [ref=e11586]: SM_AGENT_VEHICLE
+              - gridcell [ref=e11587]: CUSTOMER_PROVISION(R & W) | CUSTOMER_SEARCH(R & W) | KEYFOB_READ(R & W)
+              - gridcell [ref=e11588]: RBAC Admin
+              - gridcell [ref=e11589]: 11-09-2024 15:29:30
+              - gridcell [ref=e11590]: RBAC Admin
+              - gridcell [ref=e11591]: 11-09-2024 15:29:30
+              - gridcell [ref=e11592]: "true"
+              - gridcell [ref=e11593]:
+                - link [ref=e11594]:
+                  - /url: "javascript:"
+                  - generic [ref=e11595]: 
+                - generic [ref=e11596]: 
+            - row [ref=e11597] [cursor=pointer]:
+              - gridcell [ref=e11598]: DEVELOPER_ALL_ACCESS
+              - gridcell [ref=e11599]: DEVELOPER_ALL_ACCESS
+              - gridcell [ref=e11600]: SM_SERVICE
+              - gridcell [ref=e11601]: SM_SERVICE_ADMIN SM_SERVICE_ASSISTANCE SM_SERVICE_BATTERY_ISSUING SM_SERVICE_BATTERY_ONBOARDING SM_SERVICE_CUSTOMER SM_SERVICE_KEYFOB_CHECK SM_SERVICE_NOTIFICATION SM_SERVICE_STATION_SCAN SM_SERVICE_TICKET
+              - gridcell [ref=e11602]: ADMIN_PROVISION(R & W) | ADMIN_USERLIST(R & W) | ASSISTANCE_BLE_UNLOCK_START(R & W) | ASSISTANCE_KEYFOB_READ(R & W) | BATTERY_ISSUING_ONBOARDING(R & W) | BATTERY_ONBOARDING_ACCESS(R & W) | CUSTOMER_KEYFOB_READ(R & W) | CUSTOMER_KEYFOB_SEARCH(R & W) | CUSTOMER_PROVISION(R & W) | KEYFOB_CHECK_READ(R & W) | KEYFOB_CHECK_SEARCH(R & W) | NOTIFICATION_FORCE_LOGOUT(R & W) | NOTIFICATION_PUSH_NOTIFICATION(R & W) | SCAN_STATION(R & W) | TICKET_CREATE(R & W) | TICKET_SUPPORT(R & W)
+              - gridcell [ref=e11603]: RBAC Admin
+              - gridcell [ref=e11604]: 11-11-2024 12:40:36
+              - gridcell [ref=e11605]: RBAC Admin
+              - gridcell [ref=e11606]: 06-03-2025 18:51:47
+              - gridcell [ref=e11607]: "true"
+              - gridcell [ref=e11608]:
+                - link [ref=e11609]:
+                  - /url: "javascript:"
+                  - generic [ref=e11610]: 
+                - generic [ref=e11611]: 
+            - row [ref=e11612] [cursor=pointer]:
+              - gridcell [ref=e11613]: DEVELOPER_ALL_ACCESS_AGENT
+              - gridcell [ref=e11614]: DEVELOPER_ALL_ACCESS_AGENT
+              - gridcell [ref=e11615]: SM_AGENT
+              - gridcell [ref=e11616]: SM_AGENT_VEHICLE SM_AGENT_NOTIFICATION SM_AGENT_KEYFOB_CHECK SM_AGENT_SCAN_STATION SM_AGENT_TICKET SM_AGENT_SUBSCRIPTION SM_AGENT_STATEMENT SM_AGENT_WALLET
+              - gridcell [ref=e11617]: CUSTOMER_KEYFOB_SEARCH(R & W) | CUSTOMER_PROVISION(R & W) | CUSTOMER_SEARCH(R & W) | KEYFOB_READ(R & W) | REMOVE2(R & W) | TestFeature(R & W) | FORCE_LOGOUT(R & W) | PUSH_NOTIFICATION(R & W) | KEYFOB_SEARCH(R & W) | READ(R & W) | SUBSCRIPTION_ACTIVATE(R & W) | SUBSCRIPTION_PLAN(R & W) | SCAN_STATION(R & W) | SM_AGENT_TICKET_BATTERY(R & W) | TICKET_BATTERY(R & W) | TICKET_KEYFOB(R & W) | TICKET_STATION(R & W) | TICKET_VEHICLE(R & W) | SM_AGNET_SUBSCRIPTION_VIEW(R & W) | STATEMENT(R & W) | TRANSFER(R & W) | WALLET_SEARCH(R & W)
+              - gridcell [ref=e11618]: RBAC Admin
+              - gridcell [ref=e11619]: 12-11-2024 16:11:56
+              - gridcell [ref=e11620]
+              - gridcell [ref=e11621]: 13-01-2025 17:22:23
+              - gridcell [ref=e11622]: "true"
+              - gridcell [ref=e11623]:
+                - link [ref=e11624]:
+                  - /url: "javascript:"
+                  - generic [ref=e11625]: 
+                - generic [ref=e11626]: 
+            - row [ref=e11627] [cursor=pointer]:
+              - gridcell [ref=e11628]: Dontdelete
+              - gridcell [ref=e11629]: Satyadev APAR
+              - gridcell [ref=e11630]: INDOFAST_RIDER
+              - gridcell [ref=e11631]: INDOFAST_RIDER_LAUNCH INDOFAST_RIDER_LOGIN
+              - gridcell [ref=e11632]: APP_MAIN(R & W) | RIDER_LOGIN(R & W)
+              - gridcell [ref=e11633]: RBAC Admin
+              - gridcell [ref=e11634]: 15-01-2025 12:36:35
+              - gridcell [ref=e11635]
+              - gridcell [ref=e11636]: 15-01-2025 14:14:02
+              - gridcell [ref=e11637]: "true"
+              - gridcell [ref=e11638]:
+                - link [ref=e11639]:
+                  - /url: "javascript:"
+                  - generic [ref=e11640]: 
+                - generic [ref=e11641]: 
+            - row [ref=e11642] [cursor=pointer]:
+              - gridcell [ref=e11643]: ESV123_CUSTOMER_ACCESS
+              - gridcell [ref=e11644]: ESV123_CUSTOMER_ACCESS
+              - gridcell [ref=e11645]: SM_ESV
+              - gridcell [ref=e11646]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER
+              - gridcell [ref=e11647]: CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SEARCH(R & W)
+              - gridcell [ref=e11648]: RBAC Admin
+              - gridcell [ref=e11649]: 07-10-2024 14:55:49
+              - gridcell [ref=e11650]: RBAC Admin
+              - gridcell [ref=e11651]: 07-10-2024 14:55:49
+              - gridcell [ref=e11652]: "true"
+              - gridcell [ref=e11653]:
+                - link [ref=e11654]:
+                  - /url: "javascript:"
+                  - generic [ref=e11655]: 
+                - generic [ref=e11656]: 
+            - row [ref=e11657] [cursor=pointer]:
+              - gridcell [ref=e11658]: ESV_All_ACCESS_QA1
+              - gridcell [ref=e11659]: ESV_All_ACCESS_QA1
+              - gridcell [ref=e11660]: SM_ESV
+              - gridcell [ref=e11661]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD ESV_SCAN_STATION SM_ESV_SERVICE
+              - gridcell [ref=e11662]: AUDIT_CHOOSE_DATE(R & W) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_SEARCH(R & W) | CUSTOMER_TAP_KEYFOB(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W) | ESV_Scanstation(R & W) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_SCAN_STATION(R & W) | SERVICE_SEARCH_STATION(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e11663]: RBAC Admin
+              - gridcell [ref=e11664]: 07-10-2024 11:32:09
+              - gridcell [ref=e11665]: RBAC Admin
+              - gridcell [ref=e11666]: 16-01-2025 12:31:54
+              - gridcell [ref=e11667]: "true"
+              - gridcell [ref=e11668]:
+                - link [ref=e11669]:
+                  - /url: "javascript:"
+                  - generic [ref=e11670]: 
+                - generic [ref=e11671]: 
+            - row [ref=e11672] [cursor=pointer]:
+              - gridcell [ref=e11673]: ESV_All_ACCESS_Read_Test_QA
+              - gridcell [ref=e11674]: ESV_All_ACCESS_Read_Test_QA
+              - gridcell [ref=e11675]: SM_ESV
+              - gridcell [ref=e11676]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD
+              - gridcell [ref=e11677]: AUDIT_CHOOSE_DATE(R) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R) | CUSTOMER_BLE_UNLOCK(R) | CUSTOMER_SCAN_VEHICLE(R) | CUSTOMER_TAP_KEYFOB(R) | DASHBOARD_CHANGE_VEHICLE(R) | ESVNEW(R) | FIELD_EXCHANGE_BATTERY(R) | FIELD_LOAD_EMPTY_BATTERY(R) | FIELD_UNLOAD_FULL_BATTERY(R)
+              - gridcell [ref=e11678]: RBAC Admin
+              - gridcell [ref=e11679]: 01-10-2024 17:02:44
+              - gridcell [ref=e11680]: RBAC Admin
+              - gridcell [ref=e11681]: 01-10-2024 17:11:51
+              - gridcell [ref=e11682]: "false"
+              - gridcell [ref=e11683]:
+                - generic [ref=e11684]: 
+            - row [ref=e11685] [cursor=pointer]:
+              - gridcell [ref=e11686]: ESV_All_ACCESS_Read_Test_QA1
+              - gridcell [ref=e11687]: ESV_All_ACCESS_Read_Test_QA1
+              - gridcell [ref=e11688]: SM_ESV
+              - gridcell [ref=e11689]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11690]: CHOOSE_VIN_SCAN_VEHICLE(R) | CHOOSE_VIN_SEARCH_VEHICLE(R) | CHOOSE_VIN_SELECT_VEHICLE(R)
+              - gridcell [ref=e11691]: RBAC Admin
+              - gridcell [ref=e11692]: 01-10-2024 17:13:08
+              - gridcell [ref=e11693]: RBAC Admin
+              - gridcell [ref=e11694]: 01-10-2024 17:13:08
+              - gridcell [ref=e11695]: "true"
+              - gridcell [ref=e11696]:
+                - link [ref=e11697]:
+                  - /url: "javascript:"
+                  - generic [ref=e11698]: 
+                - generic [ref=e11699]: 
+            - row [ref=e11700] [cursor=pointer]:
+              - gridcell [ref=e11701]: ESV_All_ACCESS_Read_Test_QA2
+              - gridcell [ref=e11702]: ESV_All_ACCESS_Read_Test_QA2
+              - gridcell [ref=e11703]: SM_ESV
+              - gridcell [ref=e11704]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11705]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W)
+              - gridcell [ref=e11706]: RBAC Admin
+              - gridcell [ref=e11707]: 01-10-2024 17:17:10
+              - gridcell [ref=e11708]: RBAC Admin
+              - gridcell [ref=e11709]: 01-10-2024 17:17:10
+              - gridcell [ref=e11710]: "true"
+              - gridcell [ref=e11711]:
+                - link [ref=e11712]:
+                  - /url: "javascript:"
+                  - generic [ref=e11713]: 
+                - generic [ref=e11714]: 
+            - row [ref=e11715] [cursor=pointer]:
+              - gridcell [ref=e11716]: ESV_All_ACCESS_Read_Test_QA3
+              - gridcell [ref=e11717]: ESV_All_ACCESS_Read_Test_QA3
+              - gridcell [ref=e11718]: SM_ESV
+              - gridcell [ref=e11719]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e11720]: AUDIT_CHOOSE_DATE(R) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R) | CUSTOMER_BLE_UNLOCK(R) | CUSTOMER_SCAN_VEHICLE(R) | CUSTOMER_TAP_KEYFOB(R) | DASHBOARD_CHANGE_VEHICLE(R) | ESVNEW(R) | FIELD_EXCHANGE_BATTERY(R) | FIELD_LOAD_EMPTY_BATTERY(R) | FIELD_UNLOAD_FULL_BATTERY(R) | SERVICE_EXCHANGE_BATTERY(R) | SERVICE_LOAD_FULL_BATTERY(R) | SERVICE_UNLOAD_EMPTY_BATTERY(R)
+              - gridcell [ref=e11721]: RBAC Admin
+              - gridcell [ref=e11722]: 01-10-2024 17:21:59
+              - gridcell [ref=e11723]: RBAC Admin
+              - gridcell [ref=e11724]: 01-10-2024 17:21:59
+              - gridcell [ref=e11725]: "true"
+              - gridcell [ref=e11726]:
+                - link [ref=e11727]:
+                  - /url: "javascript:"
+                  - generic [ref=e11728]: 
+                - generic [ref=e11729]: 
+            - row [ref=e11730] [cursor=pointer]:
+              - gridcell [ref=e11731]: ESV_All_ACCESS_Test_QA
+              - gridcell [ref=e11732]: ESV_All_ACCESS_Test_QA
+              - gridcell [ref=e11733]: SM_ESV
+              - gridcell [ref=e11734]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e11735]: AUDIT_CHOOSE_DATE(R & W) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_TAP_KEYFOB(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W) | FIELD_EXCHANGE_BATTERY(R & W) | FIELD_LOAD_EMPTY_BATTERY(R & W) | FIELD_UNLOAD_FULL_BATTERY(R & W) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e11736]: RBAC Admin
+              - gridcell [ref=e11737]: 30-09-2024 11:51:32
+              - gridcell [ref=e11738]: RBAC Admin
+              - gridcell [ref=e11739]: 03-10-2024 11:07:34
+              - gridcell [ref=e11740]: "true"
+              - gridcell [ref=e11741]:
+                - link [ref=e11742]:
+                  - /url: "javascript:"
+                  - generic [ref=e11743]: 
+                - generic [ref=e11744]: 
+            - row [ref=e11745] [cursor=pointer]:
+              - gridcell [ref=e11746]: ESV_ALLFEATURES_READ_ACCESS
+              - gridcell [ref=e11747]: ESV_ALLFEATURES_READ_ACCESS
+              - gridcell [ref=e11748]: SM_ESV
+              - gridcell [ref=e11749]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e11750]: AUDIT_CHOOSE_DATE(R) | CHOOSE_VIN_SCAN_VEHICLE(R) | CHOOSE_VIN_SEARCH_VEHICLE(R) | CHOOSE_VIN_SELECT_VEHICLE(R) | CUSTOMER_BATTERY_SWAP(R) | CUSTOMER_BLE_UNLOCK(R) | CUSTOMER_SCAN_VEHICLE(R) | CUSTOMER_TAP_KEYFOB(R) | DASHBOARD_CHANGE_VEHICLE(R) | ESVNEW(R) | FIELD_EXCHANGE_BATTERY(R) | FIELD_LOAD_EMPTY_BATTERY(R) | FIELD_UNLOAD_FULL_BATTERY(R) | SERVICE_EXCHANGE_BATTERY(R) | SERVICE_LOAD_FULL_BATTERY(R) | SERVICE_UNLOAD_EMPTY_BATTERY(R)
+              - gridcell [ref=e11751]: RBAC Admin
+              - gridcell [ref=e11752]: 26-09-2024 09:49:50
+              - gridcell [ref=e11753]: RBAC Admin
+              - gridcell [ref=e11754]: 26-09-2024 09:49:50
+              - gridcell [ref=e11755]: "true"
+              - gridcell [ref=e11756]:
+                - link [ref=e11757]:
+                  - /url: "javascript:"
+                  - generic [ref=e11758]: 
+                - generic [ref=e11759]: 
+            - row [ref=e11760] [cursor=pointer]:
+              - gridcell [ref=e11761]: ESV_ALLFEATURES_READWRITE_ACCESS
+              - gridcell [ref=e11762]: ESV_ALLFEATURES_READWRITE_ACCESS
+              - gridcell [ref=e11763]: SM_ESV
+              - gridcell [ref=e11764]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e11765]: AUDIT_CHOOSE_DATE(R & W) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_TAP_KEYFOB(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W) | FIELD_EXCHANGE_BATTERY(R & W) | FIELD_LOAD_EMPTY_BATTERY(R & W) | FIELD_UNLOAD_FULL_BATTERY(R & W) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e11766]: RBAC Admin
+              - gridcell [ref=e11767]: 26-09-2024 09:49:07
+              - gridcell [ref=e11768]: RBAC Admin
+              - gridcell [ref=e11769]: 26-09-2024 09:49:07
+              - gridcell [ref=e11770]: "true"
+              - gridcell [ref=e11771]:
+                - link [ref=e11772]:
+                  - /url: "javascript:"
+                  - generic [ref=e11773]: 
+                - generic [ref=e11774]: 
+            - row [ref=e11775] [cursor=pointer]:
+              - gridcell [ref=e11776]: ESV_App_EditDisable
+              - gridcell [ref=e11777]: ESV_App_EditDisable
+              - gridcell [ref=e11778]: SM_ESV
+              - gridcell [ref=e11779]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11780]: CHOOSE_VIN_SCAN_VEHICLE(R) | CHOOSE_VIN_SEARCH_VEHICLE(R) | CHOOSE_VIN_SELECT_VEHICLE(R)
+              - gridcell [ref=e11781]: RBAC Admin
+              - gridcell [ref=e11782]: 27-09-2024 16:21:11
+              - gridcell [ref=e11783]: RBAC Admin
+              - gridcell [ref=e11784]: 27-09-2024 16:21:11
+              - gridcell [ref=e11785]: "true"
+              - gridcell [ref=e11786]:
+                - link [ref=e11787]:
+                  - /url: "javascript:"
+                  - generic [ref=e11788]: 
+                - generic [ref=e11789]: 
+            - row [ref=e11790] [cursor=pointer]:
+              - gridcell [ref=e11791]: ESV_APP_New_Role
+              - gridcell [ref=e11792]: ESV_APP_New_Role
+              - gridcell [ref=e11793]: SM_ESV
+              - gridcell [ref=e11794]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11795]: CHOOSE_VIN_SCAN_VEHICLE(R) | CHOOSE_VIN_SELECT_VEHICLE(R)
+              - gridcell [ref=e11796]: RBAC Admin
+              - gridcell [ref=e11797]: 01-10-2024 15:19:35
+              - gridcell [ref=e11798]: RBAC Admin
+              - gridcell [ref=e11799]: 01-10-2024 15:19:35
+              - gridcell [ref=e11800]: "true"
+              - gridcell [ref=e11801]:
+                - link [ref=e11802]:
+                  - /url: "javascript:"
+                  - generic [ref=e11803]: 
+                - generic [ref=e11804]: 
+            - row [ref=e11805] [cursor=pointer]:
+              - gridcell [ref=e11806]: ESV_APP_New_Role1
+              - gridcell [ref=e11807]: ESV_APP_New_Role1
+              - gridcell [ref=e11808]: SM_ESV
+              - gridcell [ref=e11809]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11810]: CHOOSE_VIN_SCAN_VEHICLE(R) | CHOOSE_VIN_SELECT_VEHICLE(R & W)
+              - gridcell [ref=e11811]: RBAC Admin
+              - gridcell [ref=e11812]: 01-10-2024 15:21:54
+              - gridcell [ref=e11813]: RBAC Admin
+              - gridcell [ref=e11814]: 01-10-2024 15:21:54
+              - gridcell [ref=e11815]: "true"
+              - gridcell [ref=e11816]:
+                - link [ref=e11817]:
+                  - /url: "javascript:"
+                  - generic [ref=e11818]: 
+                - generic [ref=e11819]: 
+            - row [ref=e11820] [cursor=pointer]:
+              - gridcell [ref=e11821]: ESV_APP_New_Role11
+              - gridcell [ref=e11822]: ESV_APP_New_Role11
+              - gridcell [ref=e11823]: SM_ESV
+              - gridcell [ref=e11824]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11825]: CHOOSE_VIN_SELECT_VEHICLE(R)
+              - gridcell [ref=e11826]: RBAC Admin
+              - gridcell [ref=e11827]: 01-10-2024 15:29:46
+              - gridcell [ref=e11828]: RBAC Admin
+              - gridcell [ref=e11829]: 01-10-2024 15:29:46
+              - gridcell [ref=e11830]: "true"
+              - gridcell [ref=e11831]:
+                - link [ref=e11832]:
+                  - /url: "javascript:"
+                  - generic [ref=e11833]: 
+                - generic [ref=e11834]: 
+            - row [ref=e11835] [cursor=pointer]:
+              - gridcell [ref=e11836]: ESV_APP_New_Role123
+              - gridcell [ref=e11837]: ESV_APP_New_Role123
+              - gridcell [ref=e11838]: SM_ESV
+              - gridcell [ref=e11839]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD
+              - gridcell [ref=e11840]: AUDIT_CHOOSE_DATE(R & W) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e11841]: RBAC Admin
+              - gridcell [ref=e11842]: 01-10-2024 15:33:00
+              - gridcell [ref=e11843]: RBAC Admin
+              - gridcell [ref=e11844]: 01-10-2024 15:33:00
+              - gridcell [ref=e11845]: "true"
+              - gridcell [ref=e11846]:
+                - link [ref=e11847]:
+                  - /url: "javascript:"
+                  - generic [ref=e11848]: 
+                - generic [ref=e11849]: 
+            - row [ref=e11850] [cursor=pointer]:
+              - gridcell [ref=e11851]: ESV_APP_New_Role2
+              - gridcell [ref=e11852]: ESV_APP_New_Role2
+              - gridcell [ref=e11853]: SM_ESV
+              - gridcell [ref=e11854]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11855]: CHOOSE_VIN_SELECT_VEHICLE(R & W)
+              - gridcell [ref=e11856]: RBAC Admin
+              - gridcell [ref=e11857]: 01-10-2024 15:24:11
+              - gridcell [ref=e11858]: RBAC Admin
+              - gridcell [ref=e11859]: 01-10-2024 15:24:11
+              - gridcell [ref=e11860]: "true"
+              - gridcell [ref=e11861]:
+                - link [ref=e11862]:
+                  - /url: "javascript:"
+                  - generic [ref=e11863]: 
+                - generic [ref=e11864]: 
+            - row [ref=e11865] [cursor=pointer]:
+              - gridcell [ref=e11866]: ESV_APP_New_Role3
+              - gridcell [ref=e11867]: ESV_APP_New_Role3
+              - gridcell [ref=e11868]: SM_ESV
+              - gridcell [ref=e11869]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11870]: CHOOSE_VIN_SELECT_VEHICLE(R & W)
+              - gridcell [ref=e11871]: RBAC Admin
+              - gridcell [ref=e11872]: 01-10-2024 15:27:26
+              - gridcell [ref=e11873]: RBAC Admin
+              - gridcell [ref=e11874]: 01-10-2024 15:27:26
+              - gridcell [ref=e11875]: "true"
+              - gridcell [ref=e11876]:
+                - link [ref=e11877]:
+                  - /url: "javascript:"
+                  - generic [ref=e11878]: 
+                - generic [ref=e11879]: 
+            - row [ref=e11880] [cursor=pointer]:
+              - gridcell [ref=e11881]: ESV_APP_NO_VIN
+              - gridcell [ref=e11882]: Without Vin SA
+              - gridcell [ref=e11883]: SM_ESV
+              - gridcell [ref=e11884]: SM_ESV_AUDIT SM_ESV_CUSTOMER SM_ESV_DASHBOARD
+              - gridcell [ref=e11885]: AUDIT_CHOOSE_DATE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W)
+              - gridcell [ref=e11886]: RBAC Admin
+              - gridcell [ref=e11887]: 23-09-2024 16:25:10
+              - gridcell [ref=e11888]: RBAC Admin
+              - gridcell [ref=e11889]: 23-09-2024 16:25:10
+              - gridcell [ref=e11890]: "true"
+              - gridcell [ref=e11891]:
+                - link [ref=e11892]:
+                  - /url: "javascript:"
+                  - generic [ref=e11893]: 
+                - generic [ref=e11894]: 
+            - row [ref=e11895] [cursor=pointer]:
+              - gridcell [ref=e11896]: ESV_AUDIT_READ
+              - gridcell [ref=e11897]: ESV_AUDIT_READ
+              - gridcell [ref=e11898]: SM_ESV
+              - gridcell [ref=e11899]: SM_ESV_AUDIT
+              - gridcell [ref=e11900]: AUDIT_CHOOSE_DATE(R)
+              - gridcell [ref=e11901]: RBAC Admin
+              - gridcell [ref=e11902]: 26-09-2024 09:46:42
+              - gridcell [ref=e11903]: RBAC Admin
+              - gridcell [ref=e11904]: 26-09-2024 09:46:42
+              - gridcell [ref=e11905]: "true"
+              - gridcell [ref=e11906]:
+                - link [ref=e11907]:
+                  - /url: "javascript:"
+                  - generic [ref=e11908]: 
+                - generic [ref=e11909]: 
+            - row [ref=e11910] [cursor=pointer]:
+              - gridcell [ref=e11911]: ESV_AUDIT_READWRITE_ACCESS
+              - gridcell [ref=e11912]: ESV_AUDIT_READWRITE_ACCESS
+              - gridcell [ref=e11913]: SM_ESV
+              - gridcell [ref=e11914]: SM_ESV_AUDIT
+              - gridcell [ref=e11915]: AUDIT_CHOOSE_DATE(R & W)
+              - gridcell [ref=e11916]: RBAC Admin
+              - gridcell [ref=e11917]: 26-09-2024 09:47:50
+              - gridcell [ref=e11918]: RBAC Admin
+              - gridcell [ref=e11919]: 26-09-2024 09:47:50
+              - gridcell [ref=e11920]: "true"
+              - gridcell [ref=e11921]:
+                - link [ref=e11922]:
+                  - /url: "javascript:"
+                  - generic [ref=e11923]: 
+                - generic [ref=e11924]: 
+            - row [ref=e11925] [cursor=pointer]:
+              - gridcell [ref=e11926]: ESV_CHOOSE_VIN_QA
+              - gridcell [ref=e11927]: ESV_CHOOSE_VIN_QA
+              - gridcell [ref=e11928]: SM_ESV
+              - gridcell [ref=e11929]: SM_ESV_CHOOSE_VIN SM_ESV_DASHBOARD
+              - gridcell [ref=e11930]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e11931]: RBAC Admin
+              - gridcell [ref=e11932]: 30-09-2024 17:44:33
+              - gridcell [ref=e11933]: RBAC Admin
+              - gridcell [ref=e11934]: 30-09-2024 17:44:33
+              - gridcell [ref=e11935]: "true"
+              - gridcell [ref=e11936]:
+                - link [ref=e11937]:
+                  - /url: "javascript:"
+                  - generic [ref=e11938]: 
+                - generic [ref=e11939]: 
+            - row [ref=e11940] [cursor=pointer]:
+              - gridcell [ref=e11941]: ESV_CHOOSE_VIN_READ_ACCESS
+              - gridcell [ref=e11942]: ESV_CHOOSE_VIN_READ_ACCESS
+              - gridcell [ref=e11943]: SM_ESV
+              - gridcell [ref=e11944]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11945]: CHOOSE_VIN_SCAN_VEHICLE(R) | CHOOSE_VIN_SEARCH_VEHICLE(R) | CHOOSE_VIN_SELECT_VEHICLE(R)
+              - gridcell [ref=e11946]: RBAC Admin
+              - gridcell [ref=e11947]: 26-09-2024 09:38:23
+              - gridcell [ref=e11948]: RBAC Admin
+              - gridcell [ref=e11949]: 26-09-2024 09:38:23
+              - gridcell [ref=e11950]: "true"
+              - gridcell [ref=e11951]:
+                - link [ref=e11952]:
+                  - /url: "javascript:"
+                  - generic [ref=e11953]: 
+                - generic [ref=e11954]: 
+            - row [ref=e11955] [cursor=pointer]:
+              - gridcell [ref=e11956]: ESV_CHOOSE_VIN_READWRITE_ACCESS
+              - gridcell [ref=e11957]: ESV_CHOOSE_VIN_READWRITE_ACCESS
+              - gridcell [ref=e11958]: SM_ESV
+              - gridcell [ref=e11959]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11960]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W)
+              - gridcell [ref=e11961]: RBAC Admin
+              - gridcell [ref=e11962]: 26-09-2024 09:39:12
+              - gridcell [ref=e11963]: RBAC Admin
+              - gridcell [ref=e11964]: 26-09-2024 09:39:12
+              - gridcell [ref=e11965]: "true"
+              - gridcell [ref=e11966]:
+                - link [ref=e11967]:
+                  - /url: "javascript:"
+                  - generic [ref=e11968]: 
+                - generic [ref=e11969]: 
+            - row [ref=e11970] [cursor=pointer]:
+              - gridcell [ref=e11971]: ESV_CHOOSEVIN_READ_CUSTOMERSEARCH
+              - gridcell [ref=e11972]: ESV_CHOOSEVIN_READ_CUSTOMERSEARCH
+              - gridcell [ref=e11973]: SM_ESV
+              - gridcell [ref=e11974]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER
+              - gridcell [ref=e11975]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_SEARCH(R) | CUSTOMER_TAP_KEYFOB(R & W)
+              - gridcell [ref=e11976]: RBAC Admin
+              - gridcell [ref=e11977]: 07-10-2024 14:44:59
+              - gridcell [ref=e11978]: RBAC Admin
+              - gridcell [ref=e11979]: 07-10-2024 14:44:59
+              - gridcell [ref=e11980]: "true"
+              - gridcell [ref=e11981]:
+                - link [ref=e11982]:
+                  - /url: "javascript:"
+                  - generic [ref=e11983]: 
+                - generic [ref=e11984]: 
+            - row [ref=e11985] [cursor=pointer]:
+              - gridcell [ref=e11986]: ESV_CHOOSEVIN_READACCESS
+              - gridcell [ref=e11987]: ESV_CHOOSEVIN_READACCESS
+              - gridcell [ref=e11988]: SM_ESV
+              - gridcell [ref=e11989]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e11990]: CHOOSE_VIN_SCAN_VEHICLE(R) | CHOOSE_VIN_SEARCH_VEHICLE(R) | CHOOSE_VIN_SELECT_VEHICLE(R)
+              - gridcell [ref=e11991]: RBAC Admin
+              - gridcell [ref=e11992]: 04-10-2024 12:04:10
+              - gridcell [ref=e11993]: RBAC Admin
+              - gridcell [ref=e11994]: 04-10-2024 12:04:10
+              - gridcell [ref=e11995]: "true"
+              - gridcell [ref=e11996]:
+                - link [ref=e11997]:
+                  - /url: "javascript:"
+                  - generic [ref=e11998]: 
+                - generic [ref=e11999]: 
+            - row [ref=e12000] [cursor=pointer]:
+              - gridcell [ref=e12001]: ESV_CHOOSEVIN_READWRITE_ACCESS
+              - gridcell [ref=e12002]: ESV_CHOOSEVIN_READWRITE_ACCESS
+              - gridcell [ref=e12003]: SM_ESV
+              - gridcell [ref=e12004]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e12005]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W)
+              - gridcell [ref=e12006]: RBAC Admin
+              - gridcell [ref=e12007]: 04-10-2024 12:07:11
+              - gridcell [ref=e12008]: RBAC Admin
+              - gridcell [ref=e12009]: 04-10-2024 12:07:11
+              - gridcell [ref=e12010]: "true"
+              - gridcell [ref=e12011]:
+                - link [ref=e12012]:
+                  - /url: "javascript:"
+                  - generic [ref=e12013]: 
+                - generic [ref=e12014]: 
+            - row [ref=e12015] [cursor=pointer]:
+              - gridcell [ref=e12016]: ESV_Choosvin_search_QA
+              - gridcell [ref=e12017]: ESV_Choosvin_search_QA
+              - gridcell [ref=e12018]: SM_ESV
+              - gridcell [ref=e12019]: SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e12020]: CHOOSE_VIN_SEARCH_VEHICLE(R)
+              - gridcell [ref=e12021]: RBAC Admin
+              - gridcell [ref=e12022]: 07-10-2024 10:17:46
+              - gridcell [ref=e12023]: RBAC Admin
+              - gridcell [ref=e12024]: 07-10-2024 10:29:26
+              - gridcell [ref=e12025]: "true"
+              - gridcell [ref=e12026]:
+                - link [ref=e12027]:
+                  - /url: "javascript:"
+                  - generic [ref=e12028]: 
+                - generic [ref=e12029]: 
+            - row [ref=e12030] [cursor=pointer]:
+              - gridcell [ref=e12031]: ESV_CUSTOMER_READ_ACCESS
+              - gridcell [ref=e12032]: ESV_CUSTOMER_READ_ACCESS
+              - gridcell [ref=e12033]: SM_ESV
+              - gridcell [ref=e12034]: SM_ESV_CUSTOMER
+              - gridcell [ref=e12035]: CUSTOMER_BATTERY_SWAP(R) | CUSTOMER_BLE_UNLOCK(R) | CUSTOMER_SCAN_VEHICLE(R) | CUSTOMER_TAP_KEYFOB(R)
+              - gridcell [ref=e12036]: RBAC Admin
+              - gridcell [ref=e12037]: 26-09-2024 09:44:46
+              - gridcell [ref=e12038]: RBAC Admin
+              - gridcell [ref=e12039]: 26-09-2024 09:44:46
+              - gridcell [ref=e12040]: "true"
+              - gridcell [ref=e12041]:
+                - link [ref=e12042]:
+                  - /url: "javascript:"
+                  - generic [ref=e12043]: 
+                - generic [ref=e12044]: 
+            - row [ref=e12045] [cursor=pointer]:
+              - gridcell [ref=e12046]: ESV_CUSTOMER_READWRITE_ACCESS
+              - gridcell [ref=e12047]: ESV_CUSTOMER_READWRITE_ACCESS
+              - gridcell [ref=e12048]: SM_ESV
+              - gridcell [ref=e12049]: SM_ESV_CUSTOMER
+              - gridcell [ref=e12050]: CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_TAP_KEYFOB(R & W)
+              - gridcell [ref=e12051]: RBAC Admin
+              - gridcell [ref=e12052]: 26-09-2024 09:45:53
+              - gridcell [ref=e12053]: RBAC Admin
+              - gridcell [ref=e12054]: 26-09-2024 09:45:53
+              - gridcell [ref=e12055]: "true"
+              - gridcell [ref=e12056]:
+                - link [ref=e12057]:
+                  - /url: "javascript:"
+                  - generic [ref=e12058]: 
+                - generic [ref=e12059]: 
+            - row [ref=e12060] [cursor=pointer]:
+              - gridcell [ref=e12061]: ESV_CV_CUSTOMER_READ_SCAN
+              - gridcell [ref=e12062]: ESV_CV_CUSTOMER_READ_SCAN
+              - gridcell [ref=e12063]: SM_ESV
+              - gridcell [ref=e12064]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER
+              - gridcell [ref=e12065]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R) | CUSTOMER_SCAN_VEHICLE(R) | CUSTOMER_SEARCH(R & W) | CUSTOMER_TAP_KEYFOB(R & W)
+              - gridcell [ref=e12066]: RBAC Admin
+              - gridcell [ref=e12067]: 07-10-2024 14:34:03
+              - gridcell [ref=e12068]: RBAC Admin
+              - gridcell [ref=e12069]: 07-10-2024 14:34:03
+              - gridcell [ref=e12070]: "true"
+              - gridcell [ref=e12071]:
+                - link [ref=e12072]:
+                  - /url: "javascript:"
+                  - generic [ref=e12073]: 
+                - generic [ref=e12074]: 
+            - row [ref=e12075] [cursor=pointer]:
+              - gridcell [ref=e12076]: ESV_CV_READ_CUSTOMERSEARCH
+              - gridcell [ref=e12077]: ESV_CV_READ_CUSTOMERSEARCH
+              - gridcell [ref=e12078]: SM_ESV
+              - gridcell [ref=e12079]: SM_ESV_CUSTOMER
+              - gridcell [ref=e12080]: CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_SEARCH(R) | CUSTOMER_TAP_KEYFOB(R & W)
+              - gridcell [ref=e12081]: RBAC Admin
+              - gridcell [ref=e12082]: 07-10-2024 14:39:35
+              - gridcell [ref=e12083]: RBAC Admin
+              - gridcell [ref=e12084]: 07-10-2024 14:39:35
+              - gridcell [ref=e12085]: "true"
+              - gridcell [ref=e12086]:
+                - link [ref=e12087]:
+                  - /url: "javascript:"
+                  - generic [ref=e12088]: 
+                - generic [ref=e12089]: 
+            - row [ref=e12090] [cursor=pointer]:
+              - gridcell [ref=e12091]: ESV_CV_WITH_FIELD_READACCESS
+              - gridcell [ref=e12092]: ESV_CV_WITH_FIELD_READACCESS
+              - gridcell [ref=e12093]: SM_ESV
+              - gridcell [ref=e12094]: SM_ESV_CHOOSE_VIN SM_ESV_FIELD
+              - gridcell [ref=e12095]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | FIELD_EXCHANGE_BATTERY(R) | FIELD_LOAD_EMPTY_BATTERY(R) | FIELD_SCAN_STATION(R) | FIELD_SEARCH_STATION(R) | FIELD_UNLOAD_FULL_BATTERY(R)
+              - gridcell [ref=e12096]: RBAC Admin
+              - gridcell [ref=e12097]: 04-10-2024 12:19:34
+              - gridcell [ref=e12098]: RBAC Admin
+              - gridcell [ref=e12099]: 04-10-2024 12:19:34
+              - gridcell [ref=e12100]: "true"
+              - gridcell [ref=e12101]:
+                - link [ref=e12102]:
+                  - /url: "javascript:"
+                  - generic [ref=e12103]: 
+                - generic [ref=e12104]: 
+            - row [ref=e12105] [cursor=pointer]:
+              - gridcell [ref=e12106]: ESV_CV_WITH_FIELD_SCAN_SEARCH_READWRITEACCESS
+              - gridcell [ref=e12107]: ESV_CV_WITH_FIELD_SCAN_SEARCH_READWRITEACCESS
+              - gridcell [ref=e12108]: SM_ESV
+              - gridcell [ref=e12109]: SM_ESV_CHOOSE_VIN SM_ESV_FIELD
+              - gridcell [ref=e12110]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | FIELD_SCAN_STATION(R & W) | FIELD_SEARCH_STATION(R & W)
+              - gridcell [ref=e12111]: RBAC Admin
+              - gridcell [ref=e12112]: 04-10-2024 12:22:51
+              - gridcell [ref=e12113]: RBAC Admin
+              - gridcell [ref=e12114]: 04-10-2024 12:22:51
+              - gridcell [ref=e12115]: "true"
+              - gridcell [ref=e12116]:
+                - link [ref=e12117]:
+                  - /url: "javascript:"
+                  - generic [ref=e12118]: 
+                - generic [ref=e12119]: 
+            - row [ref=e12120] [cursor=pointer]:
+              - gridcell [ref=e12121]: ESV_CV_WITH_FIELD_WRITEACCESS_SCANSEARCH_READBATTE
+              - gridcell [ref=e12122]: ESV_CV_WITH_FIELD_WRITEACCESS_SCANSEARCH_READBATTE
+              - gridcell [ref=e12123]: SM_ESV
+              - gridcell [ref=e12124]: SM_ESV_CHOOSE_VIN SM_ESV_FIELD
+              - gridcell [ref=e12125]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | FIELD_EXCHANGE_BATTERY(R) | FIELD_LOAD_EMPTY_BATTERY(R & W) | FIELD_SCAN_STATION(R & W) | FIELD_SEARCH_STATION(R & W) | FIELD_UNLOAD_FULL_BATTERY(R & W)
+              - gridcell [ref=e12126]: RBAC Admin
+              - gridcell [ref=e12127]: 04-10-2024 12:34:15
+              - gridcell [ref=e12128]: RBAC Admin
+              - gridcell [ref=e12129]: 04-10-2024 12:34:15
+              - gridcell [ref=e12130]: "true"
+              - gridcell [ref=e12131]:
+                - link [ref=e12132]:
+                  - /url: "javascript:"
+                  - generic [ref=e12133]: 
+                - generic [ref=e12134]: 
+            - row [ref=e12135] [cursor=pointer]:
+              - gridcell [ref=e12136]: ESV_CV_WITH_SERVICE_READACCESS
+              - gridcell [ref=e12137]: ESV_CV_WITH_SERVICE_READACCESS
+              - gridcell [ref=e12138]: SM_ESV
+              - gridcell [ref=e12139]: SM_ESV_CHOOSE_VIN SM_ESV_SERVICE
+              - gridcell [ref=e12140]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | SERVICE_EXCHANGE_BATTERY(R) | SERVICE_LOAD_FULL_BATTERY(R) | SERVICE_SCAN_STATION(R) | SERVICE_SEARCH_STATION(R) | SERVICE_UNLOAD_EMPTY_BATTERY(R)
+              - gridcell [ref=e12141]: RBAC Admin
+              - gridcell [ref=e12142]: 04-10-2024 12:39:43
+              - gridcell [ref=e12143]: RBAC Admin
+              - gridcell [ref=e12144]: 04-10-2024 12:39:43
+              - gridcell [ref=e12145]: "true"
+              - gridcell [ref=e12146]:
+                - link [ref=e12147]:
+                  - /url: "javascript:"
+                  - generic [ref=e12148]: 
+                - generic [ref=e12149]: 
+            - row [ref=e12150] [cursor=pointer]:
+              - gridcell [ref=e12151]: ESV_CV_WITH_SERVICE_WRITEACCESS
+              - gridcell [ref=e12152]: ESV_CV_WITH_SERVICE_WRITEACCESS
+              - gridcell [ref=e12153]: SM_ESV
+              - gridcell [ref=e12154]: SM_ESV_CHOOSE_VIN SM_ESV_SERVICE
+              - gridcell [ref=e12155]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_SCAN_STATION(R & W) | SERVICE_SEARCH_STATION(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e12156]: RBAC Admin
+              - gridcell [ref=e12157]: 04-10-2024 12:57:48
+              - gridcell [ref=e12158]: RBAC Admin
+              - gridcell [ref=e12159]: 04-10-2024 12:57:48
+              - gridcell [ref=e12160]: "true"
+              - gridcell [ref=e12161]:
+                - link [ref=e12162]:
+                  - /url: "javascript:"
+                  - generic [ref=e12163]: 
+                - generic [ref=e12164]: 
+            - row [ref=e12165] [cursor=pointer]:
+              - gridcell [ref=e12166]: ESV_CV_WITH_SERVICE_WRITEACCESS_READACCESSBATTERY
+              - gridcell [ref=e12167]: ESV_CV_WITH_SERVICE_WRITEACCESS_READACCESSBATTERY
+              - gridcell [ref=e12168]: SM_ESV
+              - gridcell [ref=e12169]: SM_ESV_CHOOSE_VIN SM_ESV_SERVICE
+              - gridcell [ref=e12170]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | SERVICE_EXCHANGE_BATTERY(R) | SERVICE_LOAD_FULL_BATTERY(R) | SERVICE_SCAN_STATION(R & W) | SERVICE_SEARCH_STATION(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R)
+              - gridcell [ref=e12171]: RBAC Admin
+              - gridcell [ref=e12172]: 04-10-2024 12:50:40
+              - gridcell [ref=e12173]: RBAC Admin
+              - gridcell [ref=e12174]: 04-10-2024 12:50:40
+              - gridcell [ref=e12175]: "true"
+              - gridcell [ref=e12176]:
+                - link [ref=e12177]:
+                  - /url: "javascript:"
+                  - generic [ref=e12178]: 
+                - generic [ref=e12179]: 
+            - row [ref=e12180] [cursor=pointer]:
+              - gridcell [ref=e12181]: ESV_DASHBOARD_READ_ACCESS
+              - gridcell [ref=e12182]: ESV_DASHBOARD_READ_ACCESS
+              - gridcell [ref=e12183]: SM_ESV
+              - gridcell [ref=e12184]: SM_ESV_DASHBOARD
+              - gridcell [ref=e12185]: DASHBOARD_CHANGE_VEHICLE(R) | ESVNEW(R)
+              - gridcell [ref=e12186]: RBAC Admin
+              - gridcell [ref=e12187]: 26-09-2024 09:40:22
+              - gridcell [ref=e12188]: RBAC Admin
+              - gridcell [ref=e12189]: 26-09-2024 09:40:22
+              - gridcell [ref=e12190]: "true"
+              - gridcell [ref=e12191]:
+                - link [ref=e12192]:
+                  - /url: "javascript:"
+                  - generic [ref=e12193]: 
+                - generic [ref=e12194]: 
+            - row [ref=e12195] [cursor=pointer]:
+              - gridcell [ref=e12196]: ESV_DASHBOARD_WRITEREAD_ACCESS
+              - gridcell [ref=e12197]: ESV_DASHBOARD_WRITEREAD_ACCESS
+              - gridcell [ref=e12198]: SM_ESV
+              - gridcell [ref=e12199]: SM_ESV_DASHBOARD
+              - gridcell [ref=e12200]: DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e12201]: RBAC Admin
+              - gridcell [ref=e12202]: 26-09-2024 09:41:01
+              - gridcell [ref=e12203]: RBAC Admin
+              - gridcell [ref=e12204]: 26-09-2024 09:41:01
+              - gridcell [ref=e12205]: "true"
+              - gridcell [ref=e12206]:
+                - link [ref=e12207]:
+                  - /url: "javascript:"
+                  - generic [ref=e12208]: 
+                - generic [ref=e12209]: 
+            - row [ref=e12210] [cursor=pointer]:
+              - gridcell [ref=e12211]: ESV_EXCHANGE_FIELD_SER_RW_WITH_CHOOSEVIN_RW
+              - gridcell [ref=e12212]: ESV_EXCHANGE_FIELD_SER_RW_WITH_CHOOSEVIN_RW
+              - gridcell [ref=e12213]: SM_ESV
+              - gridcell [ref=e12214]: SM_ESV_CHOOSE_VIN SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e12215]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | FIELD_EXCHANGE_BATTERY(R & W) | SERVICE_EXCHANGE_BATTERY(R & W)
+              - gridcell [ref=e12216]: RBAC Admin
+              - gridcell [ref=e12217]: 26-09-2024 12:55:26
+              - gridcell [ref=e12218]: RBAC Admin
+              - gridcell [ref=e12219]: 26-09-2024 12:55:26
+              - gridcell [ref=e12220]: "true"
+              - gridcell [ref=e12221]:
+                - link [ref=e12222]:
+                  - /url: "javascript:"
+                  - generic [ref=e12223]: 
+                - generic [ref=e12224]: 
+            - row [ref=e12225] [cursor=pointer]:
+              - gridcell [ref=e12226]: ESV_FIELD_READ_ACCESS
+              - gridcell [ref=e12227]: ESV_FIELD_READ_ACCESS
+              - gridcell [ref=e12228]: SM_ESV
+              - gridcell [ref=e12229]: SM_ESV_FIELD
+              - gridcell [ref=e12230]: FIELD_EXCHANGE_BATTERY(R) | FIELD_LOAD_EMPTY_BATTERY(R) | FIELD_UNLOAD_FULL_BATTERY(R)
+              - gridcell [ref=e12231]: RBAC Admin
+              - gridcell [ref=e12232]: 26-09-2024 09:41:52
+              - gridcell [ref=e12233]: RBAC Admin
+              - gridcell [ref=e12234]: 26-09-2024 09:41:52
+              - gridcell [ref=e12235]: "true"
+              - gridcell [ref=e12236]:
+                - link [ref=e12237]:
+                  - /url: "javascript:"
+                  - generic [ref=e12238]: 
+                - generic [ref=e12239]: 
+            - row [ref=e12240] [cursor=pointer]:
+              - gridcell [ref=e12241]: ESV_FIELD_READWRITE_ACCESS
+              - gridcell [ref=e12242]: ESV_FIELD_READWRITE_ACCESS
+              - gridcell [ref=e12243]: SM_ESV
+              - gridcell [ref=e12244]: SM_ESV_FIELD
+              - gridcell [ref=e12245]: FIELD_EXCHANGE_BATTERY(R & W) | FIELD_LOAD_EMPTY_BATTERY(R & W) | FIELD_UNLOAD_FULL_BATTERY(R & W)
+              - gridcell [ref=e12246]: RBAC Admin
+              - gridcell [ref=e12247]: 26-09-2024 09:42:27
+              - gridcell [ref=e12248]: RBAC Admin
+              - gridcell [ref=e12249]: 26-09-2024 09:42:27
+              - gridcell [ref=e12250]: "true"
+              - gridcell [ref=e12251]:
+                - link [ref=e12252]:
+                  - /url: "javascript:"
+                  - generic [ref=e12253]: 
+                - generic [ref=e12254]: 
+            - row [ref=e12255] [cursor=pointer]:
+              - gridcell [ref=e12256]: ESV_FULLACCESS
+              - gridcell [ref=e12257]: ESV_FULLACCESS
+              - gridcell [ref=e12258]: SM_ESV
+              - gridcell [ref=e12259]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e12260]: AUDIT_CHOOSE_DATE(R & W) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_SEARCH(R & W) | CUSTOMER_TAP_KEYFOB(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W) | FIELD_EXCHANGE_BATTERY(R & W) | FIELD_LOAD_EMPTY_BATTERY(R & W) | FIELD_SCAN_STATION(R & W) | FIELD_SEARCH_STATION(R & W) | FIELD_UNLOAD_FULL_BATTERY(R & W) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_SCAN_STATION(R & W) | SERVICE_SEARCH_STATION(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e12261]: RBAC Admin
+              - gridcell [ref=e12262]: 04-10-2024 15:47:18
+              - gridcell [ref=e12263]: RBAC Admin
+              - gridcell [ref=e12264]: 04-10-2024 15:47:18
+              - gridcell [ref=e12265]: "true"
+              - gridcell [ref=e12266]:
+                - link [ref=e12267]:
+                  - /url: "javascript:"
+                  - generic [ref=e12268]: 
+                - generic [ref=e12269]: 
+            - row [ref=e12270] [cursor=pointer]:
+              - gridcell [ref=e12271]: ESV_NEW_USER_ROLE
+              - gridcell [ref=e12272]: ESV_NEW_USER_ROLE
+              - gridcell [ref=e12273]: SM_ESV
+              - gridcell [ref=e12274]: SM_ESV_AUDIT
+              - gridcell [ref=e12275]: AUDIT_CHOOSE_DATE(R)
+              - gridcell [ref=e12276]: RBAC Admin
+              - gridcell [ref=e12277]: 27-09-2024 12:43:10
+              - gridcell [ref=e12278]: RBAC Admin
+              - gridcell [ref=e12279]: 27-09-2024 12:43:10
+              - gridcell [ref=e12280]: "true"
+              - gridcell [ref=e12281]:
+                - link [ref=e12282]:
+                  - /url: "javascript:"
+                  - generic [ref=e12283]: 
+                - generic [ref=e12284]: 
+            - row [ref=e12285] [cursor=pointer]:
+              - gridcell [ref=e12286]: ESV_R_ALLFEATURE_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12287]: ESV_R_ALLFEATURE_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12288]: SM_ESV
+              - gridcell [ref=e12289]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e12290]: AUDIT_CHOOSE_DATE(R) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R) | CUSTOMER_BLE_UNLOCK(R) | CUSTOMER_SCAN_VEHICLE(R) | CUSTOMER_TAP_KEYFOB(R) | DASHBOARD_CHANGE_VEHICLE(R) | ESVNEW(R) | FIELD_EXCHANGE_BATTERY(R) | FIELD_LOAD_EMPTY_BATTERY(R) | FIELD_UNLOAD_FULL_BATTERY(R) | SERVICE_EXCHANGE_BATTERY(R) | SERVICE_LOAD_FULL_BATTERY(R) | SERVICE_UNLOAD_EMPTY_BATTERY(R)
+              - gridcell [ref=e12291]: RBAC Admin
+              - gridcell [ref=e12292]: 26-09-2024 11:20:14
+              - gridcell [ref=e12293]: RBAC Admin
+              - gridcell [ref=e12294]: 26-09-2024 11:20:14
+              - gridcell [ref=e12295]: "true"
+              - gridcell [ref=e12296]:
+                - link [ref=e12297]:
+                  - /url: "javascript:"
+                  - generic [ref=e12298]: 
+                - generic [ref=e12299]: 
+            - row [ref=e12300] [cursor=pointer]:
+              - gridcell [ref=e12301]: ESV_R_CUSTOMER_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12302]: ESV_R_CUSTOMER_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12303]: SM_ESV
+              - gridcell [ref=e12304]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER
+              - gridcell [ref=e12305]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R) | CUSTOMER_BLE_UNLOCK(R) | CUSTOMER_SCAN_VEHICLE(R) | CUSTOMER_TAP_KEYFOB(R)
+              - gridcell [ref=e12306]: RBAC Admin
+              - gridcell [ref=e12307]: 26-09-2024 12:15:15
+              - gridcell [ref=e12308]: RBAC Admin
+              - gridcell [ref=e12309]: 26-09-2024 12:15:15
+              - gridcell [ref=e12310]: "true"
+              - gridcell [ref=e12311]:
+                - link [ref=e12312]:
+                  - /url: "javascript:"
+                  - generic [ref=e12313]: 
+                - generic [ref=e12314]: 
+            - row [ref=e12315] [cursor=pointer]:
+              - gridcell [ref=e12316]: ESV_R_W_AUDIT_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12317]: ESV_R_W_AUDIT_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12318]: SM_ESV
+              - gridcell [ref=e12319]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e12320]: AUDIT_CHOOSE_DATE(R & W) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W)
+              - gridcell [ref=e12321]: RBAC Admin
+              - gridcell [ref=e12322]: 26-09-2024 11:16:11
+              - gridcell [ref=e12323]: RBAC Admin
+              - gridcell [ref=e12324]: 26-09-2024 11:16:11
+              - gridcell [ref=e12325]: "true"
+              - gridcell [ref=e12326]:
+                - link [ref=e12327]:
+                  - /url: "javascript:"
+                  - generic [ref=e12328]: 
+                - generic [ref=e12329]: 
+            - row [ref=e12330] [cursor=pointer]:
+              - gridcell [ref=e12331]: ESV_R_W_CUSTOMER_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12332]: ESV_R_W_CUSTOMER_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12333]: SM_ESV
+              - gridcell [ref=e12334]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER
+              - gridcell [ref=e12335]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_TAP_KEYFOB(R & W)
+              - gridcell [ref=e12336]: RBAC Admin
+              - gridcell [ref=e12337]: 26-09-2024 11:18:51
+              - gridcell [ref=e12338]: RBAC Admin
+              - gridcell [ref=e12339]: 26-09-2024 11:18:51
+              - gridcell [ref=e12340]: "true"
+              - gridcell [ref=e12341]:
+                - link [ref=e12342]:
+                  - /url: "javascript:"
+                  - generic [ref=e12343]: 
+                - generic [ref=e12344]: 
+            - row [ref=e12345] [cursor=pointer]:
+              - gridcell [ref=e12346]: ESV_R_W_DASHBOARD_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12347]: ESV_R_W_DASHBOARD_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12348]: SM_ESV
+              - gridcell [ref=e12349]: SM_ESV_CHOOSE_VIN SM_ESV_DASHBOARD
+              - gridcell [ref=e12350]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e12351]: RBAC Admin
+              - gridcell [ref=e12352]: 26-09-2024 11:16:52
+              - gridcell [ref=e12353]: RBAC Admin
+              - gridcell [ref=e12354]: 26-09-2024 11:16:52
+              - gridcell [ref=e12355]: "true"
+              - gridcell [ref=e12356]:
+                - link [ref=e12357]:
+                  - /url: "javascript:"
+                  - generic [ref=e12358]: 
+                - generic [ref=e12359]: 
+            - row [ref=e12360] [cursor=pointer]:
+              - gridcell [ref=e12361]: ESV_R_W_FIELD_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12362]: ESV_R_W_FIELD_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12363]: SM_ESV
+              - gridcell [ref=e12364]: SM_ESV_CHOOSE_VIN SM_ESV_FIELD
+              - gridcell [ref=e12365]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | FIELD_EXCHANGE_BATTERY(R & W) | FIELD_LOAD_EMPTY_BATTERY(R & W) | FIELD_UNLOAD_FULL_BATTERY(R & W)
+              - gridcell [ref=e12366]: RBAC Admin
+              - gridcell [ref=e12367]: 26-09-2024 11:17:29
+              - gridcell [ref=e12368]: RBAC Admin
+              - gridcell [ref=e12369]: 26-09-2024 11:17:29
+              - gridcell [ref=e12370]: "true"
+              - gridcell [ref=e12371]:
+                - link [ref=e12372]:
+                  - /url: "javascript:"
+                  - generic [ref=e12373]: 
+                - generic [ref=e12374]: 
+            - row [ref=e12375] [cursor=pointer]:
+              - gridcell [ref=e12376]: ESV_R_W_SERVICE_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12377]: ESV_R_W_SERVICE_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12378]: SM_ESV
+              - gridcell [ref=e12379]: SM_ESV_CHOOSE_VIN SM_ESV_SERVICE
+              - gridcell [ref=e12380]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e12381]: RBAC Admin
+              - gridcell [ref=e12382]: 26-09-2024 11:18:10
+              - gridcell [ref=e12383]: RBAC Admin
+              - gridcell [ref=e12384]: 26-09-2024 11:18:10
+              - gridcell [ref=e12385]: "true"
+              - gridcell [ref=e12386]:
+                - link [ref=e12387]:
+                  - /url: "javascript:"
+                  - generic [ref=e12388]: 
+                - generic [ref=e12389]: 
+            - row [ref=e12390] [cursor=pointer]:
+              - gridcell [ref=e12391]: ESV_READ__SERVICE_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12392]: ESV_READ__SERVICE_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12393]: SM_ESV
+              - gridcell [ref=e12394]: SM_ESV_CHOOSE_VIN SM_ESV_SERVICE
+              - gridcell [ref=e12395]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | SERVICE_EXCHANGE_BATTERY(R) | SERVICE_LOAD_FULL_BATTERY(R) | SERVICE_UNLOAD_EMPTY_BATTERY(R)
+              - gridcell [ref=e12396]: RBAC Admin
+              - gridcell [ref=e12397]: 26-09-2024 11:13:44
+              - gridcell [ref=e12398]: RBAC Admin
+              - gridcell [ref=e12399]: 26-09-2024 11:13:44
+              - gridcell [ref=e12400]: "true"
+              - gridcell [ref=e12401]:
+                - link [ref=e12402]:
+                  - /url: "javascript:"
+                  - generic [ref=e12403]: 
+                - generic [ref=e12404]: 
+            - row [ref=e12405] [cursor=pointer]:
+              - gridcell [ref=e12406]: ESV_READ_AUDIT_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12407]: ESV_READ_AUDIT_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12408]: SM_ESV
+              - gridcell [ref=e12409]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN
+              - gridcell [ref=e12410]: AUDIT_CHOOSE_DATE(R) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W)
+              - gridcell [ref=e12411]: RBAC Admin
+              - gridcell [ref=e12412]: 26-09-2024 11:15:35
+              - gridcell [ref=e12413]: RBAC Admin
+              - gridcell [ref=e12414]: 26-09-2024 11:15:35
+              - gridcell [ref=e12415]: "true"
+              - gridcell [ref=e12416]:
+                - link [ref=e12417]:
+                  - /url: "javascript:"
+                  - generic [ref=e12418]: 
+                - generic [ref=e12419]: 
+            - row [ref=e12420] [cursor=pointer]:
+              - gridcell [ref=e12421]: ESV_READ_CUSTOMER_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12422]: ESV_READ_CUSTOMER_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12423]: SM_ESV
+              - gridcell [ref=e12424]: SM_ESV_CUSTOMER
+              - gridcell [ref=e12425]: CUSTOMER_BATTERY_SWAP(R) | CUSTOMER_BLE_UNLOCK(R) | CUSTOMER_SCAN_VEHICLE(R) | CUSTOMER_TAP_KEYFOB(R)
+              - gridcell [ref=e12426]: RBAC Admin
+              - gridcell [ref=e12427]: 26-09-2024 11:14:30
+              - gridcell [ref=e12428]: RBAC Admin
+              - gridcell [ref=e12429]: 26-09-2024 12:14:43
+              - gridcell [ref=e12430]: "false"
+              - gridcell [ref=e12431]:
+                - generic [ref=e12432]: 
+            - row [ref=e12433] [cursor=pointer]:
+              - gridcell [ref=e12434]: ESV_READ_FIELD_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12435]: ESV_READ_FIELD_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12436]: SM_ESV
+              - gridcell [ref=e12437]: SM_ESV_CHOOSE_VIN SM_ESV_FIELD
+              - gridcell [ref=e12438]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | FIELD_EXCHANGE_BATTERY(R) | FIELD_LOAD_EMPTY_BATTERY(R) | FIELD_UNLOAD_FULL_BATTERY(R)
+              - gridcell [ref=e12439]: RBAC Admin
+              - gridcell [ref=e12440]: 26-09-2024 11:12:34
+              - gridcell [ref=e12441]: RBAC Admin
+              - gridcell [ref=e12442]: 26-09-2024 11:12:34
+              - gridcell [ref=e12443]: "true"
+              - gridcell [ref=e12444]:
+                - link [ref=e12445]:
+                  - /url: "javascript:"
+                  - generic [ref=e12446]: 
+                - generic [ref=e12447]: 
+            - row [ref=e12448] [cursor=pointer]:
+              - gridcell [ref=e12449]: ESV_READACCES_DASHBOARD_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12450]: ESV_READACCES_DASHBOARD_WITH_CHOOSEVIN_R_W
+              - gridcell [ref=e12451]: SM_ESV
+              - gridcell [ref=e12452]: SM_ESV_CHOOSE_VIN SM_ESV_DASHBOARD
+              - gridcell [ref=e12453]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R) | ESVNEW(R)
+              - gridcell [ref=e12454]: RBAC Admin
+              - gridcell [ref=e12455]: 26-09-2024 11:11:36
+              - gridcell [ref=e12456]: RBAC Admin
+              - gridcell [ref=e12457]: 26-09-2024 11:11:36
+              - gridcell [ref=e12458]: "true"
+              - gridcell [ref=e12459]:
+                - link [ref=e12460]:
+                  - /url: "javascript:"
+                  - generic [ref=e12461]: 
+                - generic [ref=e12462]: 
+            - row [ref=e12463] [cursor=pointer]:
+              - gridcell [ref=e12464]: ESV_READACCESS_ALLPAGES_EXCEPT_CHOOSEVIN
+              - gridcell [ref=e12465]: ESV_READACCESS_ALLPAGES_EXCEPT_CHOOSEVIN
+              - gridcell [ref=e12466]: SM_ESV
+              - gridcell [ref=e12467]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e12468]: AUDIT_CHOOSE_DATE(R) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R) | CUSTOMER_BLE_UNLOCK(R) | CUSTOMER_SCAN_VEHICLE(R) | CUSTOMER_SEARCH(R) | CUSTOMER_TAP_KEYFOB(R) | DASHBOARD_CHANGE_VEHICLE(R) | ESVNEW(R) | FIELD_EXCHANGE_BATTERY(R) | FIELD_LOAD_EMPTY_BATTERY(R) | FIELD_SCAN_STATION(R) | FIELD_SEARCH_STATION(R) | FIELD_UNLOAD_FULL_BATTERY(R) | SERVICE_EXCHANGE_BATTERY(R) | SERVICE_LOAD_FULL_BATTERY(R) | SERVICE_SCAN_STATION(R) | SERVICE_SEARCH_STATION(R) | SERVICE_UNLOAD_EMPTY_BATTERY(R)
+              - gridcell [ref=e12469]: RBAC Admin
+              - gridcell [ref=e12470]: 04-10-2024 15:41:05
+              - gridcell [ref=e12471]: RBAC Admin
+              - gridcell [ref=e12472]: 04-10-2024 15:41:05
+              - gridcell [ref=e12473]: "true"
+              - gridcell [ref=e12474]:
+                - link [ref=e12475]:
+                  - /url: "javascript:"
+                  - generic [ref=e12476]: 
+                - generic [ref=e12477]: 
+            - row [ref=e12478] [cursor=pointer]:
+              - gridcell [ref=e12479]: ESV_READSEARCH_ACCESSSCAN_ON_CUSTOMER_CV
+              - gridcell [ref=e12480]: ESV_READSEARCH_ACCESSSCAN_ON_CUSTOMER_CV
+              - gridcell [ref=e12481]: SM_ESV
+              - gridcell [ref=e12482]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER
+              - gridcell [ref=e12483]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_TAP_KEYFOB(R & W)
+              - gridcell [ref=e12484]: RBAC Admin
+              - gridcell [ref=e12485]: 07-10-2024 15:05:33
+              - gridcell [ref=e12486]: RBAC Admin
+              - gridcell [ref=e12487]: 07-10-2024 15:05:33
+              - gridcell [ref=e12488]: "true"
+              - gridcell [ref=e12489]:
+                - link [ref=e12490]:
+                  - /url: "javascript:"
+                  - generic [ref=e12491]: 
+                - generic [ref=e12492]: 
+            - row [ref=e12493] [cursor=pointer]:
+              - gridcell [ref=e12494]: ESV_SERVICE_QA
+              - gridcell [ref=e12495]: ESV_SERVICE_QAA
+              - gridcell [ref=e12496]: SM_ESV
+              - gridcell [ref=e12497]: SM_ESV_CHOOSE_VIN SM_ESV_SERVICE
+              - gridcell [ref=e12498]: CHOOSE_VIN_SEARCH_VEHICLE(R) | CHOOSE_VIN_SELECT_VEHICLE(R) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e12499]: RBAC Admin
+              - gridcell [ref=e12500]: 30-09-2024 18:08:05
+              - gridcell [ref=e12501]: RBAC Admin
+              - gridcell [ref=e12502]: 01-10-2024 09:47:52
+              - gridcell [ref=e12503]: "true"
+              - gridcell [ref=e12504]:
+                - link [ref=e12505]:
+                  - /url: "javascript:"
+                  - generic [ref=e12506]: 
+                - generic [ref=e12507]: 
+            - row [ref=e12508] [cursor=pointer]:
+              - gridcell [ref=e12509]: ESV_SERVICE_READ_ACCESS
+              - gridcell [ref=e12510]: ESV_SERVICE_READ_ACCESS
+              - gridcell [ref=e12511]: SM_ESV
+              - gridcell [ref=e12512]: SM_ESV_SERVICE
+              - gridcell [ref=e12513]: SERVICE_EXCHANGE_BATTERY(R) | SERVICE_LOAD_FULL_BATTERY(R) | SERVICE_UNLOAD_EMPTY_BATTERY(R)
+              - gridcell [ref=e12514]: RBAC Admin
+              - gridcell [ref=e12515]: 26-09-2024 09:44:01
+              - gridcell [ref=e12516]: RBAC Admin
+              - gridcell [ref=e12517]: 26-09-2024 09:44:01
+              - gridcell [ref=e12518]: "true"
+              - gridcell [ref=e12519]:
+                - link [ref=e12520]:
+                  - /url: "javascript:"
+                  - generic [ref=e12521]: 
+                - generic [ref=e12522]: 
+            - row [ref=e12523] [cursor=pointer]:
+              - gridcell [ref=e12524]: ESV_SERVICE_READWRITE_ACCESS
+              - gridcell [ref=e12525]: ESV_SERVICE_READWRITE_ACCESS
+              - gridcell [ref=e12526]: SM_ESV
+              - gridcell [ref=e12527]: SM_ESV_SERVICE
+              - gridcell [ref=e12528]: SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e12529]: RBAC Admin
+              - gridcell [ref=e12530]: 26-09-2024 09:43:20
+              - gridcell [ref=e12531]: RBAC Admin
+              - gridcell [ref=e12532]: 26-09-2024 09:43:20
+              - gridcell [ref=e12533]: "true"
+              - gridcell [ref=e12534]:
+                - link [ref=e12535]:
+                  - /url: "javascript:"
+                  - generic [ref=e12536]: 
+                - generic [ref=e12537]: 
+            - row [ref=e12538] [cursor=pointer]:
+              - gridcell [ref=e12539]: ESV_User
+              - gridcell [ref=e12540]: ESV_user
+              - gridcell [ref=e12541]: SM_ESV
+              - gridcell [ref=e12542]: SM_ESV_AUDIT
+              - gridcell [ref=e12543]: AUDIT_CHOOSE_DATE(R & W)
+              - gridcell [ref=e12544]: RBAC Admin
+              - gridcell [ref=e12545]: 23-09-2024 15:10:38
+              - gridcell [ref=e12546]: RBAC Admin
+              - gridcell [ref=e12547]: 23-09-2024 15:10:38
+              - gridcell [ref=e12548]: "true"
+              - gridcell [ref=e12549]:
+                - link [ref=e12550]:
+                  - /url: "javascript:"
+                  - generic [ref=e12551]: 
+                - generic [ref=e12552]: 
+            - row [ref=e12553] [cursor=pointer]:
+              - gridcell [ref=e12554]: ESV_VIN_DASHBOARD_Audit_QA
+              - gridcell [ref=e12555]: ESV_VIN_DASHBOARD_Audit_QA
+              - gridcell [ref=e12556]: SM_ESV
+              - gridcell [ref=e12557]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_DASHBOARD
+              - gridcell [ref=e12558]: AUDIT_CHOOSE_DATE(R & W) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e12559]: RBAC Admin
+              - gridcell [ref=e12560]: 01-10-2024 16:16:14
+              - gridcell [ref=e12561]: RBAC Admin
+              - gridcell [ref=e12562]: 08-10-2024 15:14:25
+              - gridcell [ref=e12563]: "false"
+              - gridcell [ref=e12564]:
+                - generic [ref=e12565]: 
+            - row [ref=e12566] [cursor=pointer]:
+              - gridcell [ref=e12567]: ESV_VIN_DASHBOARD_Audit_QA1
+              - gridcell [ref=e12568]: ESV_VIN_DASHBOARD_Audit_QA1
+              - gridcell [ref=e12569]: SM_ESV
+              - gridcell [ref=e12570]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_DASHBOARD
+              - gridcell [ref=e12571]: AUDIT_CHOOSE_DATE(R & W) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e12572]: RBAC Admin
+              - gridcell [ref=e12573]: 08-10-2024 16:41:21
+              - gridcell [ref=e12574]: RBAC Admin
+              - gridcell [ref=e12575]: 08-10-2024 16:41:21
+              - gridcell [ref=e12576]: "true"
+              - gridcell [ref=e12577]:
+                - link [ref=e12578]:
+                  - /url: "javascript:"
+                  - generic [ref=e12579]: 
+                - generic [ref=e12580]: 
+            - row [ref=e12581] [cursor=pointer]:
+              - gridcell [ref=e12582]: ESV_VIN_DASHBOARD_Customer_QA
+              - gridcell [ref=e12583]: ESV_VIN_DASHBOARD_Customer_QA
+              - gridcell [ref=e12584]: SM_ESV
+              - gridcell [ref=e12585]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD
+              - gridcell [ref=e12586]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_TAP_KEYFOB(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e12587]: RBAC Admin
+              - gridcell [ref=e12588]: 01-10-2024 16:01:43
+              - gridcell [ref=e12589]: RBAC Admin
+              - gridcell [ref=e12590]: 01-10-2024 16:01:43
+              - gridcell [ref=e12591]: "true"
+              - gridcell [ref=e12592]:
+                - link [ref=e12593]:
+                  - /url: "javascript:"
+                  - generic [ref=e12594]: 
+                - generic [ref=e12595]: 
+            - row [ref=e12596] [cursor=pointer]:
+              - gridcell [ref=e12597]: ESV_VIN_DASHBOARD_Customer_QA1
+              - gridcell [ref=e12598]: ESV_VIN_DASHBOARD_Customer_QA1
+              - gridcell [ref=e12599]: SM_ESV
+              - gridcell [ref=e12600]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD
+              - gridcell [ref=e12601]: AUDIT_CHOOSE_DATE(R & W) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_SEARCH(R & W) | CUSTOMER_TAP_KEYFOB(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e12602]: RBAC Admin
+              - gridcell [ref=e12603]: 07-10-2024 12:25:13
+              - gridcell [ref=e12604]: RBAC Admin
+              - gridcell [ref=e12605]: 07-10-2024 12:25:13
+              - gridcell [ref=e12606]: "true"
+              - gridcell [ref=e12607]:
+                - link [ref=e12608]:
+                  - /url: "javascript:"
+                  - generic [ref=e12609]: 
+                - generic [ref=e12610]: 
+            - row [ref=e12611] [cursor=pointer]:
+              - gridcell [ref=e12612]: ESV_VIN_DASHBOARD_Customer_QA11
+              - gridcell [ref=e12613]: ESV_VIN_DASHBOARD_Customer_QA11
+              - gridcell [ref=e12614]: SM_ESV
+              - gridcell [ref=e12615]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD
+              - gridcell [ref=e12616]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_SEARCH(R & W) | CUSTOMER_TAP_KEYFOB(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e12617]: RBAC Admin
+              - gridcell [ref=e12618]: 07-10-2024 12:37:41
+              - gridcell [ref=e12619]: RBAC Admin
+              - gridcell [ref=e12620]: 07-10-2024 12:37:41
+              - gridcell [ref=e12621]: "true"
+              - gridcell [ref=e12622]:
+                - link [ref=e12623]:
+                  - /url: "javascript:"
+                  - generic [ref=e12624]: 
+                - generic [ref=e12625]: 
+            - row [ref=e12626] [cursor=pointer]:
+              - gridcell [ref=e12627]: ESV_VIN_DASHBOARD_Customer_QA2
+              - gridcell [ref=e12628]: ESV_VIN_DASHBOARD_Customer_QA2
+              - gridcell [ref=e12629]: SM_ESV
+              - gridcell [ref=e12630]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD
+              - gridcell [ref=e12631]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_SEARCH(R & W) | CUSTOMER_TAP_KEYFOB(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W)
+              - gridcell [ref=e12632]: RBAC Admin
+              - gridcell [ref=e12633]: 08-10-2024 16:40:07
+              - gridcell [ref=e12634]: RBAC Admin
+              - gridcell [ref=e12635]: 08-10-2024 16:40:07
+              - gridcell [ref=e12636]: "true"
+              - gridcell [ref=e12637]:
+                - link [ref=e12638]:
+                  - /url: "javascript:"
+                  - generic [ref=e12639]: 
+                - generic [ref=e12640]: 
+            - row [ref=e12641] [cursor=pointer]:
+              - gridcell [ref=e12642]: ESV_VIN_DASHBOARD_Customer_QA22
+              - gridcell [ref=e12643]: ESV_VIN_DASHBOARD_Customer_QA22
+              - gridcell [ref=e12644]: SM_ESV
+              - gridcell [ref=e12645]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER
+              - gridcell [ref=e12646]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_SEARCH(R & W)
+              - gridcell [ref=e12647]: RBAC Admin
+              - gridcell [ref=e12648]: 07-10-2024 13:33:44
+              - gridcell [ref=e12649]: RBAC Admin
+              - gridcell [ref=e12650]: 07-10-2024 13:33:44
+              - gridcell [ref=e12651]: "true"
+              - gridcell [ref=e12652]:
+                - link [ref=e12653]:
+                  - /url: "javascript:"
+                  - generic [ref=e12654]: 
+                - generic [ref=e12655]: 
+            - row [ref=e12656] [cursor=pointer]:
+              - gridcell [ref=e12657]: ESV_VIN_DASHBOARD_FIELD_QA
+              - gridcell [ref=e12658]: ESV_VIN_DASHBOARD_FIELD_QA
+              - gridcell [ref=e12659]: SM_ESV
+              - gridcell [ref=e12660]: SM_ESV_CHOOSE_VIN SM_ESV_DASHBOARD SM_ESV_FIELD
+              - gridcell [ref=e12661]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W) | FIELD_EXCHANGE_BATTERY(R & W) | FIELD_LOAD_EMPTY_BATTERY(R & W) | FIELD_UNLOAD_FULL_BATTERY(R & W)
+              - gridcell [ref=e12662]: RBAC Admin
+              - gridcell [ref=e12663]: 01-10-2024 15:36:26
+              - gridcell [ref=e12664]: RBAC Admin
+              - gridcell [ref=e12665]: 01-10-2024 15:36:26
+              - gridcell [ref=e12666]: "true"
+              - gridcell [ref=e12667]:
+                - link [ref=e12668]:
+                  - /url: "javascript:"
+                  - generic [ref=e12669]: 
+                - generic [ref=e12670]: 
+            - row [ref=e12671] [cursor=pointer]:
+              - gridcell [ref=e12672]: ESV_VIN_DASHBOARD_FIELD_QA1
+              - gridcell [ref=e12673]: ESV_VIN_DASHBOARD_FIELD_QA1
+              - gridcell [ref=e12674]: SM_ESV
+              - gridcell [ref=e12675]: SM_ESV_CHOOSE_VIN SM_ESV_DASHBOARD SM_ESV_FIELD
+              - gridcell [ref=e12676]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W) | FIELD_EXCHANGE_BATTERY(R & W) | FIELD_LOAD_EMPTY_BATTERY(R & W) | FIELD_SCAN_STATION(R & W) | FIELD_SEARCH_STATION(R & W) | FIELD_UNLOAD_FULL_BATTERY(R & W)
+              - gridcell [ref=e12677]: RBAC Admin
+              - gridcell [ref=e12678]: 08-10-2024 16:38:23
+              - gridcell [ref=e12679]: RBAC Admin
+              - gridcell [ref=e12680]: 08-10-2024 16:38:23
+              - gridcell [ref=e12681]: "true"
+              - gridcell [ref=e12682]:
+                - link [ref=e12683]:
+                  - /url: "javascript:"
+                  - generic [ref=e12684]: 
+                - generic [ref=e12685]: 
+            - row [ref=e12686] [cursor=pointer]:
+              - gridcell [ref=e12687]: ESV_VIN_DASHBOARD_SERVICE_QA
+              - gridcell [ref=e12688]: ESV_VIN_DASHBOARD_SERVICE_QA
+              - gridcell [ref=e12689]: SM_ESV
+              - gridcell [ref=e12690]: SM_ESV_CHOOSE_VIN SM_ESV_DASHBOARD SM_ESV_SERVICE
+              - gridcell [ref=e12691]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e12692]: RBAC Admin
+              - gridcell [ref=e12693]: 01-10-2024 14:53:39
+              - gridcell [ref=e12694]: RBAC Admin
+              - gridcell [ref=e12695]: 01-10-2024 14:54:28
+              - gridcell [ref=e12696]: "true"
+              - gridcell [ref=e12697]:
+                - link [ref=e12698]:
+                  - /url: "javascript:"
+                  - generic [ref=e12699]: 
+                - generic [ref=e12700]: 
+            - row [ref=e12701] [cursor=pointer]:
+              - gridcell [ref=e12702]: ESV_VIN_DASHBOARD_SERVICE_QA1
+              - gridcell [ref=e12703]: ESV_VIN_DASHBOARD_SERVICE_QA1
+              - gridcell [ref=e12704]: SM_ESV
+              - gridcell [ref=e12705]: SM_ESV_CHOOSE_VIN SM_ESV_DASHBOARD SM_ESV_SERVICE
+              - gridcell [ref=e12706]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_SCAN_STATION(R & W) | SERVICE_SEARCH_STATION(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e12707]: RBAC Admin
+              - gridcell [ref=e12708]: 08-10-2024 16:36:31
+              - gridcell [ref=e12709]: RBAC Admin
+              - gridcell [ref=e12710]: 08-10-2024 16:36:31
+              - gridcell [ref=e12711]: "true"
+              - gridcell [ref=e12712]:
+                - link [ref=e12713]:
+                  - /url: "javascript:"
+                  - generic [ref=e12714]: 
+                - generic [ref=e12715]: 
+            - row [ref=e12716] [cursor=pointer]:
+              - gridcell [ref=e12717]: ESVAdmin
+              - gridcell [ref=e12718]: Admin_New
+              - gridcell [ref=e12719]: SM_ESV
+              - gridcell [ref=e12720]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e12721]: AUDIT_CHOOSE_DATE(R) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R) | FIELD_EXCHANGE_BATTERY(R & W) | FIELD_LOAD_EMPTY_BATTERY(R & W) | SERVICE_EXCHANGE_BATTERY(R) | SERVICE_LOAD_FULL_BATTERY(R & W)
+              - gridcell [ref=e12722]: RBAC Admin
+              - gridcell [ref=e12723]: 21-09-2024 14:29:57
+              - gridcell [ref=e12724]: RBAC Admin
+              - gridcell [ref=e12725]: 23-09-2024 10:23:10
+              - gridcell [ref=e12726]: "true"
+              - gridcell [ref=e12727]:
+                - link [ref=e12728]:
+                  - /url: "javascript:"
+                  - generic [ref=e12729]: 
+                - generic [ref=e12730]: 
+            - row [ref=e12731] [cursor=pointer]:
+              - gridcell [ref=e12732]: ESVADMIN
+              - gridcell [ref=e12733]: Admin ESV
+              - gridcell [ref=e12734]: SM_ESV
+              - gridcell [ref=e12735]: SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e12736]: CHOOSE_VIN_SCAN_VEHICLE(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | FIELD_EXCHANGE_BATTERY(R & W) | FIELD_LOAD_EMPTY_BATTERY(R & W) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e12737]: RBAC Admin
+              - gridcell [ref=e12738]: 23-09-2024 10:13:47
+              - gridcell [ref=e12739]: RBAC Admin
+              - gridcell [ref=e12740]: 23-09-2024 10:22:14
+              - gridcell [ref=e12741]: "true"
+              - gridcell [ref=e12742]:
+                - link [ref=e12743]:
+                  - /url: "javascript:"
+                  - generic [ref=e12744]: 
+                - generic [ref=e12745]: 
+            - row [ref=e12746] [cursor=pointer]:
+              - gridcell [ref=e12747]: ESVAPPALLFEATUREFORRISHABH
+              - gridcell [ref=e12748]: ESVAPPALLFEATUREFORRISHABH
+              - gridcell [ref=e12749]: SM_ESV
+              - gridcell [ref=e12750]: SM_ESV_AUDIT SM_ESV_CHOOSE_VIN SM_ESV_CUSTOMER SM_ESV_DASHBOARD SM_ESV_FIELD SM_ESV_SERVICE
+              - gridcell [ref=e12751]: AUDIT_CHOOSE_DATE(R & W) | CHOOSE_VIN_SCAN_VEHICLE(R & W) | CHOOSE_VIN_SEARCH_VEHICLE(R & W) | CHOOSE_VIN_SELECT_VEHICLE(R & W) | CUSTOMER_BATTERY_SWAP(R & W) | CUSTOMER_BLE_UNLOCK(R & W) | CUSTOMER_SCAN_VEHICLE(R & W) | CUSTOMER_TAP_KEYFOB(R & W) | DASHBOARD_CHANGE_VEHICLE(R & W) | ESVNEW(R & W) | FIELD_EXCHANGE_BATTERY(R & W) | FIELD_LOAD_EMPTY_BATTERY(R & W) | FIELD_UNLOAD_FULL_BATTERY(R & W) | SERVICE_EXCHANGE_BATTERY(R & W) | SERVICE_LOAD_FULL_BATTERY(R & W) | SERVICE_UNLOAD_EMPTY_BATTERY(R & W)
+              - gridcell [ref=e12752]: RBAC Admin
+              - gridcell [ref=e12753]: 25-09-2024 13:23:01
+              - gridcell [ref=e12754]: RBAC Admin
+              - gridcell [ref=e12755]: 25-09-2024 13:23:01
+              - gridcell [ref=e12756]: "true"
+              - gridcell [ref=e12757]:
+                - link [ref=e12758]:
+                  - /url: "javascript:"
+                  - generic [ref=e12759]: 
+                - generic [ref=e12760]: 
+            - row [ref=e12761] [cursor=pointer]:
+              - gridcell [ref=e12762]: ewe
+              - gridcell [ref=e12763]: qeq
+              - gridcell [ref=e12764]: Indofast Test App 1790964696233
+              - gridcell [ref=e12765]: Indofast dashboard page 1790964696233
+              - gridcell [ref=e12766]: checkpage 1790964696233(R & W)
+              - gridcell [ref=e12767]: RBAC Admin
+              - gridcell [ref=e12768]: 02-10-2026 23:50:19
+              - gridcell [ref=e12769]: RBAC Admin
+              - gridcell [ref=e12770]: 02-10-2026 23:50:19
+              - gridcell [ref=e12771]: "true"
+              - gridcell [ref=e12772]:
+                - link [ref=e12773]:
+                  - /url: "javascript:"
+                  - generic [ref=e12774]: 
+                - generic [ref=e12775]: 
+            - row [ref=e12776] [cursor=pointer]:
+              - gridcell [ref=e12777]: FINAROLELLWHITOUTACCESSEXCEPTTICKETANDBATTERYONBOA
+              - gridcell [ref=e12778]: FINAROLELLWHITOUTACCESSEXCEPTTICKETANDBATTERYONBOA
+              - gridcell [ref=e12779]: SM_SERVICE
+              - gridcell [ref=e12780]: SM_SERVICE_ADMIN SM_SERVICE_ASSISTANCE SM_SERVICE_BATTERY_ISSUING SM_SERVICE_BATTERY_ONBOARDING SM_SERVICE_CUSTOMER SM_SERVICE_KEYFOB_CHECK SM_SERVICE_NOTIFICATION SM_SERVICE_TICKET
+              - gridcell [ref=e12781]: ADMIN_PROVISION(R) | ADMIN_USERLIST(R) | ASSISTANCE_BLE_UNLOCK_START(R) | ASSISTANCE_KEYFOB_READ(R) | REMOVE1(R) | BATTERY_ISSUING_ONBOARDING(R & W) | BATTERY_ONBOARDING_ACCESS(R & W) | CUSTOMER_KEYFOB_READ(R) | CUSTOMER_KEYFOB_SEARCH(R) | CUSTOMER_PROVISION(R) | REMOVE3(R) | KEYFOB_CHECK_READ(R) | KEYFOB_CHECK_SEARCH(R) | NOTIFICATION_FORCE_LOGOUT(R) | NOTIFICATION_PUSH_NOTIFICATION(R) | TICKET_CREATE(R & W) | TICKET_SUPPORT(R & W)
+              - gridcell [ref=e12782]: RBAC Admin
+              - gridcell [ref=e12783]: 22-09-2024 20:00:58
+              - gridcell [ref=e12784]: RBAC Admin
+              - gridcell [ref=e12785]: 22-09-2024 20:00:58
+              - gridcell [ref=e12786]: "true"
+              - gridcell [ref=e12787]:
+                - link [ref=e12788]:
+                  - /url: "javascript:"
+                  - generic [ref=e12789]: 
+                - generic [ref=e12790]: 
+            - row [ref=e12791] [cursor=pointer]:
+              - gridcell [ref=e12792]: HEV_SERVICE_FULL_ACCESS
+              - gridcell [ref=e12793]: HEV_SERVICE_FULL_ACCESS
+              - gridcell [ref=e12794]: HEV_SERVICE
+              - gridcell [ref=e12795]: HEV_SERVICE_ADMIN HEV_SERVICE_ASSISTANCE HEV_SERVICE_BATTERY_ISSUING HEV_SERVICE_CUSTOMER HEV_SERVICE_KEYFOB_CHECK HEV_SERVICE_NOTIFICATION HEV_SERVICE_STATION_SCAN HEV_SERVICE_TICKET
+              - gridcell [ref=e12796]: ADMIN_PROVISION(R & W) | ADMIN_USERLIST(R & W) | ASSISTANCE_BLE_UNLOCK_START(R & W) | ASSISTANCE_KEYFOB_READ(R & W) | ASSISTANCE_KEYFOB_SEARCH(R & W) | BATTERY_ISSUING_ONBOARDING(R & W) | CUSTOMER_KEYFOB_READ(R & W) | CUSTOMER_KEYFOB_SEARCH(R & W) | CUSTOMER_PROVISION(R & W) | KEYFOB_CHECK_READ(R & W) | KEYFOB_CHECK_SEARCH(R & W) | NOTIFICATION_FORCE_LOGOUT(R & W) | NOTIFICATION_PUSH_NOTIFICATION(R & W) | STATION_ASSESSMENT(R & W) | STATION_CAN(R & W) | TICKET_CREATE(R & W) | TICKET_SUPPORT(R & W)
+              - gridcell [ref=e12797]: RBAC Admin
+              - gridcell [ref=e12798]: 29-09-2026 20:27:38
+              - gridcell [ref=e12799]: RBAC Admin
+              - gridcell [ref=e12800]: 29-09-2026 20:27:38
+              - gridcell [ref=e12801]: "true"
+              - gridcell [ref=e12802]:
+                - link [ref=e12803]:
+                  - /url: "javascript:"
+                  - generic [ref=e12804]: 
+                - generic [ref=e12805]: 
+            - row [ref=e12806] [cursor=pointer]:
+              - gridcell [ref=e12807]: IB_Billing_Admin
+              - gridcell [ref=e12808]: IB_Billing_Admin
+              - gridcell [ref=e12809]: IB_Billing_Test
+              - gridcell [ref=e12810]: Vehicle_Transaction
+              - gridcell [ref=e12811]: IB_Billing_App_login(R & W)
+              - gridcell [ref=e12812]: RBAC Admin
+              - gridcell [ref=e12813]: 03-03-2026 12:23:27
+              - gridcell [ref=e12814]: RBAC Admin
+              - gridcell [ref=e12815]: 03-03-2026 12:23:27
+              - gridcell [ref=e12816]: "true"
+              - gridcell [ref=e12817]:
+                - link [ref=e12818]:
+                  - /url: "javascript:"
+                  - generic [ref=e12819]: 
+                - generic [ref=e12820]: 
+        - status [ref=e12821]: Showing 1 to 100 of 346 entries
+        - generic [ref=e12822]:
+          - generic [ref=e12823]: Previous
+          - generic [ref=e12824]:
+            - generic [ref=e12825] [cursor=pointer]: "1"
+            - generic [ref=e12826] [cursor=pointer]: "2"
+            - generic [ref=e12827] [cursor=pointer]: "3"
+            - generic [ref=e12828] [cursor=pointer]: "4"
+          - generic [ref=e12829] [cursor=pointer]: Next
+  - dialog [ref=e12833]:
+    - generic [ref=e12834]:
+      - heading [level=1] [ref=e12835]:
+        - text: "Action:"
+        - strong [ref=e12836]: AddRole
+      - generic [ref=e12838]:
+        - generic [ref=e12839]:
+          - generic [ref=e12840]: Role Name*
+          - textbox "Enter user role name" [active] [ref=e12843]
+        - generic [ref=e12844]:
+          - generic [ref=e12845]: Role Description*
+          - textbox "Enter role description" [ref=e12848]
+        - generic [ref=e12849]:
+          - generic [ref=e12850]: "Choose Allowed Apps : *"
+          - listbox [ref=e12853]:
+            - generic [ref=e12854]:
+              - generic [ref=e12855]:
+                - generic [ref=e12856]: Select app
+                - combobox [ref=e12858]
+              - generic [ref=e12859] [cursor=pointer]
+        - generic [ref=e12861]:
+          - button "Submit" [ref=e12862] [cursor=pointer]
+          - button "Cancel" [ref=e12863] [cursor=pointer]

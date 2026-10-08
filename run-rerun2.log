@@ -1,0 +1,20 @@
+﻿
+Running 6 tests using 1 worker
+
+node.exe : (node:36400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+At C:\Program Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:36400) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [bdd] › .features-gen\features\02-applications.feature.spec.js:17:7 › 2. Application › Add application (14.5s)
+  ok 2 [bdd] › .features-gen\features\03-pages.feature.spec.js:17:7 › 3. Pages › Add page mapped to application (12.8s)
+  ok 3 [bdd] › .features-gen\features\04-features.feature.spec.js:17:7 › 4. Features › Add feature mapped to page (12.2s)
+  ok 4 [bdd] › .features-gen\features\04-features.feature.spec.js:56:7 › 4. Features › Delete a feature that is not the last on its page (14.8s)
+  ok 5 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:64:9 › 8. Cleanup - delete role, page and application › Delete <label> also removes its feature › Delete page 1 also removes its feature (22.4s)
+  ok 6 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:98:7 › 8. Cleanup - delete role, page and application › Delete application (15.4s)
+
+  6 passed (1.7m)
+EXIT 0

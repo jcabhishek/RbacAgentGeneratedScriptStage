@@ -1,0 +1,8 @@
+[   -9585ms] [WARNING] Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading @ https://maps.google.com/maps/api/js?v=3.exp&key=AIzaSyBLaOvHkluDx8PkmOc1zC-hF6FSR_34acY&libraries=weather,geometry,visualization,places:2700
+[   -8335ms] [WARNING] Could not find HammerJS. Certain Angular Material components may not work correctly. @ https://sm-rbac-dashboard-staging.azurewebsites.net/vendor-es2015.js:118004
+[   -8320ms] [LOG] Angular is running in the development mode. Call enableProdMode() to enable the production mode. @ https://sm-rbac-dashboard-staging.azurewebsites.net/vendor-es2015.js:96733
+[   -8300ms] [LOG] data false @ https://sm-rbac-dashboard-staging.azurewebsites.net/main-es2015.js:3401
+[   -8242ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://sm-rbac-dashboard-staging.azurewebsites.net/:0
+[   -5190ms] [LOG] 44cb78d7-dc43-4692-a4d4-837ee3897923 id 44cb78d7-dc43-4692-a4d4-837ee3897923 @ https://sm-rbac-dashboard-staging.azurewebsites.net/main-es2015.js:3420
+[   -4551ms] [LOG] data {status: 200, data: Object} @ https://sm-rbac-dashboard-staging.azurewebsites.net/main-es2015.js:3423
+[   -4550ms] [LOG] keys [userName, userEmail, userMobileNumber, countryCode, userRole, partnerId, isActive, isKeyFobMapped, userId, userType, createdAt, lastModifiedAt, createdUser, lastUpdatedUser, Key, legalEntityGuid, organizationName, brandName] @ https://sm-rbac-dashboard-staging.azurewebsites.net/main-es2015.js:3427

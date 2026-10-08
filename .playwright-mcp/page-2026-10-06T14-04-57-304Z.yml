@@ -1,0 +1,1272 @@
+- generic [ref=e41]:
+  - list [ref=e49]:
+    - generic [ref=e50]:
+      - list [ref=e51]:
+        - listitem [ref=e52]
+      - listitem [ref=e54]:
+        - link [ref=e5202] [cursor=pointer]:
+          - /url: /home/rbac-users
+          - generic [ref=e56]: 
+      - listitem [ref=e59]:
+        - link [ref=e5203] [cursor=pointer]:
+          - /url: /home/rbac-roles
+      - listitem [ref=e64]:
+        - link [ref=e5204] [cursor=pointer]:
+          - /url: /home/applications
+      - listitem [ref=e69]:
+        - link [ref=e5205] [cursor=pointer]:
+          - /url: /home/pages
+      - listitem [ref=e74]:
+        - link [ref=e5206] [cursor=pointer]:
+          - /url: /home/features
+      - listitem [ref=e79]:
+        - link [ref=e5207] [cursor=pointer]:
+          - /url: /home/rbac-logs
+  - generic [ref=e83]:
+    - generic [ref=e84]:
+      - link [ref=e85] [cursor=pointer]:
+        - /url: "javascript:"
+      - link [ref=e87] [cursor=pointer]:
+        - /url: /home
+      - text: 
+    - list [ref=e90]:
+      - listitem [ref=e91]:
+        - generic [ref=e92]:
+          - text: RBAC Admin
+          - link [ref=e5208] [cursor=pointer]:
+            - /url: "javascript:"
+            - generic [ref=e94]: 
+          - text: 
+  - generic [ref=e1648]:
+    - button [ref=e5209] [cursor=pointer]: Add Application
+    - generic [ref=e3964]:
+      - button [ref=e5210] [cursor=pointer]:
+        - generic [ref=e3967]: 
+      - generic [ref=e3970]:
+        - text: Show
+        - combobox [ref=e5211]
+        - text: entries
+      - generic [ref=e3973]:
+        - text: "Search:"
+        - searchbox [ref=e5212]
+      - grid [ref=e3975]:
+        - rowgroup [ref=e3976]:
+          - row [ref=e5213]:
+            - columnheader [ref=e5214] [cursor=pointer]: App Name
+            - columnheader [ref=e5215] [cursor=pointer]: Description
+            - columnheader [ref=e5216] [cursor=pointer]: Mapped Pages
+            - columnheader [ref=e5217] [cursor=pointer]: Mapped Features
+            - columnheader [ref=e5218] [cursor=pointer]: Created By
+            - columnheader [ref=e5219] [cursor=pointer]: Created Date
+            - columnheader [ref=e5220] [cursor=pointer]: Updated By
+            - columnheader [ref=e5221] [cursor=pointer]: Updated Date
+            - columnheader [ref=e5222] [cursor=pointer]: Status
+            - columnheader [ref=e5223] [cursor=pointer]: Action
+        - rowgroup [ref=e3988]:
+          - row [ref=e5224] [cursor=pointer]:
+            - gridcell [ref=e5225]: abhistest
+            - gridcell [ref=e5226]: asas
+            - gridcell [ref=e3992]
+            - gridcell [ref=e3993]
+            - gridcell [ref=e5227]: RBAC Admin
+            - gridcell [ref=e5228]: 04-10-2026 22:14:25
+            - gridcell [ref=e5229]: RBAC Admin
+            - gridcell [ref=e5230]: 04-10-2026 22:14:25
+            - gridcell [ref=e5231]: "true"
+            - gridcell [ref=e5232]:
+              - generic [ref=e4000]: 
+          - row [ref=e5233] [cursor=pointer]:
+            - gridcell [ref=e5234]: audit_app_2
+            - gridcell [ref=e5235]: audit_app_2
+            - gridcell [ref=e5236]: 5665 , deletiontesting , Testing
+            - gridcell [ref=e5237]: deltiontesting , deletiontesting1
+            - gridcell [ref=e5238]: RBAC Admin
+            - gridcell [ref=e5239]: 15-01-2025 15:31:04
+            - gridcell [ref=e5240]: RBAC Admin
+            - gridcell [ref=e5241]: 15-01-2025 15:31:04
+            - gridcell [ref=e5242]: "true"
+            - gridcell [ref=e5243]:
+              - generic [ref=e4012]: 
+          - row [ref=e5244] [cursor=pointer]:
+            - gridcell [ref=e5245]: HEV_SERVICE
+            - gridcell [ref=e5246]: HEV SERVICE APP
+            - gridcell [ref=e5247]: HEV_SERVICE_ADMIN , HEV_SERVICE_ASSISTANCE , HEV_SERVICE_BATTERY_ISSUING , HEV_SERVICE_CUSTOMER , HEV_SERVICE_KEYFOB_CHECK , HEV_SERVICE_NOTIFICATION , HEV_SERVICE_STATION_SCAN , HEV_SERVICE_TICKET
+            - gridcell [ref=e5248]: ADMIN_USERLIST , ADMIN_PROVISION , ASSISTANCE_KEYFOB_SEARCH , ASSISTANCE_BLE_UNLOCK_START , ASSISTANCE_KEYFOB_READ , BATTERY_ISSUING_ONBOARDING , CUSTOMER_KEYFOB_READ , CUSTOMER_KEYFOB_SEARCH , CUSTOMER_PROVISION , KEYFOB_CHECK_SEARCH , KEYFOB_CHECK_READ , NOTIFICATION_PUSH_NOTIFICATION , NOTIFICATION_FORCE_LOGOUT , STATION_CAN , STATION_ASSESSMENT , TICKET_SUPPORT , TICKET_CREATE
+            - gridcell [ref=e5249]: RBAC Admin
+            - gridcell [ref=e5250]: 29-09-2026 19:36:51
+            - gridcell [ref=e5251]: RBAC Admin
+            - gridcell [ref=e5252]: 29-09-2026 19:36:51
+            - gridcell [ref=e5253]: "true"
+            - gridcell [ref=e5254]:
+              - generic [ref=e4024]: 
+          - row [ref=e5255] [cursor=pointer]:
+            - gridcell [ref=e5256]: IB_Billing_Test
+            - gridcell [ref=e5257]: IB_Billing_Test
+            - gridcell [ref=e5258]: Vehicle_Transaction
+            - gridcell [ref=e5259]: IB_Billing_App_login
+            - gridcell [ref=e5260]: RBAC Admin
+            - gridcell [ref=e5261]: 03-03-2026 12:18:51
+            - gridcell [ref=e5262]: RBAC Admin
+            - gridcell [ref=e5263]: 03-03-2026 12:18:51
+            - gridcell [ref=e5264]: "true"
+            - gridcell [ref=e5265]:
+              - generic [ref=e4036]: 
+          - row [ref=e5266] [cursor=pointer]:
+            - gridcell [ref=e5267]: "Indofast Test App ${Date.now()}"
+            - gridcell [ref=e5268]: "Indofast Test Service App ${Date.now()}"
+            - gridcell [ref=e4040]
+            - gridcell [ref=e4041]
+            - gridcell [ref=e5269]: RBAC Admin
+            - gridcell [ref=e5270]: 29-09-2026 21:33:36
+            - gridcell [ref=e5271]: RBAC Admin
+            - gridcell [ref=e5272]: 29-09-2026 21:33:36
+            - gridcell [ref=e5273]: "true"
+            - gridcell [ref=e5274]:
+              - generic [ref=e4048]: 
+          - row [ref=e5275] [cursor=pointer]:
+            - gridcell [ref=e5276]: "Indofast Test App ${runId}"
+            - gridcell [ref=e5277]: "Indofast Test Service App ${runId}"
+            - gridcell [ref=e4052]
+            - gridcell [ref=e4053]
+            - gridcell [ref=e5278]: RBAC Admin
+            - gridcell [ref=e5279]: 29-09-2026 21:29:36
+            - gridcell [ref=e5280]: RBAC Admin
+            - gridcell [ref=e5281]: 29-09-2026 21:29:36
+            - gridcell [ref=e5282]: "true"
+            - gridcell [ref=e5283]:
+              - generic [ref=e4060]: 
+          - row [ref=e5284] [cursor=pointer]:
+            - gridcell [ref=e5285]: Indofast Test App 1790698304735
+            - gridcell [ref=e5286]: Indofast Test Service App 1790698304735
+            - gridcell [ref=e4064]
+            - gridcell [ref=e4065]
+            - gridcell [ref=e5287]: RBAC Admin
+            - gridcell [ref=e5288]: 29-09-2026 21:42:04
+            - gridcell [ref=e5289]: RBAC Admin
+            - gridcell [ref=e5290]: 29-09-2026 21:42:04
+            - gridcell [ref=e5291]: "true"
+            - gridcell [ref=e5292]:
+              - generic [ref=e4072]: 
+          - row [ref=e5293] [cursor=pointer]:
+            - gridcell [ref=e5294]: Indofast Test App 1790698632790
+            - gridcell [ref=e5295]: Indofast Test Service App 1790698632790
+            - gridcell [ref=e4076]
+            - gridcell [ref=e4077]
+            - gridcell [ref=e5296]: RBAC Admin
+            - gridcell [ref=e5297]: 29-09-2026 21:47:34
+            - gridcell [ref=e5298]: RBAC Admin
+            - gridcell [ref=e5299]: 29-09-2026 21:47:34
+            - gridcell [ref=e5300]: "true"
+            - gridcell [ref=e5301]:
+              - generic [ref=e4084]: 
+          - row [ref=e5302] [cursor=pointer]:
+            - gridcell [ref=e5303]: Indofast Test App 1790705334620
+            - gridcell [ref=e5304]: Indofast Test Service App 1790705334620
+            - gridcell [ref=e4088]
+            - gridcell [ref=e4089]
+            - gridcell [ref=e5305]: RBAC Admin
+            - gridcell [ref=e5306]: 29-09-2026 23:39:22
+            - gridcell [ref=e5307]: RBAC Admin
+            - gridcell [ref=e5308]: 29-09-2026 23:39:22
+            - gridcell [ref=e5309]: "true"
+            - gridcell [ref=e5310]:
+              - generic [ref=e4096]: 
+          - row [ref=e5311] [cursor=pointer]:
+            - gridcell [ref=e5312]: Indofast Test App 1790705407619
+            - gridcell [ref=e5313]: Indofast Test Service App 1790705407619
+            - gridcell [ref=e4100]
+            - gridcell [ref=e4101]
+            - gridcell [ref=e5314]: RBAC Admin
+            - gridcell [ref=e5315]: 29-09-2026 23:40:52
+            - gridcell [ref=e5316]: RBAC Admin
+            - gridcell [ref=e5317]: 29-09-2026 23:40:52
+            - gridcell [ref=e5318]: "true"
+            - gridcell [ref=e5319]:
+              - generic [ref=e4108]: 
+          - row [ref=e5320] [cursor=pointer]:
+            - gridcell [ref=e5321]: Indofast Test App 1790705554802
+            - gridcell [ref=e5322]: Indofast Test Service App 1790705554802
+            - gridcell [ref=e4112]
+            - gridcell [ref=e4113]
+            - gridcell [ref=e5323]: RBAC Admin
+            - gridcell [ref=e5324]: 29-09-2026 23:43:06
+            - gridcell [ref=e5325]: RBAC Admin
+            - gridcell [ref=e5326]: 29-09-2026 23:43:06
+            - gridcell [ref=e5327]: "true"
+            - gridcell [ref=e5328]:
+              - generic [ref=e4120]: 
+          - row [ref=e5329] [cursor=pointer]:
+            - gridcell [ref=e5330]: Indofast Test App 1790705674815
+            - gridcell [ref=e5331]: Indofast Test Service App 1790705674815
+            - gridcell [ref=e4124]
+            - gridcell [ref=e4125]
+            - gridcell [ref=e5332]: RBAC Admin
+            - gridcell [ref=e5333]: 29-09-2026 23:45:02
+            - gridcell [ref=e5334]: RBAC Admin
+            - gridcell [ref=e5335]: 29-09-2026 23:45:02
+            - gridcell [ref=e5336]: "true"
+            - gridcell [ref=e5337]:
+              - generic [ref=e4132]: 
+          - row [ref=e5338] [cursor=pointer]:
+            - gridcell [ref=e5339]: Indofast Test App 1790705820113
+            - gridcell [ref=e5340]: Indofast Test Service App 1790705820113
+            - gridcell [ref=e4136]
+            - gridcell [ref=e4137]
+            - gridcell [ref=e5341]: RBAC Admin
+            - gridcell [ref=e5342]: 29-09-2026 23:47:19
+            - gridcell [ref=e5343]: RBAC Admin
+            - gridcell [ref=e5344]: 29-09-2026 23:47:19
+            - gridcell [ref=e5345]: "true"
+            - gridcell [ref=e5346]:
+              - generic [ref=e4144]: 
+          - row [ref=e5347] [cursor=pointer]:
+            - gridcell [ref=e5348]: Indofast Test App 1790706474318
+            - gridcell [ref=e5349]: Indofast Test Service App 1790706474318
+            - gridcell [ref=e4148]
+            - gridcell [ref=e4149]
+            - gridcell [ref=e5350]: RBAC Admin
+            - gridcell [ref=e5351]: 29-09-2026 23:58:20
+            - gridcell [ref=e5352]: RBAC Admin
+            - gridcell [ref=e5353]: 29-09-2026 23:58:20
+            - gridcell [ref=e5354]: "true"
+            - gridcell [ref=e5355]:
+              - generic [ref=e4156]: 
+          - row [ref=e5356] [cursor=pointer]:
+            - gridcell [ref=e5357]: Indofast Test App 1790706561663
+            - gridcell [ref=e5358]: Indofast Test Service App 1790706561663
+            - gridcell [ref=e4160]
+            - gridcell [ref=e4161]
+            - gridcell [ref=e5359]: RBAC Admin
+            - gridcell [ref=e5360]: 29-09-2026 23:59:46
+            - gridcell [ref=e5361]: RBAC Admin
+            - gridcell [ref=e5362]: 29-09-2026 23:59:46
+            - gridcell [ref=e5363]: "true"
+            - gridcell [ref=e5364]:
+              - generic [ref=e4168]: 
+          - row [ref=e5365] [cursor=pointer]:
+            - gridcell [ref=e5366]: Indofast Test App 1790706673911
+            - gridcell [ref=e5367]: Indofast Test Service App 1790706673911
+            - gridcell [ref=e4172]
+            - gridcell [ref=e4173]
+            - gridcell [ref=e5368]: RBAC Admin
+            - gridcell [ref=e5369]: 30-09-2026 00:01:47
+            - gridcell [ref=e5370]: RBAC Admin
+            - gridcell [ref=e5371]: 30-09-2026 00:01:47
+            - gridcell [ref=e5372]: "true"
+            - gridcell [ref=e5373]:
+              - generic [ref=e4180]: 
+          - row [ref=e5374] [cursor=pointer]:
+            - gridcell [ref=e5375]: Indofast Test App 1790706982926
+            - gridcell [ref=e5376]: Indofast Test Service App 1790706982926
+            - gridcell [ref=e4184]
+            - gridcell [ref=e4185]
+            - gridcell [ref=e5377]: RBAC Admin
+            - gridcell [ref=e5378]: 30-09-2026 00:06:52
+            - gridcell [ref=e5379]: RBAC Admin
+            - gridcell [ref=e5380]: 30-09-2026 00:06:52
+            - gridcell [ref=e5381]: "true"
+            - gridcell [ref=e5382]:
+              - generic [ref=e4192]: 
+          - row [ref=e5383] [cursor=pointer]:
+            - gridcell [ref=e5384]: Indofast Test App 1790707143851
+            - gridcell [ref=e5385]: Indofast Test Service App 1790707143851
+            - gridcell [ref=e4196]
+            - gridcell [ref=e4197]
+            - gridcell [ref=e5386]: RBAC Admin
+            - gridcell [ref=e5387]: 30-09-2026 00:09:27
+            - gridcell [ref=e5388]: RBAC Admin
+            - gridcell [ref=e5389]: 30-09-2026 00:09:27
+            - gridcell [ref=e5390]: "true"
+            - gridcell [ref=e5391]:
+              - generic [ref=e4204]: 
+          - row [ref=e5392] [cursor=pointer]:
+            - gridcell [ref=e5393]: Indofast Test App 1790707209323
+            - gridcell [ref=e5394]: Indofast Test Service App 1790707209323
+            - gridcell [ref=e4208]
+            - gridcell [ref=e4209]
+            - gridcell [ref=e5395]: RBAC Admin
+            - gridcell [ref=e5396]: 30-09-2026 00:10:34
+            - gridcell [ref=e5397]: RBAC Admin
+            - gridcell [ref=e5398]: 30-09-2026 00:10:34
+            - gridcell [ref=e5399]: "true"
+            - gridcell [ref=e5400]:
+              - generic [ref=e4216]: 
+          - row [ref=e5401] [cursor=pointer]:
+            - gridcell [ref=e5402]: Indofast Test App 1790707359316
+            - gridcell [ref=e5403]: Indofast Test Service App 1790707359316
+            - gridcell [ref=e5404]: Indofast dashboard page 1790707359316
+            - gridcell [ref=e4221]
+            - gridcell [ref=e5405]: RBAC Admin
+            - gridcell [ref=e5406]: 30-09-2026 00:12:59
+            - gridcell [ref=e5407]: RBAC Admin
+            - gridcell [ref=e5408]: 30-09-2026 00:12:59
+            - gridcell [ref=e5409]: "true"
+            - gridcell [ref=e5410]:
+              - generic [ref=e4228]: 
+          - row [ref=e5411] [cursor=pointer]:
+            - gridcell [ref=e5412]: Indofast Test App 1790960475078
+            - gridcell [ref=e5413]: Indofast Test Service App 1790960475078
+            - gridcell [ref=e5414]: Indofast dashboard page 1790960475078
+            - gridcell [ref=e4233]
+            - gridcell [ref=e5415]: RBAC Admin
+            - gridcell [ref=e5416]: 02-10-2026 22:32:38
+            - gridcell [ref=e5417]: RBAC Admin
+            - gridcell [ref=e5418]: 02-10-2026 22:32:38
+            - gridcell [ref=e5419]: "true"
+            - gridcell [ref=e5420]:
+              - generic [ref=e4240]: 
+          - row [ref=e5421] [cursor=pointer]:
+            - gridcell [ref=e5422]: Indofast Test App 1790961594486
+            - gridcell [ref=e5423]: Indofast Test Service App 1790961594486
+            - gridcell [ref=e5424]: Indofast dashboard page 1790961594486
+            - gridcell [ref=e4245]
+            - gridcell [ref=e5425]: RBAC Admin
+            - gridcell [ref=e5426]: 02-10-2026 22:51:09
+            - gridcell [ref=e5427]: RBAC Admin
+            - gridcell [ref=e5428]: 02-10-2026 22:51:09
+            - gridcell [ref=e5429]: "true"
+            - gridcell [ref=e5430]:
+              - generic [ref=e4252]: 
+          - row [ref=e5431] [cursor=pointer]:
+            - gridcell [ref=e5432]: Indofast Test App 1790961885381
+            - gridcell [ref=e5433]: Indofast Test Service App 1790961885381
+            - gridcell [ref=e5434]: Indofast dashboard page 1790961885381
+            - gridcell [ref=e4257]
+            - gridcell [ref=e5435]: RBAC Admin
+            - gridcell [ref=e5436]: 02-10-2026 22:56:33
+            - gridcell [ref=e5437]: RBAC Admin
+            - gridcell [ref=e5438]: 02-10-2026 22:56:33
+            - gridcell [ref=e5439]: "true"
+            - gridcell [ref=e5440]:
+              - generic [ref=e4264]: 
+          - row [ref=e5441] [cursor=pointer]:
+            - gridcell [ref=e5442]: Indofast Test App 1790962157265
+            - gridcell [ref=e5443]: Indofast Test Service App 1790962157265
+            - gridcell [ref=e5444]: Indofast dashboard page 1790962157265
+            - gridcell [ref=e4269]
+            - gridcell [ref=e5445]: RBAC Admin
+            - gridcell [ref=e5446]: 02-10-2026 23:00:32
+            - gridcell [ref=e5447]: RBAC Admin
+            - gridcell [ref=e5448]: 02-10-2026 23:00:32
+            - gridcell [ref=e5449]: "true"
+            - gridcell [ref=e5450]:
+              - generic [ref=e4276]: 
+          - row [ref=e5451] [cursor=pointer]:
+            - gridcell [ref=e5452]: Indofast Test App 1790962334356
+            - gridcell [ref=e5453]: Indofast Test Service App 1790962334356
+            - gridcell [ref=e5454]: Indofast dashboard page 1790962334356
+            - gridcell [ref=e4281]
+            - gridcell [ref=e5455]: RBAC Admin
+            - gridcell [ref=e5456]: 02-10-2026 23:03:38
+            - gridcell [ref=e5457]: RBAC Admin
+            - gridcell [ref=e5458]: 02-10-2026 23:03:38
+            - gridcell [ref=e5459]: "true"
+            - gridcell [ref=e5460]:
+              - generic [ref=e4288]: 
+          - row [ref=e5461] [cursor=pointer]:
+            - gridcell [ref=e5462]: Indofast Test App 1790962487871
+            - gridcell [ref=e5463]: Indofast Test Service App 1790962487871
+            - gridcell [ref=e5464]: Indofast dashboard page 1790962487871
+            - gridcell [ref=e5465]: checkpage 1790962487871
+            - gridcell [ref=e5466]: RBAC Admin
+            - gridcell [ref=e5467]: 02-10-2026 23:05:42
+            - gridcell [ref=e5468]: RBAC Admin
+            - gridcell [ref=e5469]: 02-10-2026 23:05:42
+            - gridcell [ref=e5470]: "true"
+            - gridcell [ref=e5471]:
+              - generic [ref=e4300]: 
+          - row [ref=e5472] [cursor=pointer]:
+            - gridcell [ref=e5473]: Indofast Test App 1790964323999
+            - gridcell [ref=e5474]: Indofast Test Service App 1790964323999
+            - gridcell [ref=e5475]: Indofast dashboard page 1790964323999
+            - gridcell [ref=e5476]: checkpage 1790964323999
+            - gridcell [ref=e5477]: RBAC Admin
+            - gridcell [ref=e5478]: 02-10-2026 23:36:39
+            - gridcell [ref=e5479]: RBAC Admin
+            - gridcell [ref=e5480]: 02-10-2026 23:36:39
+            - gridcell [ref=e5481]: "true"
+            - gridcell [ref=e5482]:
+              - generic [ref=e4312]: 
+          - row [ref=e5483] [cursor=pointer]:
+            - gridcell [ref=e5484]: Indofast Test App 1790964696233
+            - gridcell [ref=e5485]: Indofast Test Service App 1790964696233
+            - gridcell [ref=e5486]: Indofast dashboard page 1790964696233
+            - gridcell [ref=e5487]: checkpage 1790964696233
+            - gridcell [ref=e5488]: RBAC Admin
+            - gridcell [ref=e5489]: 02-10-2026 23:43:01
+            - gridcell [ref=e5490]: RBAC Admin
+            - gridcell [ref=e5491]: 02-10-2026 23:43:01
+            - gridcell [ref=e5492]: "true"
+            - gridcell [ref=e5493]:
+              - generic [ref=e4324]: 
+          - row [ref=e5494] [cursor=pointer]:
+            - gridcell [ref=e5495]: Indofast Test App 1790965235365
+            - gridcell [ref=e5496]: Indofast Test Service App 1790965235365
+            - gridcell [ref=e5497]: Indofast dashboard page 1790965235365
+            - gridcell [ref=e5498]: checkpage 1790965235365
+            - gridcell [ref=e5499]: RBAC Admin
+            - gridcell [ref=e5500]: 02-10-2026 23:51:48
+            - gridcell [ref=e5501]: RBAC Admin
+            - gridcell [ref=e5502]: 02-10-2026 23:51:48
+            - gridcell [ref=e5503]: "true"
+            - gridcell [ref=e5504]:
+              - generic [ref=e4336]: 
+          - row [ref=e5505] [cursor=pointer]:
+            - gridcell [ref=e5506]: Indofast Test App 1790965561618
+            - gridcell [ref=e5507]: Indofast Test Service App 1790965561618
+            - gridcell [ref=e5508]: Indofast dashboard page 1790965561618
+            - gridcell [ref=e5509]: checkpage 1790965561618
+            - gridcell [ref=e5510]: RBAC Admin
+            - gridcell [ref=e5511]: 02-10-2026 23:57:17
+            - gridcell [ref=e5512]: RBAC Admin
+            - gridcell [ref=e5513]: 02-10-2026 23:57:17
+            - gridcell [ref=e5514]: "true"
+            - gridcell [ref=e5515]:
+              - generic [ref=e4348]: 
+          - row [ref=e5516] [cursor=pointer]:
+            - gridcell [ref=e5517]: Indofast Test App 1791022693333
+            - gridcell [ref=e5518]: Indofast Test Service App 1791022693333
+            - gridcell [ref=e5519]: Indofast dashboard page 1791022693333
+            - gridcell [ref=e4353]
+            - gridcell [ref=e5520]: RBAC Admin
+            - gridcell [ref=e5521]: 03-10-2026 15:50:00
+            - gridcell [ref=e5522]: RBAC Admin
+            - gridcell [ref=e5523]: 03-10-2026 15:50:00
+            - gridcell [ref=e5524]: "true"
+            - gridcell [ref=e5525]:
+              - generic [ref=e4360]: 
+          - row [ref=e5526] [cursor=pointer]:
+            - gridcell [ref=e5527]: Indofast Test App 1791044152955
+            - gridcell [ref=e5528]: Indofast Test Service App 1791044152955
+            - gridcell [ref=e5529]: Indofast dashboard page 1791044152955
+            - gridcell [ref=e5530]: checkpage 1791044152955
+            - gridcell [ref=e5531]: RBAC Admin
+            - gridcell [ref=e5532]: 03-10-2026 21:47:16
+            - gridcell [ref=e5533]: RBAC Admin
+            - gridcell [ref=e5534]: 03-10-2026 21:47:16
+            - gridcell [ref=e5535]: "true"
+            - gridcell [ref=e5536]:
+              - generic [ref=e4372]: 
+          - row [ref=e5537] [cursor=pointer]:
+            - gridcell [ref=e5538]: Indofast Test App 1791044544096
+            - gridcell [ref=e5539]: Indofast Test Service App 1791044544096
+            - gridcell [ref=e5540]: Indofast dashboard page 1791044544096
+            - gridcell [ref=e4377]
+            - gridcell [ref=e5541]: RBAC Admin
+            - gridcell [ref=e5542]: 03-10-2026 21:53:04
+            - gridcell [ref=e5543]: RBAC Admin
+            - gridcell [ref=e5544]: 03-10-2026 21:53:04
+            - gridcell [ref=e5545]: "true"
+            - gridcell [ref=e5546]:
+              - generic [ref=e4384]: 
+          - row [ref=e5547] [cursor=pointer]:
+            - gridcell [ref=e5548]: Indofast Test App 1791044666980
+            - gridcell [ref=e5549]: Indofast Test Service App 1791044666980
+            - gridcell [ref=e5550]: Indofast dashboard page 1791044666980
+            - gridcell [ref=e5551]: checkpage 1791044666980
+            - gridcell [ref=e5552]: RBAC Admin
+            - gridcell [ref=e5553]: 03-10-2026 21:55:05
+            - gridcell [ref=e5554]: RBAC Admin
+            - gridcell [ref=e5555]: 03-10-2026 21:55:05
+            - gridcell [ref=e5556]: "true"
+            - gridcell [ref=e5557]:
+              - generic [ref=e4396]: 
+          - row [ref=e5558] [cursor=pointer]:
+            - gridcell [ref=e5559]: Indofast Test App 1791044816519
+            - gridcell [ref=e5560]: Indofast Test Service App 1791044816519
+            - gridcell [ref=e5561]: Indofast dashboard page 1791044816519
+            - gridcell [ref=e5562]: checkpage 1791044816519
+            - gridcell [ref=e5563]: RBAC Admin
+            - gridcell [ref=e5564]: 03-10-2026 21:57:32
+            - gridcell [ref=e5565]: RBAC Admin
+            - gridcell [ref=e5566]: 03-10-2026 21:57:32
+            - gridcell [ref=e5567]: "true"
+            - gridcell [ref=e5568]:
+              - generic [ref=e4408]: 
+          - row [ref=e5569] [cursor=pointer]:
+            - gridcell [ref=e5570]: Indofast Test App 1791045003864
+            - gridcell [ref=e5571]: Indofast Test Service App 1791045003864
+            - gridcell [ref=e5572]: Indofast dashboard page 1791045003864
+            - gridcell [ref=e5573]: checkpage 1791045003864
+            - gridcell [ref=e5574]: RBAC Admin
+            - gridcell [ref=e5575]: 03-10-2026 22:00:42
+            - gridcell [ref=e5576]: RBAC Admin
+            - gridcell [ref=e5577]: 03-10-2026 22:00:42
+            - gridcell [ref=e5578]: "true"
+            - gridcell [ref=e5579]:
+              - generic [ref=e4420]: 
+          - row [ref=e5580] [cursor=pointer]:
+            - gridcell [ref=e5581]: Indofast Test App 1791045109438
+            - gridcell [ref=e5582]: Indofast Test Service App 1791045109438
+            - gridcell [ref=e5583]: Indofast dashboard page 1791045109438
+            - gridcell [ref=e5584]: checkpage 1791045109438
+            - gridcell [ref=e5585]: RBAC Admin
+            - gridcell [ref=e5586]: 03-10-2026 22:02:22
+            - gridcell [ref=e5587]: RBAC Admin
+            - gridcell [ref=e5588]: 03-10-2026 22:02:22
+            - gridcell [ref=e5589]: "true"
+            - gridcell [ref=e5590]:
+              - generic [ref=e4432]: 
+          - row [ref=e5591] [cursor=pointer]:
+            - gridcell [ref=e5592]: Indofast Test App 1791045194378
+            - gridcell [ref=e5593]: Indofast Test Service App 1791045194378
+            - gridcell [ref=e5594]: Indofast dashboard page 1791045194378
+            - gridcell [ref=e5595]: checkpage 1791045194378
+            - gridcell [ref=e5596]: RBAC Admin
+            - gridcell [ref=e5597]: 03-10-2026 22:03:42
+            - gridcell [ref=e5598]: RBAC Admin
+            - gridcell [ref=e5599]: 03-10-2026 22:03:42
+            - gridcell [ref=e5600]: "true"
+            - gridcell [ref=e5601]:
+              - generic [ref=e4444]: 
+          - row [ref=e5602] [cursor=pointer]:
+            - gridcell [ref=e5603]: Indofast Test App 1791045346133
+            - gridcell [ref=e5604]: Indofast Test Service App 1791045346133
+            - gridcell [ref=e5605]: Indofast dashboard page 1791045346133
+            - gridcell [ref=e5606]: checkpage 1791045346133
+            - gridcell [ref=e5607]: RBAC Admin
+            - gridcell [ref=e5608]: 03-10-2026 22:06:16
+            - gridcell [ref=e5609]: RBAC Admin
+            - gridcell [ref=e5610]: 03-10-2026 22:06:16
+            - gridcell [ref=e5611]: "true"
+            - gridcell [ref=e5612]:
+              - generic [ref=e4456]: 
+          - row [ref=e5613] [cursor=pointer]:
+            - gridcell [ref=e5614]: Indofast Test App 1791045507223
+            - gridcell [ref=e5615]: Indofast Test Service App 1791045507223
+            - gridcell [ref=e5616]: Indofast dashboard page 1791045507223
+            - gridcell [ref=e5617]: checkpage 1791045507223
+            - gridcell [ref=e5618]: RBAC Admin
+            - gridcell [ref=e5619]: 03-10-2026 22:08:55
+            - gridcell [ref=e5620]: RBAC Admin
+            - gridcell [ref=e5621]: 03-10-2026 22:08:55
+            - gridcell [ref=e5622]: "true"
+            - gridcell [ref=e5623]:
+              - generic [ref=e4468]: 
+          - row [ref=e5624] [cursor=pointer]:
+            - gridcell [ref=e5625]: Indofast Test App 1791045620366
+            - gridcell [ref=e5626]: Indofast Test Service App 1791045620366
+            - gridcell [ref=e5627]: Indofast dashboard page 1791045620366
+            - gridcell [ref=e5628]: checkpage 1791045620366
+            - gridcell [ref=e5629]: RBAC Admin
+            - gridcell [ref=e5630]: 03-10-2026 22:10:49
+            - gridcell [ref=e5631]: RBAC Admin
+            - gridcell [ref=e5632]: 03-10-2026 22:10:49
+            - gridcell [ref=e5633]: "true"
+            - gridcell [ref=e5634]:
+              - generic [ref=e4480]: 
+          - row [ref=e5635] [cursor=pointer]:
+            - gridcell [ref=e5636]: Indofast Test App 1791045740130
+            - gridcell [ref=e5637]: Indofast Test Service App 1791045740130
+            - gridcell [ref=e5638]: Indofast dashboard page 1791045740130
+            - gridcell [ref=e5639]: checkpage 1791045740130
+            - gridcell [ref=e5640]: RBAC Admin
+            - gridcell [ref=e5641]: 03-10-2026 22:12:54
+            - gridcell [ref=e5642]: RBAC Admin
+            - gridcell [ref=e5643]: 03-10-2026 22:12:54
+            - gridcell [ref=e5644]: "true"
+            - gridcell [ref=e5645]:
+              - generic [ref=e4492]: 
+          - row [ref=e5646] [cursor=pointer]:
+            - gridcell [ref=e5647]: Indofast Test App 1791045933527
+            - gridcell [ref=e5648]: Indofast Test Service App 1791045933527
+            - gridcell [ref=e5649]: Indofast dashboard page 1791045933527
+            - gridcell [ref=e5650]: checkpage 1791045933527
+            - gridcell [ref=e5651]: RBAC Admin
+            - gridcell [ref=e5652]: 03-10-2026 22:16:46
+            - gridcell [ref=e5653]: RBAC Admin
+            - gridcell [ref=e5654]: 03-10-2026 22:16:46
+            - gridcell [ref=e5655]: "true"
+            - gridcell [ref=e5656]:
+              - generic [ref=e4504]: 
+          - row [ref=e5657] [cursor=pointer]:
+            - gridcell [ref=e5658]: Indofast Test App 1791046283484
+            - gridcell [ref=e5659]: Indofast Test Service App 1791046283484
+            - gridcell [ref=e5660]: Indofast dashboard page 1791046283484
+            - gridcell [ref=e5661]: checkpage 1791046283484
+            - gridcell [ref=e5662]: RBAC Admin
+            - gridcell [ref=e5663]: 03-10-2026 22:22:48
+            - gridcell [ref=e5664]: RBAC Admin
+            - gridcell [ref=e5665]: 03-10-2026 22:22:48
+            - gridcell [ref=e5666]: "true"
+            - gridcell [ref=e5667]:
+              - generic [ref=e4516]: 
+          - row [ref=e5668] [cursor=pointer]:
+            - gridcell [ref=e5669]: Indofast Test App 1791046674503
+            - gridcell [ref=e5670]: Indofast Test Service App 1791046674503
+            - gridcell [ref=e5671]: Indofast dashboard page 1791046674503
+            - gridcell [ref=e5672]: checkpage 1791046674503
+            - gridcell [ref=e5673]: RBAC Admin
+            - gridcell [ref=e5674]: 03-10-2026 22:28:23
+            - gridcell [ref=e5675]: RBAC Admin
+            - gridcell [ref=e5676]: 03-10-2026 22:28:23
+            - gridcell [ref=e5677]: "true"
+            - gridcell [ref=e5678]:
+              - generic [ref=e4528]: 
+          - row [ref=e5679] [cursor=pointer]:
+            - gridcell [ref=e5680]: Indofast Test App 1791046889687
+            - gridcell [ref=e5681]: Indofast Test Service App 1791046889687
+            - gridcell [ref=e5682]: Indofast dashboard page 1791046889687
+            - gridcell [ref=e5683]: checkpage 1791046889687
+            - gridcell [ref=e5684]: RBAC Admin
+            - gridcell [ref=e5685]: 03-10-2026 22:32:00
+            - gridcell [ref=e5686]: RBAC Admin
+            - gridcell [ref=e5687]: 03-10-2026 22:32:00
+            - gridcell [ref=e5688]: "true"
+            - gridcell [ref=e5689]:
+              - generic [ref=e4540]: 
+          - row [ref=e5690] [cursor=pointer]:
+            - gridcell [ref=e5691]: Indofast Test App 1791047060907
+            - gridcell [ref=e5692]: Indofast Test Service App 1791047060907
+            - gridcell [ref=e5693]: Indofast dashboard page 1791047060907
+            - gridcell [ref=e5694]: checkpage 1791047060907
+            - gridcell [ref=e5695]: RBAC Admin
+            - gridcell [ref=e5696]: 03-10-2026 22:34:50
+            - gridcell [ref=e5697]: RBAC Admin
+            - gridcell [ref=e5698]: 03-10-2026 22:34:50
+            - gridcell [ref=e5699]: "true"
+            - gridcell [ref=e5700]:
+              - generic [ref=e4552]: 
+          - row [ref=e5701] [cursor=pointer]:
+            - gridcell [ref=e5702]: Indofast Test App 1791047818359
+            - gridcell [ref=e5703]: Indofast Test Service App 1791047818359
+            - gridcell [ref=e5704]: Indofast dashboard page 1791047818359
+            - gridcell [ref=e5705]: checkpage 1791047818359
+            - gridcell [ref=e5706]: RBAC Admin
+            - gridcell [ref=e5707]: 03-10-2026 22:47:29
+            - gridcell [ref=e5708]: RBAC Admin
+            - gridcell [ref=e5709]: 03-10-2026 22:47:29
+            - gridcell [ref=e5710]: "true"
+            - gridcell [ref=e5711]:
+              - generic [ref=e4564]: 
+          - row [ref=e5712] [cursor=pointer]:
+            - gridcell [ref=e5713]: Indofast Test App 1791047961007
+            - gridcell [ref=e5714]: Indofast Test Service App 1791047961007
+            - gridcell [ref=e5715]: Indofast dashboard page 1791047961007
+            - gridcell [ref=e5716]: checkpage 1791047961007
+            - gridcell [ref=e5717]: RBAC Admin
+            - gridcell [ref=e5718]: 03-10-2026 22:49:54
+            - gridcell [ref=e5719]: RBAC Admin
+            - gridcell [ref=e5720]: 03-10-2026 22:49:54
+            - gridcell [ref=e5721]: "true"
+            - gridcell [ref=e5722]:
+              - generic [ref=e4576]: 
+          - row [ref=e5723] [cursor=pointer]:
+            - gridcell [ref=e5724]: Indofast Test App 1791048214768
+            - gridcell [ref=e5725]: Indofast Test Service App 1791048214768
+            - gridcell [ref=e5726]: Indofast dashboard page 1791048214768
+            - gridcell [ref=e5727]: checkpage 1791048214768
+            - gridcell [ref=e5728]: RBAC Admin
+            - gridcell [ref=e5729]: 03-10-2026 22:54:03
+            - gridcell [ref=e5730]: RBAC Admin
+            - gridcell [ref=e5731]: 03-10-2026 22:54:03
+            - gridcell [ref=e5732]: "true"
+            - gridcell [ref=e5733]:
+              - generic [ref=e4588]: 
+          - row [ref=e5734] [cursor=pointer]:
+            - gridcell [ref=e5735]: Indofast Test App 1791048415950
+            - gridcell [ref=e5736]: Indofast Test Service App 1791048415950
+            - gridcell [ref=e5737]: Indofast dashboard page 1791048415950
+            - gridcell [ref=e5738]: checkpage 1791048415950
+            - gridcell [ref=e5739]: RBAC Admin
+            - gridcell [ref=e5740]: 03-10-2026 22:57:22
+            - gridcell [ref=e5741]: RBAC Admin
+            - gridcell [ref=e5742]: 03-10-2026 22:57:22
+            - gridcell [ref=e5743]: "true"
+            - gridcell [ref=e5744]:
+              - generic [ref=e4600]: 
+          - row [ref=e5745] [cursor=pointer]:
+            - gridcell [ref=e5746]: Indofast Test App 1791048647485
+            - gridcell [ref=e5747]: Indofast Test Service App 1791048647485
+            - gridcell [ref=e5748]: Indofast dashboard page 1791048647485
+            - gridcell [ref=e5749]: checkpage 1791048647485
+            - gridcell [ref=e5750]: RBAC Admin
+            - gridcell [ref=e5751]: 03-10-2026 23:01:14
+            - gridcell [ref=e5752]: RBAC Admin
+            - gridcell [ref=e5753]: 03-10-2026 23:01:14
+            - gridcell [ref=e5754]: "true"
+            - gridcell [ref=e5755]:
+              - generic [ref=e4612]: 
+          - row [ref=e5756] [cursor=pointer]:
+            - gridcell [ref=e5757]: Indofast Test App 1791048748233
+            - gridcell [ref=e5758]: Indofast Test Service App 1791048748233
+            - gridcell [ref=e5759]: Indofast dashboard page 1791048748233
+            - gridcell [ref=e5760]: checkpage 1791048748233
+            - gridcell [ref=e5761]: RBAC Admin
+            - gridcell [ref=e5762]: 03-10-2026 23:02:57
+            - gridcell [ref=e5763]: RBAC Admin
+            - gridcell [ref=e5764]: 03-10-2026 23:02:57
+            - gridcell [ref=e5765]: "true"
+            - gridcell [ref=e5766]:
+              - generic [ref=e4624]: 
+          - row [ref=e5767] [cursor=pointer]:
+            - gridcell [ref=e5768]: Indofast Test App 1791049068208
+            - gridcell [ref=e5769]: Indofast Test Service App 1791049068208
+            - gridcell [ref=e5770]: Indofast dashboard page 1791049068208
+            - gridcell [ref=e5771]: checkpage 1791049068208
+            - gridcell [ref=e5772]: RBAC Admin
+            - gridcell [ref=e5773]: 03-10-2026 23:08:12
+            - gridcell [ref=e5774]: RBAC Admin
+            - gridcell [ref=e5775]: 03-10-2026 23:08:12
+            - gridcell [ref=e5776]: "true"
+            - gridcell [ref=e5777]:
+              - generic [ref=e4636]: 
+          - row [ref=e5778] [cursor=pointer]:
+            - gridcell [ref=e5779]: Indofast Test App 1791049240907
+            - gridcell [ref=e5780]: Indofast Test Service App 1791049240907
+            - gridcell [ref=e5781]: Indofast dashboard page 1791049240907
+            - gridcell [ref=e5782]: checkpage 1791049240907
+            - gridcell [ref=e5783]: RBAC Admin
+            - gridcell [ref=e5784]: 03-10-2026 23:11:04
+            - gridcell [ref=e5785]: RBAC Admin
+            - gridcell [ref=e5786]: 03-10-2026 23:11:04
+            - gridcell [ref=e5787]: "true"
+            - gridcell [ref=e5788]:
+              - generic [ref=e4648]: 
+          - row [ref=e5789] [cursor=pointer]:
+            - gridcell [ref=e5790]: Indofast Test App 1791131455095
+            - gridcell [ref=e5791]: Indofast Test Service App 1791131455095
+            - gridcell [ref=e5792]: Indofast dashboard page 1791131455095
+            - gridcell [ref=e5793]: checkpage 1791131455095
+            - gridcell [ref=e5794]: RBAC Admin
+            - gridcell [ref=e5795]: 04-10-2026 22:01:16
+            - gridcell [ref=e5796]: RBAC Admin
+            - gridcell [ref=e5797]: 04-10-2026 22:01:16
+            - gridcell [ref=e5798]: "true"
+            - gridcell [ref=e5799]:
+              - generic [ref=e4660]: 
+          - row [ref=e5800] [cursor=pointer]:
+            - gridcell [ref=e5801]: Indofast Test App 1791131760521
+            - gridcell [ref=e5802]: Indofast Test Service App 1791131760521
+            - gridcell [ref=e4664]
+            - gridcell [ref=e4665]
+            - gridcell [ref=e5803]: RBAC Admin
+            - gridcell [ref=e5804]: 04-10-2026 22:06:23
+            - gridcell [ref=e5805]: RBAC Admin
+            - gridcell [ref=e5806]: 04-10-2026 22:06:23
+            - gridcell [ref=e5807]: "true"
+            - gridcell [ref=e5808]:
+              - generic [ref=e4672]: 
+          - row [ref=e5809] [cursor=pointer]:
+            - gridcell [ref=e5810]: Indofast Test App 1791131845465
+            - gridcell [ref=e5811]: Indofast Test Service App 1791131845465
+            - gridcell [ref=e4676]
+            - gridcell [ref=e4677]
+            - gridcell [ref=e5812]: RBAC Admin
+            - gridcell [ref=e5813]: 04-10-2026 22:07:48
+            - gridcell [ref=e5814]: RBAC Admin
+            - gridcell [ref=e5815]: 04-10-2026 22:07:48
+            - gridcell [ref=e5816]: "true"
+            - gridcell [ref=e5817]:
+              - generic [ref=e4684]: 
+          - row [ref=e5818] [cursor=pointer]:
+            - gridcell [ref=e5819]: Indofast Test App 1791131954979
+            - gridcell [ref=e5820]: Indofast Test Service App 1791131954979
+            - gridcell [ref=e4688]
+            - gridcell [ref=e4689]
+            - gridcell [ref=e5821]: RBAC Admin
+            - gridcell [ref=e5822]: 04-10-2026 22:09:36
+            - gridcell [ref=e5823]: RBAC Admin
+            - gridcell [ref=e5824]: 04-10-2026 22:09:36
+            - gridcell [ref=e5825]: "true"
+            - gridcell [ref=e5826]:
+              - generic [ref=e4696]: 
+          - row [ref=e5827] [cursor=pointer]:
+            - gridcell [ref=e5828]: Indofast Test App 1791132325465
+            - gridcell [ref=e5829]: Indofast Test Service App 1791132325465
+            - gridcell [ref=e4700]
+            - gridcell [ref=e4701]
+            - gridcell [ref=e5830]: RBAC Admin
+            - gridcell [ref=e5831]: 04-10-2026 22:15:49
+            - gridcell [ref=e5832]: RBAC Admin
+            - gridcell [ref=e5833]: 04-10-2026 22:15:49
+            - gridcell [ref=e5834]: "true"
+            - gridcell [ref=e5835]:
+              - generic [ref=e4708]: 
+          - row [ref=e5836] [cursor=pointer]:
+            - gridcell [ref=e5837]: Indofast Test App 1791132716287
+            - gridcell [ref=e5838]: Indofast Test Service App 1791132716287
+            - gridcell [ref=e5839]: Indofast dashboard page 1791132716287
+            - gridcell [ref=e5840]: checkpage 1791132716287
+            - gridcell [ref=e5841]: RBAC Admin
+            - gridcell [ref=e5842]: 04-10-2026 22:22:24
+            - gridcell [ref=e5843]: RBAC Admin
+            - gridcell [ref=e5844]: 04-10-2026 22:22:24
+            - gridcell [ref=e5845]: "true"
+            - gridcell [ref=e5846]:
+              - generic [ref=e4720]: 
+          - row [ref=e5847] [cursor=pointer]:
+            - gridcell [ref=e5848]: Indofast Test App 1791132872939
+            - gridcell [ref=e5849]: Indofast Test Service App 1791132872939
+            - gridcell [ref=e5850]: Indofast dashboard page 1791132872939
+            - gridcell [ref=e5851]: checkpage 1791132872939
+            - gridcell [ref=e5852]: RBAC Admin
+            - gridcell [ref=e5853]: 04-10-2026 22:24:57
+            - gridcell [ref=e5854]: RBAC Admin
+            - gridcell [ref=e5855]: 04-10-2026 22:24:57
+            - gridcell [ref=e5856]: "true"
+            - gridcell [ref=e5857]:
+              - generic [ref=e4732]: 
+          - row [ref=e5858] [cursor=pointer]:
+            - gridcell [ref=e5859]: Indofast Test App 1791137098982
+            - gridcell [ref=e5860]: Indofast Test Service App 1791137098982
+            - gridcell [ref=e4736]
+            - gridcell [ref=e4737]
+            - gridcell [ref=e5861]: RBAC Admin
+            - gridcell [ref=e5862]: 04-10-2026 23:35:22
+            - gridcell [ref=e5863]: RBAC Admin
+            - gridcell [ref=e5864]: 04-10-2026 23:35:22
+            - gridcell [ref=e5865]: "true"
+            - gridcell [ref=e5866]:
+              - generic [ref=e4744]: 
+          - row [ref=e5867] [cursor=pointer]:
+            - gridcell [ref=e5868]: Indofast Test App 1791137194028
+            - gridcell [ref=e5869]: Indofast Test Service App 1791137194028
+            - gridcell [ref=e4748]
+            - gridcell [ref=e4749]
+            - gridcell [ref=e5870]: RBAC Admin
+            - gridcell [ref=e5871]: 04-10-2026 23:36:57
+            - gridcell [ref=e5872]: RBAC Admin
+            - gridcell [ref=e5873]: 04-10-2026 23:36:57
+            - gridcell [ref=e5874]: "true"
+            - gridcell [ref=e5875]:
+              - generic [ref=e4756]: 
+          - row [ref=e5876] [cursor=pointer]:
+            - gridcell [ref=e5877]: Indofast Test App 1791137272445
+            - gridcell [ref=e5878]: Indofast Test Service App 1791137272445
+            - gridcell [ref=e4760]
+            - gridcell [ref=e4761]
+            - gridcell [ref=e5879]: RBAC Admin
+            - gridcell [ref=e5880]: 04-10-2026 23:38:13
+            - gridcell [ref=e5881]: RBAC Admin
+            - gridcell [ref=e5882]: 04-10-2026 23:38:13
+            - gridcell [ref=e5883]: "true"
+            - gridcell [ref=e5884]:
+              - generic [ref=e4768]: 
+          - row [ref=e5885] [cursor=pointer]:
+            - gridcell [ref=e5886]: Indofast Test App 1791137341954
+            - gridcell [ref=e5887]: Indofast Test Service App 1791137341954
+            - gridcell [ref=e4772]
+            - gridcell [ref=e4773]
+            - gridcell [ref=e5888]: RBAC Admin
+            - gridcell [ref=e5889]: 04-10-2026 23:39:23
+            - gridcell [ref=e5890]: RBAC Admin
+            - gridcell [ref=e5891]: 04-10-2026 23:39:23
+            - gridcell [ref=e5892]: "true"
+            - gridcell [ref=e5893]:
+              - generic [ref=e4780]: 
+          - row [ref=e5894] [cursor=pointer]:
+            - gridcell [ref=e5895]: Indofast Test App 1791137423627
+            - gridcell [ref=e5896]: Indofast Test Service App 1791137423627
+            - gridcell [ref=e4784]
+            - gridcell [ref=e4785]
+            - gridcell [ref=e5897]: RBAC Admin
+            - gridcell [ref=e5898]: 04-10-2026 23:40:46
+            - gridcell [ref=e5899]: RBAC Admin
+            - gridcell [ref=e5900]: 04-10-2026 23:40:46
+            - gridcell [ref=e5901]: "true"
+            - gridcell [ref=e5902]:
+              - generic [ref=e4792]: 
+          - row [ref=e5903] [cursor=pointer]:
+            - gridcell [ref=e5904]: Indofast Test App 1791137523091
+            - gridcell [ref=e5905]: Indofast Test Service App 1791137523091
+            - gridcell [ref=e4796]
+            - gridcell [ref=e4797]
+            - gridcell [ref=e5906]: RBAC Admin
+            - gridcell [ref=e5907]: 04-10-2026 23:42:24
+            - gridcell [ref=e5908]: RBAC Admin
+            - gridcell [ref=e5909]: 04-10-2026 23:42:24
+            - gridcell [ref=e5910]: "true"
+            - gridcell [ref=e5911]:
+              - generic [ref=e4804]: 
+          - row [ref=e5912] [cursor=pointer]:
+            - gridcell [ref=e5913]: Indofast Test App 1791137967245
+            - gridcell [ref=e5914]: Indofast Test Service App 1791137967245
+            - gridcell [ref=e5915]: Indofast dashboard page 1791137967245
+            - gridcell [ref=e5916]: checkpage 1791137967245
+            - gridcell [ref=e5917]: RBAC Admin
+            - gridcell [ref=e5918]: 04-10-2026 23:49:50
+            - gridcell [ref=e5919]: RBAC Admin
+            - gridcell [ref=e5920]: 04-10-2026 23:49:50
+            - gridcell [ref=e5921]: "true"
+            - gridcell [ref=e5922]:
+              - generic [ref=e4816]: 
+          - row [ref=e5923] [cursor=pointer]:
+            - gridcell [ref=e5924]: Indofast Test App 1791138223521
+            - gridcell [ref=e5925]: Indofast Test Service App 1791138223521
+            - gridcell [ref=e5926]: Indofast dashboard page 1791138223521
+            - gridcell [ref=e5927]: checkpage 1791138223521
+            - gridcell [ref=e5928]: RBAC Admin
+            - gridcell [ref=e5929]: 04-10-2026 23:54:07
+            - gridcell [ref=e5930]: RBAC Admin
+            - gridcell [ref=e5931]: 04-10-2026 23:54:07
+            - gridcell [ref=e5932]: "true"
+            - gridcell [ref=e5933]:
+              - generic [ref=e4828]: 
+          - row [ref=e5934] [cursor=pointer]:
+            - gridcell [ref=e5935]: Indofast Test App 1791222665848
+            - gridcell [ref=e5936]: Indofast Test Service App 1791222665848
+            - gridcell [ref=e5937]: Indofast dashboard page 1791222665848
+            - gridcell [ref=e5938]: checkpage 1791222665848
+            - gridcell [ref=e5939]: RBAC Admin
+            - gridcell [ref=e5940]: 05-10-2026 23:21:26
+            - gridcell [ref=e5941]: RBAC Admin
+            - gridcell [ref=e5942]: 05-10-2026 23:21:26
+            - gridcell [ref=e5943]: "true"
+            - gridcell [ref=e5944]:
+              - generic [ref=e4840]: 
+          - row [ref=e5945] [cursor=pointer]:
+            - gridcell [ref=e5946]: Indofast Test App 1791222775779
+            - gridcell [ref=e5947]: Indofast Test Service App 1791222775779
+            - gridcell [ref=e5948]: Indofast dashboard page 1791222775779
+            - gridcell [ref=e5949]: checkpage 1791222775779
+            - gridcell [ref=e5950]: RBAC Admin
+            - gridcell [ref=e5951]: 05-10-2026 23:23:16
+            - gridcell [ref=e5952]: RBAC Admin
+            - gridcell [ref=e5953]: 05-10-2026 23:23:16
+            - gridcell [ref=e5954]: "true"
+            - gridcell [ref=e5955]:
+              - generic [ref=e4852]: 
+          - row [ref=e5956] [cursor=pointer]:
+            - gridcell [ref=e5957]: Indofast Test App 1791222936521
+            - gridcell [ref=e5958]: Indofast Test Service App 1791222936521
+            - gridcell [ref=e5959]: Indofast dashboard page 1791222936521
+            - gridcell [ref=e5960]: checkpage 1791222936521
+            - gridcell [ref=e5961]: RBAC Admin
+            - gridcell [ref=e5962]: 05-10-2026 23:26:03
+            - gridcell [ref=e5963]: RBAC Admin
+            - gridcell [ref=e5964]: 05-10-2026 23:26:03
+            - gridcell [ref=e5965]: "true"
+            - gridcell [ref=e5966]:
+              - generic [ref=e4864]: 
+          - row [ref=e5967] [cursor=pointer]:
+            - gridcell [ref=e5968]: Indofast Test App 1791223058256
+            - gridcell [ref=e5969]: Indofast Test Service App 1791223058256
+            - gridcell [ref=e5970]: Indofast dashboard page 1791223058256
+            - gridcell [ref=e5971]: checkpage 1791223058256
+            - gridcell [ref=e5972]: RBAC Admin
+            - gridcell [ref=e5973]: 05-10-2026 23:28:04
+            - gridcell [ref=e5974]: RBAC Admin
+            - gridcell [ref=e5975]: 05-10-2026 23:28:04
+            - gridcell [ref=e5976]: "true"
+            - gridcell [ref=e5977]:
+              - generic [ref=e4876]: 
+          - row [ref=e5978] [cursor=pointer]:
+            - gridcell [ref=e5979]: INDOFAST_FLEET
+            - gridcell [ref=e5980]: INDOFAST_FLEET
+            - gridcell [ref=e5981]: INDOFAST_FLEET_LAUNCH , INDOFAST_FLEET_LOGIN
+            - gridcell [ref=e5982]: APP_MAIN , TestFeature , FLEET_LOGIN
+            - gridcell [ref=e5983]: RBAC Admin
+            - gridcell [ref=e5984]: 19-12-2024 12:09:12
+            - gridcell [ref=e5985]: RBAC Admin
+            - gridcell [ref=e5986]: 19-12-2024 12:09:12
+            - gridcell [ref=e5987]: "true"
+            - gridcell [ref=e5988]:
+              - generic [ref=e4888]: 
+          - row [ref=e5989] [cursor=pointer]:
+            - gridcell [ref=e5990]: INDOFAST_PARTNER
+            - gridcell [ref=e5991]: INDOFAST_PARTNER
+            - gridcell [ref=e5992]: INDOFAST_PARTNER_KEYFOB_CHECK , INDOFAST_PARTNER_NOTIFICATION , INDOFAST_PARTNER_SCAN_STATION , INDOFAST_PARTNER_STATEMENT , INDOFAST_PARTNER_SUBSCRIPTION , INDOFAST_PARTNER_TICKET , INDOFAST_PARTNER_VEHICLE , INDOFAST_PARTNER_WALLET , Rbac_page
+            - gridcell [ref=e5993]: SUBSCRIPTION_PLAN , READ , SUBSCRIPTION_ACTIVATE , READ , INDOFAST_PARTNER_CHECK , PUSH_NOTIFICATION , abhishek_agent , FORCE_LOGOUT , SCAN_STATION , STATEMENT , rbac_feature , INDOFAST_PARTNER_SUBSCRIPTION_VIEW , TICKET_KEYFOB , TICKET_VEHICLE , TICKET_STATION , TICKET_BATTERY , CUSTOMER_PROVISION , KEYFOB_READ , REMOVE2 , CUSTOMER_SEARCH , CUSTOMER_KEYFOB_SEARCH , KEYFOB_SEARCH , WALLET_SEARCH , TRANSFER
+            - gridcell [ref=e5994]: RBAC Admin
+            - gridcell [ref=e5995]: 15-11-2024 10:28:47
+            - gridcell [ref=e5996]: RBAC Admin
+            - gridcell [ref=e5997]: 15-11-2024 10:28:47
+            - gridcell [ref=e5998]: "true"
+            - gridcell [ref=e5999]:
+              - generic [ref=e4900]: 
+          - row [ref=e6000] [cursor=pointer]:
+            - gridcell [ref=e6001]: INDOFAST_RIDER
+            - gridcell [ref=e6002]: INDOFAST_RIDER
+            - gridcell [ref=e6003]: INDOFAST_RIDER_LAUNCH , INDOFAST_RIDER_LOGIN , RIDER_MAIN
+            - gridcell [ref=e6004]: APP_MAIN , RIDER_LOGIN
+            - gridcell [ref=e6005]: RBAC Admin
+            - gridcell [ref=e6006]: 17-12-2024 15:32:56
+            - gridcell [ref=e6007]: RBAC Admin
+            - gridcell [ref=e6008]: 17-12-2024 15:32:56
+            - gridcell [ref=e6009]: "true"
+            - gridcell [ref=e6010]:
+              - generic [ref=e4912]: 
+          - row [ref=e6011] [cursor=pointer]:
+            - gridcell [ref=e6012]: INDOFAST_SERVICE
+            - gridcell [ref=e6013]: INDOFAST_SERVICE
+            - gridcell [ref=e6014]: INDOFAST_SERVICE_ADMIN , INDOFAST_SERVICE_ASSISTANCE , INDOFAST_SERVICE_BATTERY_ISSUING , INDOFAST_SERVICE_BP_DASHBOARD , INDOFAST_SERVICE_CUSTOMER , INDOFAST_SERVICE_KEYFOB_CHECK , INDOFAST_SERVICE_NOTIFICATION , INDOFAST_SERVICE_ONBOARD_OFFBOARD_BP , INDOFAST_SERVICE_STATION_LOAD_UNLOAD , INDOFAST_SERVICE_STATION_SCAN , INDOFAST_SERVICE_TICKET , service_check , TestPage , TestPages
+            - gridcell [ref=e6015]: ADMIN_USERLIST , ADMIN_PROVISION , SM_ADMIN , ADMIN_USERLIST , ADMIN_PROVISION , ASSISTANCE_BLE_UNLOCK_START , ASSISTANCE_KEYFOB_READ , ASSISTANCE_KEYFOB_SEARCH , ASSISTANCE_KEYFOB_READ , ASSISTANCE_BLE_UNLOCK_START , BATTERY_ISSUING_ONBOARDING , BP_ZONE_LOAD , BP_ZONE_UNLOAD , BP_STATION_LOAD , BP_STATION_UNLOAD , CUSTOMER_PROVISION , SUBSCRIPTION_PLAN , CUSTOMER_KEYFOB_SEARCH , CUSTOMER_KEYFOB_READ , KEYFOB_CHECK_SEARCH , KEYFOB_CHECK_READ , NOTIFICATION_PUSH_NOTIFICATION , NOTIFICATION_FORCE_LOGOUT , BP_OFFBOARD , BP_ONBOARD , STATION_LOAD , STATION_UNLOAD , STATION_SCAN , STATION_ASSESSMENT , TICKET_SUPPORT , TICKET_CREATE , service_tester , TestFeature2 , TestFeature1 , TestFeatures2 , TestFeatures1
+            - gridcell [ref=e6016]: RBAC Admin
+            - gridcell [ref=e6017]: 14-11-2024 15:08:16
+            - gridcell [ref=e6018]: RBAC Admin
+            - gridcell [ref=e6019]: 14-11-2024 15:08:16
+            - gridcell [ref=e6020]: "true"
+            - gridcell [ref=e6021]:
+              - generic [ref=e4924]: 
+          - row [ref=e6022] [cursor=pointer]:
+            - gridcell [ref=e6023]: Indofast_service_app
+            - gridcell [ref=e6024]: Indofast_service_app
+            - gridcell [ref=e4928]
+            - gridcell [ref=e4929]
+            - gridcell [ref=e6025]: RBAC Admin
+            - gridcell [ref=e6026]: 01-04-2025 14:35:57
+            - gridcell [ref=e6027]: RBAC Admin
+            - gridcell [ref=e6028]: 01-04-2025 14:35:57
+            - gridcell [ref=e6029]: "true"
+            - gridcell [ref=e6030]:
+              - generic [ref=e4936]: 
+          - row [ref=e6031] [cursor=pointer]:
+            - gridcell [ref=e6032]: INDOFAST_SERVICE_TESTING_APP
+            - gridcell [ref=e6033]: INDOFAST_SERVICE_TESTING_APP
+            - gridcell [ref=e6034]: INDOFAST_SERVICE_CHECK
+            - gridcell [ref=e6035]: INDOFAST_READ , INDOFAST_SEARCH , INDOFAST_WRITE
+            - gridcell [ref=e6036]: RBAC Admin
+            - gridcell [ref=e6037]: 01-04-2025 00:01:11
+            - gridcell [ref=e6038]: RBAC Admin
+            - gridcell [ref=e6039]: 01-04-2025 00:01:11
+            - gridcell [ref=e6040]: "true"
+            - gridcell [ref=e6041]:
+              - generic [ref=e4948]: 
+          - row [ref=e6042] [cursor=pointer]:
+            - gridcell [ref=e6043]: INDOFAST_SWAPEASI
+            - gridcell [ref=e6044]: INDOFAST_SWAPEASI APP
+            - gridcell [ref=e6045]: AUDIT_CHOOSE_DATE , indofast_audit_1 , Indofast_audit_log , indofast_audit_log_1 , indofast_audit_log_2 , INDOFAST_SWAPEASI_AUDIT , INDOFAST_SWAPEASI_BP_DASHBOARD , INDOFAST_SWAPEASI_CHOOSE_VIN , INDOFAST_SWAPEASI_CUSTOMER , INDOFAST_SWAPEASI_DASHBOARD , INDOFAST_SWAPEASI_FIELD , INDOFAST_SWAPEASI_ONBOARD_OFFBOARD_BP , INDOFAST_SWAPEASI_SCAN_STATION , INDOFAST_SWAPEASI_SERVICE , Indofast_swap_easy_auditlog , New_indofast_audit_log , Sanjay_audit , SM_ESV_APPROVALS , SM_ESV_ASSISTANCE , SM_ESV_AUDIT , SM_ESV_BATTERY_ISSUING , SM_ESV_BP_DASHBOARD , SM_ESV_BP_REQUESTS , SM_ESV_CHOOSE_VIN , SM_ESV_CUSTOMER , SM_ESV_DASHBOARD , SM_ESV_FIELD , SM_ESV_SCAN_STATION , SM_ESV_SERVICE , SM_ESV_STATION , SM_ESV_STORE_DASHBOARD , SM_ESV_STORE_LISTING , SM_ESV_STORE_TRANSIT , Test
+            - gridcell [ref=e6046]: indofast_audit_3 , indofast_audit_2 , indofast_audit_log_4 , indofast_audit_4 , indofast_audit_3 , indofast_audit_log_1 , indofast_audit_log_3 , indofast_audit_log_3 , indofast_audit_log_4 , New_indofast_audit_log_2 , indofast_audit_log_4 , Sanjay_audit_3 , AUDIT_CHOOSE_DATE , Indofast_audit_log , AUDIT_CHOOSE_DATE , BP_LOAD , BP_ZONE_UNLOAD , BP_ZONE_LOAD , BP_UNLOAD , CHOOSE_VIN_SEARCH_VEHICLE , CHOOSE_VIN_SCAN_VEHICLE , CHOOSE_VIN_SELECT_VEHICLE , CUSTOMER_TAP_KEYFOB , CUSTOMER_BLE_UNLOCK , SUBSCRIPTION_PLAN , SUBSCRIPTION_ACTIVATE , CUSTOMER_BATTERY_SWAP , CUSTOMER_SEARCH , CUSTOMER_SCAN_VEHICLE , DASHBOARD_CHANGE_VEHICLE , FIELD_UNLOAD_FULL_BATTERY , FIELD_SCAN_STATION , FIELD_SEARCH_STATION , FIELD_LOAD_EMPTY_BATTERY , FIELD_EXCHANGE_BATTERY , BP_ONBOARD , BP_OFFBOARD , STATION_SCAN , SERVICE_LOAD_FULL_BATTERY , SERVICE_SEARCH_STATION , SERVICE_EXCHANGE_BATTERY , SERVICE_SCAN_STATION , SERVICE_UNLOAD_EMPTY_BATTERY , New_indofast_audit_log_1 , New_indofast_audit_log_2 , Sanjay_audit_1 , Sanjay_audit_2 , Sanjay_audit_3 , SM_ESV_APPROVALS_VIEW , ASSISTANCE_KEYFOB_SEARCH , ASSISTANCE_BLE_UNLOCK_START , ASSISTANCE_KEYFOB_READ , BATTERY_ISSUING_ONBOARDING , SM_ESV_BP_REQUESTS_VIEW , SM_ESV_STATION_UNLOAD_FULL_BP , SM_ESV_STATION_UNLOAD_DRAINED_BP , SM_ESV_STATION_SEARCH , SM_ESV_STATION_SCAN , SM_ESV_STATION_LOAD_FULL_BP , SM_ESV_STATION_LOAD_DRAINED_BP , SM_ESV_STATION_EXCHANGE_BP , SM_ESV_STORE_DASHBOARD_VIEW , SM_ESV_STORE_LISTING_FEATURE , SM_ESV_STORE_TRANSIT_VIEW
+            - gridcell [ref=e6047]: RBAC Admin
+            - gridcell [ref=e6048]: 15-11-2024 10:15:12
+            - gridcell [ref=e6049]: RBAC Admin
+            - gridcell [ref=e6050]: 09-12-2024 12:52:21
+            - gridcell [ref=e6051]: "true"
+            - gridcell [ref=e6052]:
+              - generic [ref=e4960]: 
+          - row [ref=e6053] [cursor=pointer]:
+            - gridcell [ref=e6054]: Indofats Test App 1790695467299
+            - gridcell [ref=e6055]: testing app
+            - gridcell [ref=e4964]
+            - gridcell [ref=e4965]
+            - gridcell [ref=e6056]: RBAC Admin
+            - gridcell [ref=e6057]: 29-09-2026 20:54:38
+            - gridcell [ref=e6058]: RBAC Admin
+            - gridcell [ref=e6059]: 29-09-2026 20:54:38
+            - gridcell [ref=e6060]: "true"
+            - gridcell [ref=e6061]:
+              - generic [ref=e4972]: 
+          - row [ref=e6062] [cursor=pointer]:
+            - gridcell [ref=e6063]: Indofats Test App Fleet
+            - gridcell [ref=e6064]: testing app
+            - gridcell [ref=e4976]
+            - gridcell [ref=e4977]
+            - gridcell [ref=e6065]: RBAC Admin
+            - gridcell [ref=e6066]: 23-09-2026 22:38:35
+            - gridcell [ref=e6067]: RBAC Admin
+            - gridcell [ref=e6068]: 23-09-2026 22:38:35
+            - gridcell [ref=e6069]: "true"
+            - gridcell [ref=e6070]:
+              - generic [ref=e4984]: 
+          - row [ref=e6071] [cursor=pointer]:
+            - gridcell [ref=e6072]: Indofats Test App Fleet 1
+            - gridcell [ref=e6073]: testing app
+            - gridcell [ref=e4988]
+            - gridcell [ref=e4989]
+            - gridcell [ref=e6074]: RBAC Admin
+            - gridcell [ref=e6075]: 23-09-2026 22:42:44
+            - gridcell [ref=e6076]: RBAC Admin
+            - gridcell [ref=e6077]: 23-09-2026 22:42:44
+            - gridcell [ref=e6078]: "true"
+            - gridcell [ref=e6079]:
+              - generic [ref=e4996]: 
+          - row [ref=e6080] [cursor=pointer]:
+            - gridcell [ref=e6081]: MutiService
+            - gridcell [ref=e6082]: MutiullaTestservice
+            - gridcell [ref=e5000]
+            - gridcell [ref=e5001]
+            - gridcell [ref=e6083]: RBAC Admin
+            - gridcell [ref=e6084]: 18-12-2025 17:46:16
+            - gridcell [ref=e6085]: RBAC Admin
+            - gridcell [ref=e6086]: 18-12-2025 17:46:16
+            - gridcell [ref=e6087]: "true"
+            - gridcell [ref=e6088]:
+              - generic [ref=e5008]: 
+          - row [ref=e6089] [cursor=pointer]:
+            - gridcell [ref=e6090]: PW_AUTO_APP_1006
+            - gridcell [ref=e6091]: Playwright automation test app
+            - gridcell [ref=e5012]
+            - gridcell [ref=e5013]
+            - gridcell [ref=e6092]: RBAC Admin
+            - gridcell [ref=e6093]: 06-10-2026 19:34:44
+            - gridcell [ref=e6094]: RBAC Admin
+            - gridcell [ref=e6095]: 06-10-2026 19:34:44
+            - gridcell [ref=e6096]: "true"
+            - gridcell [ref=e6097]:
+              - generic [ref=e5020]: 
+          - row [ref=e6098] [cursor=pointer]:
+            - gridcell [ref=e6099]: qeqe
+            - gridcell [ref=e6100]: eeqqe
+            - gridcell [ref=e5024]
+            - gridcell [ref=e5025]
+            - gridcell [ref=e6101]: RBAC Admin
+            - gridcell [ref=e6102]: 23-09-2026 22:38:48
+            - gridcell [ref=e6103]: RBAC Admin
+            - gridcell [ref=e6104]: 23-09-2026 22:38:48
+            - gridcell [ref=e6105]: "true"
+            - gridcell [ref=e6106]:
+              - generic [ref=e5032]: 
+          - row [ref=e6107] [cursor=pointer]:
+            - gridcell [ref=e6108]: RBAC_TESTING_APPICATION
+            - gridcell [ref=e6109]: RBAC_TESTING_APPICATION
+            - gridcell [ref=e6110]: RBAC_TESTING_PAGE1 , RBAC_TESTING_PAGE2 , RBAC_TESTING_PAGE3
+            - gridcell [ref=e6111]: RBAC_TESTING_FEATURE1 , RBAC_TESTING_FEATURE2 , RBAC_TESTING_FEATURE3 , RBAC_TESTING_FEATURE4
+            - gridcell [ref=e6112]: RBAC Admin
+            - gridcell [ref=e6113]: 22-12-2025 11:28:15
+            - gridcell [ref=e6114]: RBAC Admin
+            - gridcell [ref=e6115]: 22-12-2025 11:28:15
+            - gridcell [ref=e6116]: "true"
+            - gridcell [ref=e6117]:
+              - generic [ref=e5044]: 
+          - row [ref=e6118] [cursor=pointer]:
+            - gridcell [ref=e6119]: service
+            - gridcell [ref=e6120]: service
+            - gridcell [ref=e5048]
+            - gridcell [ref=e5049]
+            - gridcell [ref=e6121]: RBAC Admin
+            - gridcell [ref=e6122]: 31-03-2025 23:53:14
+            - gridcell [ref=e6123]: RBAC Admin
+            - gridcell [ref=e6124]: 31-03-2025 23:53:14
+            - gridcell [ref=e6125]: "true"
+            - gridcell [ref=e6126]:
+              - generic [ref=e5056]: 
+          - row [ref=e6127] [cursor=pointer]:
+            - gridcell [ref=e6128]: SM_AGENT
+            - gridcell [ref=e6129]: SM_AGENTs
+            - gridcell [ref=e6130]: SM_AGENT_KEYFOB_CHECK , SM_AGENT_NOTIFICATION , SM_AGENT_SCAN_STATION , SM_AGENT_STATEMENT , SM_AGENT_SUBSCRIPTION , SM_AGENT_TICKET , SM_AGENT_VEHICLE , SM_AGENT_WALLET
+            - gridcell [ref=e6131]: READ , SUBSCRIPTION_ACTIVATE , SUBSCRIPTION_PLAN , FORCE_LOGOUT , PUSH_NOTIFICATION , SCAN_STATION , STATEMENT , SUBSCRIPTION_VIEW , TICKET_KEYFOB , TICKET_BATTERY , TICKET_STATION , TICKET_VEHICLE , KEYFOB_SEARCH , CUSTOMER_PROVISION , CUSTOMER_SEARCH , KEYFOB_READ , CUSTOMER_KEYFOB_SEARCH , TRANSFER , WALLET_SEARCH
+            - gridcell [ref=e6132]: RBAC Admin
+            - gridcell [ref=e6133]: 28-10-2025 11:23:58
+            - gridcell [ref=e6134]: RBAC Admin
+            - gridcell [ref=e6135]: 18-12-2025 16:09:58
+            - gridcell [ref=e6136]: "true"
+            - gridcell [ref=e6137]:
+              - generic [ref=e5068]: 
+          - row [ref=e6138] [cursor=pointer]:
+            - gridcell [ref=e6139]: SM_ESV
+            - gridcell [ref=e6140]: SM_ESV
+            - gridcell [ref=e6141]: SM_ESV_APPROVALS , SM_ESV_ASSISTANCE , SM_ESV_AUDIT , SM_ESV_BATTERY_ISSUING , SM_ESV_BP_DASHBOARD , SM_ESV_BP_REQUESTS , SM_ESV_CHOOSE_VIN , SM_ESV_CUSTOMER , SM_ESV_DASHBOARD , SM_ESV_FIELD , SM_ESV_SCAN_STATION , SM_ESV_SERVICE , SM_ESV_STATION , SM_ESV_STORE_DASHBOARD , SM_ESV_STORE_LISTING , SM_ESV_STORE_TRANSIT , SM_SERVICE_BATTERY_ISSUING
+            - gridcell [ref=e6142]: SM_ESV_APPROVALS_VIEW , ASSISTANCE_KEYFOB_READ , ASSISTANCE_BLE_UNLOCK_START , ASSISTANCE_KEYFOB_SEARCH , AUDIT_CHOOSE_DATE , AUDIT_LOG , Refresh , BATTERY_ISSUING_ONBOARDING , BP_LOAD , BP_ZONE_UNLOAD , BP_UNLOAD , BP_ZONE_LOAD , SM_ESV_BP_REQUESTS_VIEW , CHOOSE_VIN_SCAN_VEHICLE , CHOOSE_VIN_SELECT_VEHICLE , CHOOSE_VIN_SEARCH_VEHICLE , CUSTOMER_SEARCH , SUBSCRIPTION_ACTIVATE , CUSTOMER_BATTERY_SWAP , CUSTOMER_BLE_UNLOCK , CUSTOMER_SCAN_VEHICLE , CUSTOMER_TAP_KEYFOB , DASHBOARD_CHANGE_VEHICLE , FIELD_SEARCH_STATION , FIELD_UNLOAD_FULL_BATTERY , FIELD_EXCHANGE_BATTERY , FIELD_SCAN_STATION , FIELD_LOAD_EMPTY_BATTERY , STATION_SCAN , SERVICE_SEARCH_STATION , SERVICE_UNLOAD_EMPTY_BATTERY , SERVICE_LOAD_FULL_BATTERY , SERVICE_SCAN_STATION , SERVICE_EXCHANGE_BATTERY , SM_ESV_STATION_UNLOAD_FULL_BP , SM_ESV_STATION_SCAN , SM_ESV_STATION_SEARCH , SM_ESV_STATION_LOAD_FULL_BP , SM_ESV_STATION_EXCHANGE_BP , SM_ESV_STATION_LOAD_DRAINED_BP , SM_ESV_STATION_UNLOAD_DRAINED_BP , SM_ESV_STORE_DASHBOARD_VIEW , SM_ESV_STORE_LISTING_FEATURE , SM_ESV_STORE_TRANSIT_VIEW
+            - gridcell [ref=e6143]: RBAC Admin
+            - gridcell [ref=e6144]: 09-10-2025 16:22:07
+            - gridcell [ref=e6145]: RBAC Admin
+            - gridcell [ref=e6146]: 09-10-2025 16:22:07
+            - gridcell [ref=e6147]: "true"
+            - gridcell [ref=e6148]:
+              - generic [ref=e5080]: 
+          - row [ref=e6149] [cursor=pointer]:
+            - gridcell [ref=e6150]: SM_RETAIL_DRIVER
+            - gridcell [ref=e6151]: SM_RETAIL_DRIVER
+            - gridcell [ref=e6152]: SM_RETAIL_DRIVER_LOGIN
+            - gridcell [ref=e6153]: APP_LOGIN
+            - gridcell [ref=e6154]: RBAC Admin
+            - gridcell [ref=e6155]: 11-12-2024 16:11:50
+            - gridcell [ref=e6156]: RBAC Admin
+            - gridcell [ref=e6157]: 11-12-2024 16:19:03
+            - gridcell [ref=e6158]: "true"
+            - gridcell [ref=e6159]:
+              - generic [ref=e5092]: 
+          - row [ref=e6160] [cursor=pointer]:
+            - gridcell [ref=e6161]: SM_Service
+            - gridcell [ref=e6162]: Service app testing
+            - gridcell [ref=e5096]
+            - gridcell [ref=e5097]
+            - gridcell [ref=e6163]: RBAC Admin
+            - gridcell [ref=e6164]: 18-12-2025 16:25:20
+            - gridcell [ref=e6165]: RBAC Admin
+            - gridcell [ref=e6166]: 18-12-2025 16:25:20
+            - gridcell [ref=e6167]: "true"
+            - gridcell [ref=e6168]:
+              - generic [ref=e5104]: 
+          - row [ref=e6169] [cursor=pointer]:
+            - gridcell [ref=e6170]: SM_SERVICE
+            - gridcell [ref=e6171]: SM_SERVICE
+            - gridcell [ref=e6172]: SM_SERVICE_ADMIN , SM_SERVICE_ASSISTANCE , SM_SERVICE_BATTERY_ISSUING , SM_SERVICE_BP_DASHBOARD , SM_SERVICE_CUSTOMER , SM_SERVICE_KEYFOB_CHECK , SM_SERVICE_NOTIFICATION , SM_SERVICE_STATION_SCAN , SM_SERVICE_TICKET
+            - gridcell [ref=e6173]: ADMIN_PROVISION , SM_ADMIN , ADMIN_USERLIST , ASSISTANCE_KEYFOB_SEARCH , ASSISTANCE_BLE_UNLOCK_START , ASSISTANCE_KEYFOB_READ , BATTERY_ISSUING_ONBOARDING , BP_ZONE_UNLOAD , BP_STATION_UNLOAD , BP_STATION_LOAD , BP_ZONE_LOAD , CUSTOMER_PROVISION , CUSTOMER_KEYFOB_READ , CUSTOMER_KEYFOB_SEARCH , KEYFOB_CHECK_SEARCH , KEYFOB_CHECK_READ , NOTIFICATION_FORCE_LOGOUT , NOTIFICATION_PUSH_NOTIFICATION , STATION_ASSESSMENT , STATION_SCAN , TICKET_CREATE , TICKET_SUPPORT
+            - gridcell [ref=e6174]: RBAC Admin
+            - gridcell [ref=e6175]: 13-10-2025 13:21:49
+            - gridcell [ref=e6176]: RBAC Admin
+            - gridcell [ref=e6177]: 13-10-2025 13:21:49
+            - gridcell [ref=e6178]: "true"
+            - gridcell [ref=e6179]:
+              - generic [ref=e5116]: 
+          - row [ref=e6180] [cursor=pointer]:
+            - gridcell [ref=e6181]: SM_Service1
+            - gridcell [ref=e6182]: SM_Service1
+            - gridcell [ref=e5120]
+            - gridcell [ref=e5121]
+            - gridcell [ref=e6183]: RBAC Admin
+            - gridcell [ref=e6184]: 16-01-2025 11:16:30
+            - gridcell [ref=e6185]: RBAC Admin
+            - gridcell [ref=e6186]: 16-01-2025 11:16:30
+            - gridcell [ref=e6187]: "true"
+            - gridcell [ref=e6188]:
+              - generic [ref=e5128]: 
+          - row [ref=e6189] [cursor=pointer]:
+            - gridcell [ref=e6190]: SM_TESTING_PARTNER
+            - gridcell [ref=e6191]: SM_TESTING_PARTNER
+            - gridcell [ref=e6192]: sm_testing_check_page
+            - gridcell [ref=e6193]: STATION_SCAN
+            - gridcell [ref=e6194]: RBAC Admin
+            - gridcell [ref=e6195]: 22-12-2025 11:03:42
+            - gridcell [ref=e6196]: RBAC Admin
+            - gridcell [ref=e6197]: 22-12-2025 11:03:42
+            - gridcell [ref=e6198]: "true"
+            - gridcell [ref=e6199]:
+              - generic [ref=e5140]: 
+          - row [ref=e6200] [cursor=pointer]:
+            - gridcell [ref=e6201]: SMAGENTTT
+            - gridcell [ref=e6202]: SMAGENTTT
+            - gridcell [ref=e5144]
+            - gridcell [ref=e5145]
+            - gridcell [ref=e6203]: RBAC Admin
+            - gridcell [ref=e6204]: 27-01-2025 16:40:32
+            - gridcell [ref=e6205]: RBAC Admin
+            - gridcell [ref=e6206]: 27-01-2025 16:40:32
+            - gridcell [ref=e6207]: "true"
+            - gridcell [ref=e6208]:
+              - generic [ref=e5152]: 
+          - row [ref=e6209] [cursor=pointer]:
+            - gridcell [ref=e6210]: SMPL_AMS
+            - gridcell [ref=e6211]: SunMobility AMS App
+            - gridcell [ref=e6212]: Home , SMPL_AMS_HOME
+            - gridcell [ref=e5157]
+            - gridcell [ref=e6213]: RBAC Admin
+            - gridcell [ref=e6214]: 03-03-2025 16:54:26
+            - gridcell [ref=e6215]: RBAC Admin
+            - gridcell [ref=e6216]: 03-03-2025 16:54:26
+            - gridcell [ref=e6217]: "true"
+            - gridcell [ref=e6218]:
+              - generic [ref=e5164]: 
+          - row [ref=e6219] [cursor=pointer]:
+            - gridcell [ref=e6220]: SMPL_SmartDiagnostic
+            - gridcell [ref=e6221]: SunMobility Smart Diagnostic App
+            - gridcell [ref=e6222]: SMPL_SmartDiagnostic_3DC , SMPL_SmartDiagnostic_Battery , SMPL_SmartDiagnostic_Home , SMPL_SmartDiagnostic_MQIS , SMPL_SmartDiagnostic_Service , SMPL_SmartDiagnostic_Vehicle
+            - gridcell [ref=e6223]: 3DC_Faults , Battery_SWFlash , Battery_SWFlash_Download , Battery_Unlock , Battery_Diagnostics , Battery_Diagnostics_QuarantineClear , Battery_ConfigFlash , Battery_SWFlash_SoftwareUpdate , Battery_ConfigFlash_Download , Battery_ConfigFlash_SoftwareUpdate , HOME_ALL , MQIS_Battery_Unlock , MQIS_Battery_Diagnostics , MQIS_Battery_Diagnostics_QuarantineClear , Service_DockIdRemap , Service_ViewLogReport , Service_ServiceDongleFlash , Vehicle_ConfigFlash_SoftwareUpdate , Vehicle_BatteryFaults_QuarantineClear , Vehicle_SWFlash_Download , Vehicle_SWFlash_SoftwareUpdate , Vehicle_ConfigFlash_Download , Vehicle_BatteryFaults , Vehicle_DIUFaults_ClearShortCircuit , Vehicle_DIUFaults_ClearDockTemp , Vehicle_DIUFaults_ClearMosfetTemp , Vehicle_DIUFaults_ClearCommonLoss , Vehicle_DIUFaults , Vehicle_ConfigFlash , Vehicle_SWFlash , Vehicle_Battery_Unlock
+            - gridcell [ref=e6224]: RBAC Admin
+            - gridcell [ref=e6225]: 17-01-2025 14:34:06
+            - gridcell [ref=e6226]: RBAC Admin
+            - gridcell [ref=e6227]: 17-01-2025 14:34:06
+            - gridcell [ref=e6228]: "true"
+            - gridcell [ref=e6229]:
+              - generic [ref=e5176]: 
+          - row [ref=e6230] [cursor=pointer]:
+            - gridcell [ref=e6231]: SUN_MOBILITY_DRIVER
+            - gridcell [ref=e6232]: SUN_MOBILITY_DRIVER
+            - gridcell [ref=e6233]: SUN_MOBILITY_DRIVER_DASHBOARD , SUN_MOBILITY_DRIVER_MAP , SUN_MOBILITY_DRIVER_PROFILE , SUN_MOBILITY_DRIVER_SCAN_VEHICLE , SUN_MOBILITY_DRIVER_STATEMENT , SUN_MOBILITY_DRIVER_SUBSCRIPTIONS_HISTORY , SUN_MOBILITY_DRIVER_WALLET
+            - gridcell [ref=e6234]: SUN_MOBILITY_DRIVER_DASHBOARD_SUBSCRIPTION , SUN_MOBILITY_DRIVER_DASHBOARD_VIEW , SUN_MOBILITY_DRIVER_MAP_VIEW , SUN_MOBILITY_DRIVER_PROFILE_VIEW , SUN_MOBILITY_DRIVER_SELECT_VEHICLE , SUN_MOBILITY_DRIVER_SCAN_VEHICLE_VIEW , SUN_MOBILITY_DRIVER_STATEMENT_VIEW , SUN_MOBILITY_DRIVER_SUBSCRIPTIONS_HISTORY_VIEW , SUN_MOBILITY_DRIVER_WALLET_MPESSA , SUN_MOBILITY_DRIVER_WALLET_VIEW
+            - gridcell [ref=e6235]: RBAC Admin
+            - gridcell [ref=e6236]: 23-12-2025 20:29:45
+            - gridcell [ref=e6237]: RBAC Admin
+            - gridcell [ref=e6238]: 23-12-2025 20:29:45
+            - gridcell [ref=e6239]: "true"
+            - gridcell [ref=e6240]:
+              - generic [ref=e5188]: 
+      - status [ref=e5189]: Showing 1 to 100 of 111 entries
+      - generic [ref=e5190]:
+        - generic [ref=e5191]: Previous
+        - generic [ref=e5192]:
+          - generic [ref=e5193] [cursor=pointer]: "1"
+          - generic [ref=e5194] [cursor=pointer]: "2"
+        - generic [ref=e5195] [cursor=pointer]: Next

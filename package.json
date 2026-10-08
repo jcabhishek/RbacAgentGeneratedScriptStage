@@ -1,0 +1,27 @@
+{
+  "name": "playwrightpractice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "bddgen && playwright test",
+    "test:spec": "playwright test --project=spec",
+    "test:bdd": "bddgen && playwright test --project=bdd",
+    "test:bdd:rerun": "bddgen && playwright test --project=bdd --last-failed",
+    "bddgen": "bddgen",
+    "allure:clean": "node -e \"require('fs').rmSync('allure-results',{recursive:true,force:true})\"",
+    "allure:generate": "node scripts/allure-mark-healed.js && allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.3",
+    "allure-commandline": "^2.46.1",
+    "allure-playwright": "^3.13.0",
+    "playwright-bdd": "^9.2.1"
+  }
+}

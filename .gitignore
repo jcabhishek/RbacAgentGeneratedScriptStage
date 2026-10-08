@@ -1,0 +1,18 @@
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+/screenshots/
+/.features-gen/
+
+# Local settings and credentials (use .env.example as the template)
+.env
+
+# Allure
+/allure-results/
+/allure-report/

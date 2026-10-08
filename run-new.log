@@ -1,0 +1,47 @@
+﻿
+Running 31 tests using 1 worker
+
+node.exe : (node:23024) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+At C:\Program Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:23024) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok  1 [bdd] › .features-gen\features\02-applications.feature.spec.js:17:7 › 2. Application › Add application (18.5s)
+  ok  2 [bdd] › .features-gen\features\02-applications.feature.spec.js:41:7 › 2. Application › Add duplicate application shows error (16.9s)
+  ok  3 [bdd] › .features-gen\features\02-applications.feature.spec.js:50:7 › 2. Application › Add duplicate application with a trailing space is rejected (21.6s)
+  ok  4 [bdd] › .features-gen\features\02-applications.feature.spec.js:61:7 › 2. Application › Duplicate application name in a different letter case is accepted (27.3s)
+  ok  5 [bdd] › .features-gen\features\03-pages.feature.spec.js:17:7 › 3. Pages › Add page mapped to application (25.2s)
+  ok  6 [bdd] › .features-gen\features\03-pages.feature.spec.js:31:7 › 3. Pages › Add a second page mapped to the same application (21.3s)
+  ok  7 [bdd] › .features-gen\features\03-pages.feature.spec.js:52:7 › 3. Pages › Add page with a duplicate name in the same application is rejected (21.4s)
+  ok  8 [bdd] › .features-gen\features\04-features.feature.spec.js:17:7 › 4. Features › Add feature mapped to page (21.0s)
+  ok  9 [bdd] › .features-gen\features\04-features.feature.spec.js:31:7 › 4. Features › Add feature mapped to the second page (20.2s)
+  ok 10 [bdd] › .features-gen\features\04-features.feature.spec.js:87:7 › 4. Features › Add feature with a duplicate name on the same page is rejected (20.8s)
+  ok 11 [bdd] › .features-gen\features\04-features.feature.spec.js:101:7 › 4. Features › Same feature name on a different page is accepted (25.3s)
+  ok 12 [bdd] › .features-gen\features\05-roles.feature.spec.js:17:7 › 5. Roles › Add role with page and feature access (28.4s)
+  ok 13 [bdd] › .features-gen\features\05-roles.feature.spec.js:37:7 › 5. Roles › Add role with a duplicate name for the same application is rejected (28.7s)
+  ok 14 [bdd] › .features-gen\features\06-users.feature.spec.js:85:9 › 6. Users › Edit user mobile with <digits> digits is rejected › Edit user mobile with 1 digits is rejected @users (20.3s)
+  ok 15 [bdd] › .features-gen\features\06-users.feature.spec.js:100:9 › 6. Users › Edit user mobile with <digits> digits is rejected › Edit user mobile with 5 digits is rejected @users (23.3s)
+  ok 16 [bdd] › .features-gen\features\06-users.feature.spec.js:115:9 › 6. Users › Edit user mobile with <digits> digits is rejected › Edit user mobile with 9 digits is rejected @users (21.1s)
+  ok 17 [bdd] › .features-gen\features\06-users.feature.spec.js:132:7 › 6. Users › Edit user mobile cannot exceed 10 digits @users (25.8s)
+  ok 18 [bdd] › .features-gen\features\06-users.feature.spec.js:141:7 › 6. Users › Edit user mobile does not accept letters @users (20.7s)
+  ok 19 [bdd] › .features-gen\features\06-users.feature.spec.js:150:7 › 6. Users › Edit user mobile with exactly 10 digits is valid @users (17.8s)
+  ok 20 [bdd] › .features-gen\features\06-users.feature.spec.js:161:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate mobile is rejected @users (27.6s)
+  ok 21 [bdd] › .features-gen\features\06-users.feature.spec.js:178:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate email id is rejected @users (24.4s)
+  ok 22 [bdd] › .features-gen\features\06-users.feature.spec.js:195:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate employee id is rejected @users (23.8s)
+  ok 23 [bdd] › .features-gen\features\06-users.feature.spec.js:216:9 › 6. Users › Edit user with <case> email is not submitted › Edit user with an empty email is not submitted @users (20.9s)
+  ok 24 [bdd] › .features-gen\features\06-users.feature.spec.js:231:9 › 6. Users › Edit user with <case> email is not submitted › Edit user with a malformed email is not submitted @users (23.1s)
+  ok 25 [bdd] › .features-gen\features\06-users.feature.spec.js:284:7 › 6. Users › Assign role to user @users (33.2s)
+  ok 26 [bdd] › .features-gen\features\06-users.feature.spec.js:299:7 › 6. Users › Assigning a second role for the same application is blocked @users (20.3s)
+  ok 27 [bdd] › .features-gen\features\06-users.feature.spec.js:321:7 › 6. Users › Unassign role from user @users (23.3s)
+  ok 28 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:50:7 › 8. Cleanup - delete role, page and application › Delete role (22.9s)
+  ok 29 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:64:9 › 8. Cleanup - delete role, page and application › Delete <label> also removes its feature › Delete page 1 also removes its feature (21.4s)
+  ok 30 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:80:9 › 8. Cleanup - delete role, page and application › Delete <label> also removes its feature › Delete page 2 also removes its feature (23.1s)
+  ok 31 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:98:7 › 8. Cleanup - delete role, page and application › Delete application (17.4s)
+
+  Slow test file: [bdd] › .features-gen\features\06-users.feature.spec.js (5.4m)
+  Consider running tests from slow files in parallel. See: https://playwright.dev/docs/test-parallel
+  31 passed (12.8m)
+EXIT 0

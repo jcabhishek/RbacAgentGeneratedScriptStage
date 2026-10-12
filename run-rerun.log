@@ -1,147 +1,30 @@
 ﻿
-Running 16 tests using 1 worker
+Running 4 tests using 1 worker
 
-node.exe : (node:15852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+node.exe : (node:37324) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 At C:\Program Files\nodejs\npx.ps1:29 char:3
 +   & $NODE_EXE $NPX_CLI_JS $args
 +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: ((node:15852) Wa... env being set.:String) [], RemoteException
+    + CategoryInfo          : NotSpecified: ((node:37324) Wa... env being set.:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
  
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ok  1 [bdd] › .features-gen\features\02-applications.feature.spec.js:17:7 › 2. Application › Add application (15.4s)
-  ok  2 [bdd] › .features-gen\features\03-pages.feature.spec.js:17:7 › 3. Pages › Add page mapped to application (15.3s)
-  ok  3 [bdd] › .features-gen\features\03-pages.feature.spec.js:31:7 › 3. Pages › Add a second page mapped to the same application (15.3s)
-  ok  4 [bdd] › .features-gen\features\04-features.feature.spec.js:17:7 › 4. Features › Add feature mapped to page (23.5s)
-  ok  5 [bdd] › .features-gen\features\04-features.feature.spec.js:31:7 › 4. Features › Add feature mapped to the second page (14.5s)
-  x   6 [bdd] › .features-gen\features\04-features.feature.spec.js:56:7 › 4. Features › Delete a feature that is not the last on its page (33.1s)
-(node:13804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
-(Use `node --trace-warnings ...` to show where the warning was created)
-  ok  7 [bdd] › .features-gen\features\04-features.feature.spec.js:73:7 › 4. Features › Delete the last feature of a page is blocked (18.0s)
-  ok  8 [bdd] › .features-gen\features\04-features.feature.spec.js:88:7 › 4. Features › Add feature with a duplicate name on the same page is rejected (21.9s)
-  ok  9 [bdd] › .features-gen\features\04-features.feature.spec.js:102:7 › 4. Features › Same feature name on a different page is accepted (22.8s)
-  ok 10 [bdd] › .features-gen\features\04-features.feature.spec.js:128:7 › 4. Features › Add feature without page shows mandatory alert (15.8s)
-  ok 11 [bdd] › .features-gen\features\05-roles.feature.spec.js:17:7 › 5. Roles › Add role with page and feature access (23.0s)
-  ok 12 [bdd] › .features-gen\features\06-users.feature.spec.js:150:7 › 6. Users › Edit user mobile with exactly 10 digits is valid @users (15.0s)
-  ok 13 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:50:7 › 8. Cleanup - delete role, page and application › Delete role (16.6s)
-  ok 14 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:64:9 › 8. Cleanup - delete role, page and application › Delete <label> also removes its feature › Delete page 1 also removes its feature (15.6s)
-  ok 15 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:80:9 › 8. Cleanup - delete role, page and application › Delete <label> also removes its feature › Delete page 2 also removes its feature (18.4s)
-  ok 16 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:98:7 › 8. Cleanup - delete role, page and application › Delete application (22.3s)
+  ok 1 [bdd] › .features-gen\features\02-applications.feature.spec.js:17:7 › 2. Application › Add application (16.3s)
+  ok 2 [bdd] › .features-gen\features\02-applications.feature.spec.js:61:7 › 2. Application › Duplicate application name in a different letter case is accepted (8.8s)
+  ok 3 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:38:9 › 8. Cleanup - delete role, page and application › Cancel delete keeps the <type> › Cancel delete keeps the application (5.0s)
+  ok 4 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:101:7 › 8. Cleanup - delete role, page and application › Delete application (7.3s)
 
+  4 passed (40.7s)
+EXIT 0
 
-  1) [bdd] › .features-gen\features\04-features.feature.spec.js:56:7 › 4. Features › Delete a feature that is not the last on its page › Then the grid should show no matching records 
+> playwrightpractice@1.0.0 allure:generate
+> node scripts/allure-mark-healed.js && allure generate allure-results --clean -o allure-report
 
-    Error: expect(locator).toBeVisible() failed
-
-    Locator: getByRole('gridcell', { name: 'No matching records found' })
-    Expected: visible
-    Timeout: 15000ms
-    Error: element(s) not found
-
-    Call log:
-      - Expect "toBeVisible" getByRole('gridcell', { name: 'No matching records found' }) with timeout 15000ms
-      - waiting for getByRole('gridcell', { name: 'No matching records found' })
-
-
-       at ..\features\steps\rbac.steps.js:213
-
-      211 |
-      212 | Then('the grid should show no matching records', async ({ page }) => {
-    > 213 |   await expect(page.getByRole('gridcell', { name: 'No matching records found' })).toBeVisible();
-          |                                                                                   ^
-      214 | });
-      215 |
-      216 | Then('the grid status should contain {string}', async ({ page }, text) => {
-        at Object.<anonymous> (D:\playwrightpractice\features\steps\rbac.steps.js:213:83)
-        at D:\playwrightpractice\.features-gen\features\04-features.feature.spec.js:69:5
-
-    attachment #3: step - I am logged in as RBAC admin (image/png) ─────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-am-logged-in-as-RBAC-admin-7b7a490501d42f488e24f6457df55f2882d500d4.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #4: step - I open the "Features" module (image/png) ─────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-open-the-Features-module-aff7c0ded395d1c313c6384a1ed459a28ada9db0.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #5: step - I open the "Add Feature" form (image/png) ────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-open-the-Add-Feature-form-f2a9ab3538bad80bc624c89a4379e2144256f393.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #6: step - I enter "$TEMP_FEATURE" in "Enter feature name" (image/png) ──────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-enter-TEMP-FEATURE-in-Enter-feature-name--c340f38cd72d109ed719df2ae8b5201c11fb45fa.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #7: step - I enter "Temporary feature, deleted in this scenario" in "Enter feature d (image/png) 
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-enter-Temporary-feature-deleted-in-this-scenario-in-Enter-feature-d-ea1088282d80b115805a2ad3f11b857f21eb3955.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #8: step - I choose "$PAGE" from the dropdown (image/png) ───────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-choose-PAGE-from-the-dropdown-61ca58af365a49249caae557419e7553e93f8c54.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #9: step - I submit the form (image/png) ────────────────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-submit-the-form-41e14e5c7e9558dcabe1c3c73a5f18b078dee658.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #10: Feature added successfully (image/png) ─────────────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\Feature-added-successfully-4abdc9607ac9f4d29b929940a9b0246a76435a06.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #11: step - I should see the popup "Feature added successfully" (image/png) ─────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-should-see-the-popup-Feature-added-successfully--26f5472735db0d8c1e341c07870812224de147f5.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #12: step - I search for "$TEMP_FEATURE" (image/png) ────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-search-for-TEMP-FEATURE--c49c286f6c2124db2ebb9fd99fa5d9c1b1799b59.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #13: step - I click the "delete" icon (image/png) ───────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-click-the-delete-icon-c6bfa245a4ab1129ecbf30a920cdd5b655929059.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #14: confirm Are you sure you want to delete feature? (image/png) ───────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\confirm-Are-you-sure-you-want-to-delete-feature--dfc6de315e52b2bdf616e892b40272eb64e94821.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #15: step - I should see the confirmation "Are you sure you want to delete feature?" (image/png) 
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-should-see-the-confirmation-Are-you-sure-you-want-to-delete-feature--aa89019c44b0ed1cb34f9ae66cf40c1631ce6733.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #16: step - I answer "Yes" (image/png) ──────────────────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-answer-Yes--3c9f2ea3117ddeb239b3b72b5e98f5ab6dbd87d1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #17: success popup (image/png) ──────────────────────────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\success-popup-6ec97cc05c26a63620629d65f17102c59f6e36d7.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #18: step - I should see a success popup (image/png) ────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-should-see-a-success-popup-f5eff404b4110bb85d4072da25292ff4e078dee6.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #19: step - I search for "$TEMP_FEATURE" (image/png) ────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---I-search-for-TEMP-FEATURE--7f2e82c8a5fbf76c6a91f9b0f4f3e64176d2ddd8.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #20: step - the grid should show no matching records (image/png) ────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\attachments\step---the-grid-should-show-no-matching-records-d9373de574b690b986ccb60b54996d2c65f60aec.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #21: screenshot (image/png) ─────────────────────────────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\error-context.md
-
-    attachment #23: trace (application/zip) ────────────────────────────────────────────────────────
-    test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\trace.zip
-    Usage:
-
-        npx playwright show-trace test-results\features-04-features.featu-d3d4e-is-not-the-last-on-its-page-bdd\trace.zip
-
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-  1 failed
-    [bdd] › .features-gen\features\04-features.feature.spec.js:56:7 › 4. Features › Delete a feature that is not the last on its page 
-  15 passed (5.9m)
-EXIT 1
+allure-mark-healed: 3 test(s) passed after an earlier failure
+Report successfully generated to allure-report
+Summary: [RBAC Automation] PASSED - 4 tests: 4 passed, 0 failed - 12/10/2026, 2:19:52 pm
+Failed tests: 0, failed API calls: 0 (+0 expected 4xx)
+Allure attachment: reports\allure-report.zip (11.9 MB)
+Email saved: reports\test-summary.eml (16.3 MB), preview: reports/test-summary.html
+SMTP_HOST / MAIL_TO not set in .env - the email was saved but NOT sent.
+WALL 1.0 min

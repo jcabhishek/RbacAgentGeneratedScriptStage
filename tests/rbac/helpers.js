@@ -63,7 +63,8 @@ async function searchGrid(page, text) {
 }
 
 // Screenshot saved to screenshots/<test title>/<NN-label>.png and attached to the HTML report.
-async function snap(page, testInfo, label) {
+// `fullPage: false` (the visible window) is faster; per-step screenshots use it.
+async function snap(page, testInfo, label, { fullPage = true } = {}) {
   const dir = path.join(SCREENSHOT_DIR, testInfo.title.replace(/[^\w-]+/g, '_'));
   fs.mkdirSync(dir, { recursive: true });
   const count = testInfo.attachments.filter(a => a.contentType === 'image/png').length + 1;
@@ -72,7 +73,7 @@ async function snap(page, testInfo, label) {
   // A minimized or covered headed browser stops painting and a screenshot would wait for it;
   // give up after 15s and note it in the report instead of blocking the test.
   try {
-    await page.screenshot({ path: file, fullPage: true, timeout: 15000 });
+    await page.screenshot({ path: file, fullPage, timeout: 15000 });
   } catch (error) {
     await testInfo.attach(`${label} (screenshot not taken)`, { body: error.message.split('\n')[0], contentType: 'text/plain' });
     return;

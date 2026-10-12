@@ -7,6 +7,8 @@
     "test:spec": "playwright test --project=spec",
     "test:bdd": "bddgen && playwright test --project=bdd",
     "test:bdd:rerun": "bddgen && playwright test --project=bdd --last-failed",
+    "test:bdd:mail": "node scripts/run-and-mail.js --project=bdd",
+    "mail:report": "node scripts/send-report-mail.js",
     "bddgen": "bddgen",
     "allure:clean": "node -e \"require('fs').rmSync('allure-results',{recursive:true,force:true})\"",
     "allure:generate": "node scripts/allure-mark-healed.js && allure generate allure-results --clean -o allure-report",
@@ -20,8 +22,11 @@
   "devDependencies": {
     "@playwright/test": "^1.63.0",
     "@types/node": "^26.6.3",
+    "adm-zip": "^0.6.1",
     "allure-commandline": "^2.46.1",
     "allure-playwright": "^3.13.0",
+    "exceljs": "^4.4.0",
+    "nodemailer": "^10.1.0",
     "playwright-bdd": "^9.2.1"
   }
 }

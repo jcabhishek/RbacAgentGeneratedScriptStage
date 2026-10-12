@@ -41,6 +41,8 @@ export default defineConfig({
   reporter: [
     ['list'],
     ['html', { open: 'never' }],
+    /* Machine-readable results for the summary email (scripts/send-report-mail.js) */
+    ...(process.argv.includes('--list') ? [] : [['json', { outputFile: 'reports/results.json' }]] as any[]),
     /* `--list` only prints tests; without this guard Allure would record them all as "skipped" */
     ...(process.argv.includes('--list') ? [] : [['allure-playwright', {
       resultsDir: 'allure-results',
@@ -83,7 +85,13 @@ export default defineConfig({
   projects: [
     /* Plain Playwright specs in tests/ */
     { name: 'spec', testDir: './tests' },
-    /* Cucumber scenarios from features/ */
-    { name: 'bdd', testDir: bddTestDir },
+    /* Cucumber scenarios from features/. They share one logged-in page per worker
+       (features/steps/fixtures.js), which records each test's trace and final screenshot itself,
+       so the built-in ones are off here. RBAC_FRESH_LOGIN=true restores a new login per test. */
+    {
+      name: 'bdd',
+      testDir: bddTestDir,
+      use: process.env.RBAC_FRESH_LOGIN === 'true' ? {} : { trace: 'off', screenshot: 'off' },
+    },
   ],
 });

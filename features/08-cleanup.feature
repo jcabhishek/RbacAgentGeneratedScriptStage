@@ -12,6 +12,7 @@ Feature: 8. Cleanup - delete role, page and application
 
   Scenario Outline: Cancel delete keeps the <type>
     Given I open the "<module>" module
+    And I remove leftover letter-case copies of "<record>"
     When I search for "<record>"
     And I click the "delete" icon
     Then I should see the confirmation "<confirmation>"
@@ -60,6 +61,7 @@ Feature: 8. Cleanup - delete role, page and application
 
   Scenario: Delete application
     Given I open the "Application" module
+    And I remove leftover letter-case copies of "$APP"
     When I search for "$APP"
     And I click the "delete" icon
     Then I should see the confirmation "Are you sure you want to delete application?"

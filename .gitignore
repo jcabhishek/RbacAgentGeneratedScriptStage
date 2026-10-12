@@ -16,3 +16,6 @@ node_modules/
 # Allure
 /allure-results/
 /allure-report/
+
+# Run summary email (results.json, test-summary.eml, light Allure report)
+/reports/

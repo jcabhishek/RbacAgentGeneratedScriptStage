@@ -1,7 +1,7 @@
 // Step definitions for the RBAC dashboard features. They reuse the helpers from the
 // spec suite (tests/rbac) so both suites share locators and waits.
 const { expect } = require('@playwright/test');
-const { Given, When, Then, BeforeAll, AfterAll, AfterStep, TOKENS } = require('./fixtures');
+const { Given, When, Then, BeforeAll, AfterAll, AfterStep, TOKENS, SHARED_PAGE } = require('./fixtures');
 const { BASE_URL, login, loginAsAdmin } = require('../../tests/rbac/auth');
 const {
   PREFIX, waitForIdle, openModule, searchGrid, snap, expectAlert, openForm, ngSelect, resetTestUser,
@@ -45,7 +45,7 @@ AfterAll({ tags: '@users', timeout: 600000 }, async ({ browser }) => cleanUpTest
 // Runs after passed and failed steps alike; a page that is already closed is skipped.
 AfterStep(async ({ page, $step, $testInfo }) => {
   if (page.isClosed()) return;
-  await snap(page, $testInfo, `step - ${$step.title}`.slice(0, 80)).catch(() => {});
+  await snap(page, $testInfo, `step - ${$step.title}`.slice(0, 80), { fullPage: false }).catch(() => {});
 });
 
 // ---------- Login ----------
@@ -55,7 +55,18 @@ Given('I am on the login page', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Login' })).toBeVisible();
 });
 
+// With the shared page (see fixtures.js) the session from an earlier scenario is reused: go back to
+// the dashboard through the logo link. Otherwise (first scenario, after a failure, after the Login
+// feature reloaded the app, or RBAC_FRESH_LOGIN=true) log in.
 Given('I am logged in as RBAC admin', async ({ page }) => {
+  const sidebar = page.locator('a[href="/home/rbac-users"]');
+  if (SHARED_PAGE && /\/home/.test(page.url()) && await sidebar.isVisible().catch(() => false)) {
+    await waitForIdle(page);
+    await page.locator('a[href="/home"]').first().click();
+    await expect(page).toHaveURL(/\/home$/);
+    await waitForIdle(page);
+    return;
+  }
   await loginAsAdmin(page);
 });
 
@@ -216,8 +227,9 @@ Then('the grid should show no matching records', async ({ page }) => {
   await expect(page.locator('tbody td', { hasText: 'No matching records found' })).toBeVisible({ timeout: 30000 });
 });
 
+// CSS attribute match, not getByRole: see "the grid should show no matching records".
 Then('the grid status should contain {string}', async ({ page }, text) => {
-  await expect(page.getByRole('status')).toContainText(text);
+  await expect(page.locator('[role="status"]').first()).toContainText(text, { timeout: 30000 });
 });
 
 Then('every visible row should contain {string}', async ({ page, ctx }, raw) => {
@@ -235,7 +247,7 @@ When('I show {int} entries per page', async ({ page }, size) => {
 });
 
 Then('the grid should show at most {int} rows', async ({ page }, max) => {
-  await expect(page.getByRole('status')).toContainText(/Showing 1 to \d+ of/);
+  await expect(page.locator('[role="status"]').first()).toContainText(/Showing 1 to \d+ of/);
   expect(await page.locator('tbody tr').count()).toBeLessThanOrEqual(max);
 });
 
@@ -485,6 +497,27 @@ When('I remove leftover temporary features from {string}', async ({ page, ctx, $
     await expectAlert(page, $testInfo, /success/i, `Leftover removed - ${leftover}`);
   }
   throw new Error(`Could not remove leftover temporary features from ${pageName}`);
+});
+
+// A failed "different letter case" run can leave a copy of the record whose name differs only in
+// case (staging once answered the DELETE with 200 without deleting). The grid search ignores case,
+// so that copy would be the first row of the record's search. Delete only such copies.
+When('I remove leftover letter-case copies of {string}', async ({ page, ctx, $testInfo }, raw) => {
+  const name = ctx.resolve(raw);
+  for (let i = 0; i < 5; i++) {
+    await searchGrid(page, name);
+    await expect(page.locator('tbody tr').first()).toBeVisible({ timeout: 30000 });
+    const names = (await page.locator('tbody tr td:first-child').allTextContents()).map(n => n.trim());
+    const copy = names.find(n => n !== name && n.toLowerCase() === name.toLowerCase());
+    if (!copy) return;
+    await snap(page, $testInfo, `Leftover letter-case copy - ${copy}`);
+    const cell = page.locator('td').filter({ hasText: new RegExp(`^\\s*${escapeRegex(copy)}\\s*$`) });
+    await page.locator('tbody tr').filter({ has: cell }).locator(icon('delete')).click();
+    await waitForIdle(page);
+    await page.getByRole('dialog').getByRole('button', { name: 'Yes', exact: true }).click();
+    await expectAlert(page, $testInfo, /success/i, `Leftover removed - ${copy}`);
+  }
+  throw new Error(`Could not remove leftover letter-case copies of ${name}`);
 });
 
 Then('the first row should contain {string} once', async ({ page, ctx }, raw) => {

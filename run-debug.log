@@ -1,0 +1,765 @@
+﻿
+Running 1 test using 1 worker
+
+node.exe : (node:23616) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+At C:\Program Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:23616) Wa... env being set.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(Use `node --trace-warnings ...` to show where the warning was created)
+  pw:api => browserType.launch started +0ms
+  pw:api <= browserType.launch succeeded +980ms
+  pw:api => browser.newPage started +9ms
+  pw:api <= browser.newPage succeeded +614ms
+  pw:api => page.goto started +7ms
+  pw:api navigating to "https://sm-rbac-dashboard-staging.azurewebsites.net/", waiting until "load" +2ms
+  pw:api   "commit" event fired +275ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/" +0ms
+  pw:api   "networkidle" event fired +2s
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/" +22ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/" +13ms
+  pw:api   "domcontentloaded" event fired +13ms
+  pw:api   "load" event fired +85ms
+  pw:api <= page.goto succeeded +2ms
+  pw:api => locator.waitFor started +6ms
+  pw:api waiting for locator('.loader_div') to be hidden +1ms
+  pw:api <= locator.waitFor succeeded +30ms
+  pw:api => locator.fill started +3ms
+  pw:api waiting for getByPlaceholder('Enter Email ID') +1ms
+  pw:api   locator resolved to <input type="text" autocomplete="off" _ngcontent-hxk-c1="" placeholder="Enter Email ID" 
+formcontrolname="useremailid" ng-reflect-name="useremailid" class="form-control ng-untouched ng-pristine ng-invalid"/> 
++14ms
+  pw:api   fill("softwaredco@sunmobility.com") +3ms
+  pw:api attempting fill action +1ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +17ms
+  pw:api => locator.fill started +2ms
+  pw:api waiting for getByPlaceholder('Enter Password') +1ms
+  pw:api   locator resolved to <input type="password" _ngcontent-hxk-c1="" placeholder="Enter Password " 
+formcontrolname="userpassword" ng-reflect-name="userpassword" class="form-control ng-untouched ng-pristine 
+ng-invalid"/> +6ms
+  pw:api   fill("Sunmob@123") +2ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +37ms
+  pw:api => locator.click started +3ms
+  pw:api waiting for getByRole('button', { name: 'LOGIN' }) +1ms
+  pw:api   locator resolved to <button _ngcontent-hxk-c1="" class="btn btn-primary mr-1"> LOGIN </button> +10ms
+  pw:api attempting click action +2ms
+  pw:api   waiting for element to be visible, enabled and stable +1ms
+  pw:api   element is visible, enabled and stable +29ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +2ms
+  pw:api   performing click action +5ms
+  pw:api   click action done +16ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +1ms
+  pw:api <= locator.click succeeded +1ms
+  pw:api => locator.waitFor started +7ms
+  pw:api waiting for getByRole('dialog').getByRole('button', { name: 'OK' }) to be visible +1ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/home" +4s
+  pw:api <= page.waitForURL succeeded +3ms
+  pw:api => locator.click started +10ms
+  pw:api waiting for locator('a[href="/home/rbac-users"]') +2ms
+  pw:api   locator resolved to <a target="_self" class="nav-link" _ngcontent-hxk-c12="" href="/home/rbac-users" 
+ng-reflect-target="_self" ng-reflect-router-link="/home/rbac-users">…</a> +42ms
+  pw:api attempting click action +5ms
+  pw:api   waiting for element to be visible, enabled and stable +0ms
+  pw:api   element is visible, enabled and stable +33ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +1ms
+  pw:api   performing click action +3ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/home/rbac-users" +34ms
+  pw:api   click action done +115ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +10ms
+  pw:api <= locator.click succeeded +16ms
+  pw:api => Expect "toHaveURL" started +45ms
+  pw:api Expect "toHaveURL" with timeout 15000ms +6ms
+  pw:api <= Expect "toHaveURL" succeeded +54ms
+  pw:api => mouse.move started +12ms
+  pw:api <= mouse.move succeeded +36ms
+  pw:api => locator.waitFor started +8ms
+  pw:api waiting for locator('.loader_div') to be hidden +1ms
+  pw:api   locator resolved to visible <div _ngcontent-hxk-c0="" class="loader_div ng-star-inserted">…</div> +19ms
+  pw:api   locator resolved to visible <div _ngcontent-hxk-c0="" class="loader_div ng-star-inserted">…</div> +35ms
+  pw:api   locator resolved to visible <div _ngcontent-hxk-c0="" class="loader_div ng-star-inserted">…</div> +61ms
+  pw:api   locator resolved to visible <div _ngcontent-hxk-c0="" class="loader_div ng-star-inserted">…</div> +112ms
+  pw:api   locator resolved to visible <div _ngcontent-hxk-c0="" class="loader_div ng-star-inserted">…</div> +117ms
+  pw:api   "networkidle" event fired +828ms
+  pw:api <= locator.waitFor succeeded +197ms
+  pw:api => Expect "toBeVisible" started +6ms
+  pw:api Expect "toBeVisible" locator('tbody tr').first() with timeout 30000ms +1ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toBeVisible" succeeded +5ms
+  pw:api => Expect "not toContainText" started +6ms
+  pw:api Expect "not toContainText" locator('tbody tr').first() with timeout 15000ms +0ms
+  pw:api waiting for locator('tbody tr').first() +1ms
+  pw:api <= Expect "not toContainText" succeeded +4ms
+  pw:api => locator.fill started +2ms
+  pw:api waiting for locator('input[type="search"]').first() +0ms
+  pw:api   locator resolved to <input class="" type="search" placeholder="Search users" aria-controls="partnerTable"/> 
++4ms
+  pw:api   fill("SUNMF00000630") +2ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +21ms
+  pw:api => Expect "toContainText" started +3ms
+  pw:api Expect "toContainText" locator('tbody tr').first() with timeout 15000ms +6ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toContainText" succeeded +3ms
+  pw:api => locator.count started +2ms
+  pw:api <= locator.count succeeded +4ms
+  pw:api => locator.innerText started +1ms
+  pw:api waiting for locator('tbody tr').first() +1ms
+  pw:api   locator resolved to <tr role="row" _ngcontent-hxk-c14="" class="ng-star-inserted odd">…</tr> +6ms
+  pw:api <= locator.innerText succeeded +1ms
+  pw:api => locator.click started +1ms
+  pw:api waiting for locator('a[href="/home/rbac-users"]') +1ms
+  pw:api   locator resolved to <a target="_self" class="nav-link" _ngcontent-hxk-c12="" href="/home/rbac-users" 
+ng-reflect-target="_self" ng-reflect-router-link="/home/rbac-users">…</a> +3ms
+  pw:api attempting click action +1ms
+  pw:api   waiting for element to be visible, enabled and stable +0ms
+  pw:api   element is visible, enabled and stable +20ms
+  pw:api   scrolling into view if needed +1ms
+  pw:api   done scrolling +0ms
+  pw:api   performing click action +4ms
+  pw:api   click action done +26ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +2ms
+  pw:api <= locator.click succeeded +1ms
+  pw:api => Expect "toHaveURL" started +2ms
+  pw:api Expect "toHaveURL" with timeout 15000ms +1ms
+  pw:api <= Expect "toHaveURL" succeeded +3ms
+  pw:api => mouse.move started +2ms
+  pw:api <= mouse.move succeeded +10ms
+  pw:api => locator.waitFor started +2ms
+  pw:api waiting for locator('.loader_div') to be hidden +1ms
+  pw:api <= locator.waitFor succeeded +2ms
+  pw:api => Expect "toBeVisible" started +3ms
+  pw:api Expect "toBeVisible" locator('tbody tr').first() with timeout 30000ms +0ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toBeVisible" succeeded +3ms
+  pw:api => Expect "not toContainText" started +2ms
+  pw:api Expect "not toContainText" locator('tbody tr').first() with timeout 15000ms +0ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "not toContainText" succeeded +6ms
+  pw:api => locator.fill started +1ms
+  pw:api waiting for locator('input[type="search"]').first() +1ms
+  pw:api   locator resolved to <input class="" type="search" placeholder="Search users" aria-controls="partnerTable"/> 
++4ms
+  pw:api   fill("SUNMF00000630") +1ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +27ms
+  pw:api => Expect "toContainText" started +3ms
+  pw:api Expect "toContainText" locator('tbody tr').first() with timeout 15000ms +1ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toContainText" succeeded +11ms
+  pw:api => locator.innerText started +1ms
+  pw:api waiting for locator('tbody tr').first() +1ms
+  pw:api   locator resolved to <tr role="row" _ngcontent-hxk-c14="" class="ng-star-inserted odd">…</tr> +3ms
+  pw:api <= locator.innerText succeeded +0ms
+  pw:api => locator.click started +1ms
+  pw:api waiting for locator('a[href="/home/rbac-users"]') +1ms
+  pw:api   locator resolved to <a target="_self" class="nav-link" _ngcontent-hxk-c12="" href="/home/rbac-users" 
+ng-reflect-target="_self" ng-reflect-router-link="/home/rbac-users">…</a> +3ms
+  pw:api attempting click action +1ms
+  pw:api   waiting for element to be visible, enabled and stable +1ms
+  pw:api   element is visible, enabled and stable +36ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +1ms
+  pw:api   performing click action +5ms
+  pw:api   click action done +22ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +2ms
+  pw:api <= locator.click succeeded +2ms
+  pw:api => Expect "toHaveURL" started +2ms
+  pw:api Expect "toHaveURL" with timeout 15000ms +1ms
+  pw:api <= Expect "toHaveURL" succeeded +4ms
+  pw:api => mouse.move started +2ms
+  pw:api <= mouse.move succeeded +11ms
+  pw:api => locator.waitFor started +2ms
+  pw:api waiting for locator('.loader_div') to be hidden +1ms
+  pw:api <= locator.waitFor succeeded +3ms
+  pw:api => Expect "toBeVisible" started +5ms
+  pw:api Expect "toBeVisible" locator('tbody tr').first() with timeout 30000ms +9ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toBeVisible" succeeded +4ms
+  pw:api => Expect "not toContainText" started +4ms
+  pw:api Expect "not toContainText" locator('tbody tr').first() with timeout 15000ms +1ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "not toContainText" succeeded +4ms
+  pw:api => locator.fill started +3ms
+  pw:api waiting for locator('input[type="search"]').first() +1ms
+  pw:api   locator resolved to <input class="" type="search" placeholder="Search users" aria-controls="partnerTable"/> 
++5ms
+  pw:api   fill("SUNMF00000629") +2ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +1ms
+  pw:api <= locator.fill succeeded +23ms
+  pw:api => Expect "toContainText" started +3ms
+  pw:api Expect "toContainText" locator('tbody tr').first() with timeout 15000ms +0ms
+  pw:api waiting for locator('tbody tr').first() +1ms
+  pw:api <= Expect "toContainText" succeeded +3ms
+  pw:api => locator.count started +2ms
+  pw:api <= locator.count succeeded +2ms
+  pw:api => locator.innerText started +1ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api   locator resolved to <tr role="row" _ngcontent-hxk-c14="" class="ng-star-inserted odd">…</tr> +2ms
+  pw:api <= locator.innerText succeeded +0ms
+  pw:api => locator.click started +2ms
+  pw:api waiting for locator('a[href="/home/rbac-users"]') +0ms
+  pw:api   locator resolved to <a target="_self" class="nav-link" _ngcontent-hxk-c12="" href="/home/rbac-users" 
+ng-reflect-target="_self" ng-reflect-router-link="/home/rbac-users">…</a> +4ms
+  pw:api attempting click action +1ms
+  pw:api   waiting for element to be visible, enabled and stable +1ms
+  pw:api   element is visible, enabled and stable +7ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +1ms
+  pw:api   performing click action +4ms
+  pw:api   click action done +24ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +1ms
+  pw:api <= locator.click succeeded +1ms
+  pw:api => Expect "toHaveURL" started +4ms
+  pw:api Expect "toHaveURL" with timeout 15000ms +1ms
+  pw:api <= Expect "toHaveURL" succeeded +3ms
+  pw:api => mouse.move started +1ms
+  pw:api <= mouse.move succeeded +12ms
+  pw:api => locator.waitFor started +2ms
+  pw:api waiting for locator('.loader_div') to be hidden +1ms
+  pw:api <= locator.waitFor succeeded +3ms
+  pw:api => Expect "toBeVisible" started +1ms
+  pw:api Expect "toBeVisible" locator('tbody tr').first() with timeout 30000ms +1ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toBeVisible" succeeded +4ms
+  pw:api => Expect "not toContainText" started +6ms
+  pw:api Expect "not toContainText" locator('tbody tr').first() with timeout 15000ms +0ms
+  pw:api waiting for locator('tbody tr').first() +1ms
+  pw:api <= Expect "not toContainText" succeeded +3ms
+  pw:api => locator.fill started +1ms
+  pw:api waiting for locator('input[type="search"]').first() +1ms
+  pw:api   locator resolved to <input class="" type="search" placeholder="Search users" aria-controls="partnerTable"/> 
++4ms
+  pw:api   fill("SUNMF00000629") +2ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +21ms
+  pw:api => Expect "toContainText" started +3ms
+  pw:api Expect "toContainText" locator('tbody tr').first() with timeout 15000ms +2ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toContainText" succeeded +3ms
+  pw:api => locator.innerText started +1ms
+  pw:api waiting for locator('tbody tr').first() +1ms
+  pw:api   locator resolved to <tr role="row" _ngcontent-hxk-c14="" class="ng-star-inserted odd">…</tr> +3ms
+  pw:api <= locator.innerText succeeded +0ms
+  pw:api => page.close started +8ms
+  pw:api <= locator.waitFor failed +31ms
+  pw:api <= page.close succeeded +8ms
+  pw:api => browser.newContext started +152ms
+  pw:api <= browser.newContext succeeded +24ms
+  pw:api => tracing.start started +2ms
+  pw:api <= tracing.start succeeded +5ms
+  pw:api => browserContext.newPage started +1ms
+  pw:api <= browserContext.newPage succeeded +512ms
+  pw:api => tracing.startChunk started +10ms
+  pw:api <= tracing.startChunk succeeded +28ms
+  pw:api => locator.count started +2ms
+  pw:api <= locator.count succeeded +43ms
+  pw:api => locator.count started +1ms
+  pw:api <= locator.count succeeded +10ms
+  pw:api => page.evaluate started +1ms
+  pw:api <= page.evaluate succeeded +7ms
+  pw:api => page.goto started +50ms
+  pw:api navigating to "https://sm-rbac-dashboard-staging.azurewebsites.net/", waiting until "load" +13ms
+  pw:api   "commit" event fired +135ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/" +1ms
+  pw:api   "networkidle" event fired +2s
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/" +82ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/" +13ms
+  pw:api   "domcontentloaded" event fired +17ms
+  pw:api   "load" event fired +248ms
+  pw:api <= page.goto succeeded +282ms
+  pw:api => locator.waitFor started +2ms
+  pw:api waiting for locator('.loader_div') to be hidden +5ms
+  pw:api <= locator.waitFor succeeded +30ms
+  pw:api => locator.fill started +1ms
+  pw:api waiting for getByPlaceholder('Enter Email ID') +3ms
+  pw:api   locator resolved to <input type="text" autocomplete="off" _ngcontent-eao-c1="" placeholder="Enter Email ID" 
+formcontrolname="useremailid" ng-reflect-name="useremailid" class="form-control ng-untouched ng-pristine ng-invalid"/> 
++7ms
+  pw:api   fill("softwaredco@sunmobility.com") +1ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +4ms
+  pw:api <= locator.fill succeeded +13ms
+  pw:api => locator.fill started +7ms
+  pw:api waiting for getByPlaceholder('Enter Password') +3ms
+  pw:api   locator resolved to <input type="password" _ngcontent-eao-c1="" placeholder="Enter Password " 
+formcontrolname="userpassword" ng-reflect-name="userpassword" class="form-control ng-untouched ng-pristine 
+ng-invalid"/> +7ms
+  pw:api   fill("Sunmob@123") +4ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +4ms
+  pw:api <= locator.fill succeeded +18ms
+  pw:api => locator.click started +1ms
+  pw:api waiting for getByRole('button', { name: 'LOGIN' }) +6ms
+  pw:api   locator resolved to <button _ngcontent-eao-c1="" class="btn btn-primary mr-1"> LOGIN </button> +7ms
+  pw:api attempting click action +2ms
+  pw:api   waiting for element to be visible, enabled and stable +0ms
+  pw:api   element is visible, enabled and stable +37ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +1ms
+  pw:api   performing click action +11ms
+  pw:api   click action done +14ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +2ms
+  pw:api <= locator.click succeeded +8ms
+  pw:api => locator.waitFor started +5ms
+  pw:api waiting for getByRole('dialog').getByRole('button', { name: 'OK' }) to be visible +6ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/home" +2s
+  pw:api <= page.waitForURL succeeded +2ms
+  pw:api => page.screenshot started +9ms
+  pw:api taking page screenshot +48ms
+  pw:api waiting for fonts to load... +13ms
+  pw:api fonts loaded +26ms
+  pw:api <= page.screenshot succeeded +166ms
+  pw:api => locator.click started +27ms
+  pw:api waiting for locator('a[href="/home/rbac-users"]') +6ms
+  pw:api   locator resolved to <a target="_self" class="nav-link" _ngcontent-eao-c12="" href="/home/rbac-users" 
+ng-reflect-target="_self" ng-reflect-router-link="/home/rbac-users">…</a> +6ms
+  pw:api attempting click action +1ms
+  pw:api   waiting for element to be visible, enabled and stable +0ms
+  pw:api   element is visible, enabled and stable +32ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +1ms
+  pw:api   performing click action +9ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/home/rbac-users" +31ms
+  pw:api   click action done +48ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +9ms
+  pw:api <= locator.click succeeded +26ms
+  pw:api => Expect "toHaveURL" started +3ms
+  pw:api Expect "toHaveURL" with timeout 15000ms +17ms
+  pw:api <= Expect "toHaveURL" succeeded +15ms
+  pw:api => mouse.move started +1ms
+  pw:api <= mouse.move succeeded +17ms
+  pw:api => locator.waitFor started +2ms
+  pw:api waiting for locator('.loader_div') to be hidden +4ms
+  pw:api   locator resolved to visible <div _ngcontent-eao-c0="" class="loader_div ng-star-inserted">…</div> +10ms
+  pw:api   locator resolved to visible <div _ngcontent-eao-c0="" class="loader_div ng-star-inserted">…</div> +34ms
+  pw:api   locator resolved to visible <div _ngcontent-eao-c0="" class="loader_div ng-star-inserted">…</div> +70ms
+  pw:api   locator resolved to visible <div _ngcontent-eao-c0="" class="loader_div ng-star-inserted">…</div> +106ms
+  pw:api   locator resolved to visible <div _ngcontent-eao-c0="" class="loader_div ng-star-inserted">…</div> +116ms
+  pw:api   "networkidle" event fired +1s
+  pw:api <= locator.waitFor succeeded +218ms
+  pw:api => Expect "toBeVisible" started +4ms
+  pw:api Expect "toBeVisible" locator('tbody tr').first() with timeout 30000ms +12ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toBeVisible" succeeded +15ms
+  pw:api => Expect "not toContainText" started +2ms
+  pw:api Expect "not toContainText" locator('tbody tr').first() with timeout 15000ms +8ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "not toContainText" succeeded +14ms
+  pw:api => page.screenshot started +2ms
+  pw:api taking page screenshot +14ms
+  pw:api waiting for fonts to load... +8ms
+  pw:api fonts loaded +3ms
+  pw:api <= page.screenshot succeeded +121ms
+  pw:api => locator.fill started +17ms
+  pw:api waiting for locator('input[type="search"]').first() +69ms
+  pw:api   locator resolved to <input class="" type="search" placeholder="Search users" aria-controls="partnerTable"/> 
++7ms
+  pw:api   fill("SUNMF00000630") +2ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +13ms
+  pw:api <= locator.fill succeeded +38ms
+  pw:api => page.screenshot started +3ms
+  pw:api taking page screenshot +8ms
+  pw:api waiting for fonts to load... +16ms
+  pw:api fonts loaded +3ms
+  pw:api <= page.screenshot succeeded +117ms
+  pw:api => locator.click started +16ms
+  pw:api waiting for locator('tbody tr').first().locator('.fa-link') +7ms
+  pw:api   locator resolved to <span class="fas fa-link" _ngcontent-eao-c14=""></span> +6ms
+  pw:api attempting click action +2ms
+  pw:api   waiting for element to be visible, enabled and stable +0ms
+  pw:api   element is visible, enabled and stable +22ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +2ms
+  pw:api   performing click action +10ms
+  pw:api   click action done +300ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +2ms
+  pw:api <= locator.click succeeded +7ms
+  pw:api => mouse.move started +1ms
+  pw:api <= mouse.move succeeded +82ms
+  pw:api => locator.waitFor started +2ms
+  pw:api waiting for locator('.loader_div') to be hidden +16ms
+  pw:api <= locator.waitFor succeeded +25ms
+  pw:api => Expect "toBeVisible" started +4ms
+  pw:api Expect "toBeVisible" getByRole('dialog', { name: /assignRole/ }) with timeout 15000ms +80ms
+  pw:api waiting for getByRole('dialog', { name: /assignRole/ }) +0ms
+  pw:api <= Expect "toBeVisible" succeeded +68ms
+  pw:api => page.screenshot started +3ms
+  pw:api taking page screenshot +16ms
+  pw:api waiting for fonts to load... +12ms
+  pw:api fonts loaded +3ms
+  pw:api <= page.screenshot succeeded +123ms
+  pw:api => locator.fill started +23ms
+  pw:api waiting for getByRole('dialog', { name: /assignRole/ }).getByRole('combobox').first() +8ms
+  pw:api   locator resolved to <input id="" type="text" role="combobox" aria-expanded="false" 
+autocomplete="ab4d3a318974"/> +11ms
+  pw:api   fill("PW_AUTO_APP_1006") +2ms
+  pw:api attempting fill action +1ms
+  pw:api   waiting for element to be visible, enabled and editable +8ms
+  pw:api <= locator.fill succeeded +204ms
+  pw:api => locator.click started +1ms
+  pw:api waiting for getByRole('option', { name: 'PW_AUTO_APP_1006', exact: true }) +72ms
+  pw:api   locator resolved to <div role="option" id="a63dafa5a913" class="ng-option ng-option-marked 
+ng-star-inserted">…</div> +10ms
+  pw:api attempting click action +1ms
+  pw:api   waiting for element to be visible, enabled and stable +0ms
+  pw:api   element is visible, enabled and stable +125ms
+  pw:api   scrolling into view if needed +1ms
+  pw:api   done scrolling +2ms
+  pw:api   performing click action +16ms
+  pw:api   click action done +223ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +8ms
+  pw:api <= locator.click succeeded +9ms
+  pw:api => mouse.move started +4ms
+  pw:api <= mouse.move succeeded +12ms
+  pw:api => locator.waitFor started +1ms
+  pw:api waiting for locator('.loader_div') to be hidden +4ms
+  pw:api <= locator.waitFor succeeded +5ms
+  pw:api => page.screenshot started +1ms
+  pw:api taking page screenshot +7ms
+  pw:api waiting for fonts to load... +9ms
+  pw:api fonts loaded +1ms
+  pw:api <= page.screenshot succeeded +95ms
+  pw:api => locator.click started +15ms
+  pw:api waiting for getByRole('dialog', { name: /assignRole/ }).locator('.dropdown-btn') +5ms
+  pw:api   locator resolved to <span tabindex="-1" class="dropdown-btn" _ngcontent-eao-c18="">…</span> +6ms
+  pw:api attempting click action +1ms
+  pw:api   waiting for element to be visible, enabled and stable +1ms
+  pw:api   element is visible, enabled and stable +35ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +1ms
+  pw:api   performing click action +8ms
+  pw:api   click action done +189ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +2ms
+  pw:api <= locator.click succeeded +6ms
+  pw:api => page.screenshot started +1ms
+  pw:api taking page screenshot +5ms
+  pw:api waiting for fonts to load... +5ms
+  pw:api fonts loaded +3ms
+  pw:api <= page.screenshot succeeded +89ms
+  pw:api => Expect "toBeVisible" started +11ms
+  pw:api Expect "toBeVisible" getByRole('dialog', { name: /assignRole/ }).getByText('No data available') with timeout 
+15000ms +5ms
+  pw:api waiting for getByRole('dialog', { name: /assignRole/ }).getByText('No data available') +1ms
+  pw:api <= Expect "toBeVisible" succeeded +7ms
+  pw:api => page.screenshot started +1ms
+  pw:api taking page screenshot +4ms
+  pw:api waiting for fonts to load... +4ms
+  pw:api fonts loaded +2ms
+  pw:api <= page.screenshot succeeded +75ms
+  pw:api => page.screenshot started +14ms
+  pw:api taking page screenshot +4ms
+  pw:api waiting for fonts to load... +4ms
+  pw:api fonts loaded +2ms
+  pw:api <= page.screenshot succeeded +113ms
+  pw:api => page.screenshot started +11ms
+  pw:api taking page screenshot +5ms
+  pw:api waiting for fonts to load... +6ms
+  pw:api fonts loaded +1ms
+  pw:api <= page.screenshot succeeded +81ms
+  pw:api => page.screenshot started +14ms
+  pw:api taking page screenshot +4ms
+  pw:api waiting for fonts to load... +4ms
+  pw:api fonts loaded +2ms
+  pw:api <= page.screenshot succeeded +121ms
+  pw:api => tracing.stopChunk started +12ms
+  pw:api <= tracing.stopChunk succeeded +375ms
+  pw:api => locator.count started +9ms
+  pw:api <= locator.count succeeded +3ms
+  pw:api => locator.count started +0ms
+  pw:api <= locator.count succeeded +3ms
+  pw:api => keyboard.press started +1ms
+  pw:api <= keyboard.press succeeded +91ms
+  pw:api => mouse.click started +1ms
+  pw:api <= mouse.click succeeded +125ms
+  pw:api => locator.count started +1ms
+  pw:api <= locator.count succeeded +53ms
+  pw:api => keyboard.press started +1ms
+  pw:api <= keyboard.press succeeded +45ms
+  pw:api => page.waitForTimeout started +1ms
+  pw:api <= page.waitForTimeout succeeded +607ms
+  pw:api => locator.count started +2ms
+  pw:api <= locator.count succeeded +4ms
+  pw:api => locator.count started +1ms
+  pw:api <= locator.count succeeded +3ms
+  pw:api => page.evaluate started +1ms
+  pw:api <= page.evaluate succeeded +4ms
+  ok 1 [bdd] › .features-gen\features\06-users.feature.spec.js:264:7 › 6. Users › Role list is empty for an application with no roles @users (11.7s)
+  pw:api => browser.newPage started +68ms
+  pw:api <= browser.newPage succeeded +504ms
+  pw:api => page.goto started +3ms
+  pw:api navigating to "https://sm-rbac-dashboard-staging.azurewebsites.net/", waiting until "load" +1ms
+  pw:api   "commit" event fired +185ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/" +0ms
+  pw:api   "networkidle" event fired +4s
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/" +583ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/" +18ms
+  pw:api   "domcontentloaded" event fired +24ms
+  pw:api   "load" event fired +72ms
+  pw:api <= page.goto succeeded +1ms
+  pw:api => locator.waitFor started +1ms
+  pw:api waiting for locator('.loader_div') to be hidden +0ms
+  pw:api <= locator.waitFor succeeded +49ms
+  pw:api => locator.fill started +1ms
+  pw:api waiting for getByPlaceholder('Enter Email ID') +1ms
+  pw:api   locator resolved to <input type="text" autocomplete="off" _ngcontent-mcg-c1="" placeholder="Enter Email ID" 
+formcontrolname="useremailid" ng-reflect-name="useremailid" class="form-control ng-untouched ng-pristine ng-invalid"/> 
++16ms
+  pw:api   fill("softwaredco@sunmobility.com") +4ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +32ms
+  pw:api => locator.fill started +1ms
+  pw:api waiting for getByPlaceholder('Enter Password') +1ms
+  pw:api   locator resolved to <input type="password" _ngcontent-mcg-c1="" placeholder="Enter Password " 
+formcontrolname="userpassword" ng-reflect-name="userpassword" class="form-control ng-untouched ng-pristine 
+ng-invalid"/> +10ms
+  pw:api   fill("Sunmob@123") +6ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +19ms
+  pw:api => locator.click started +1ms
+  pw:api waiting for getByRole('button', { name: 'LOGIN' }) +3ms
+  pw:api   locator resolved to <button _ngcontent-mcg-c1="" class="btn btn-primary mr-1"> LOGIN </button> +9ms
+  pw:api attempting click action +5ms
+  pw:api   waiting for element to be visible, enabled and stable +0ms
+  pw:api   element is visible, enabled and stable +28ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +2ms
+  pw:api   performing click action +6ms
+  pw:api   click action done +28ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +2ms
+  pw:api <= locator.click succeeded +1ms
+  pw:api => locator.waitFor started +1ms
+  pw:api waiting for getByRole('dialog').getByRole('button', { name: 'OK' }) to be visible +0ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/home" +2s
+  pw:api <= page.waitForURL succeeded +2ms
+  pw:api => locator.click started +2ms
+  pw:api waiting for locator('a[href="/home/rbac-users"]') +2ms
+  pw:api   locator resolved to <a target="_self" class="nav-link" _ngcontent-mcg-c12="" href="/home/rbac-users" 
+ng-reflect-target="_self" ng-reflect-router-link="/home/rbac-users">…</a> +133ms
+  pw:api attempting click action +2ms
+  pw:api   waiting for element to be visible, enabled and stable +0ms
+  pw:api   element is visible, enabled and stable +127ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +3ms
+  pw:api   performing click action +7ms
+  pw:api   navigated to "https://sm-rbac-dashboard-staging.azurewebsites.net/home/rbac-users" +64ms
+  pw:api   click action done +62ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +3ms
+  pw:api <= locator.click succeeded +1ms
+  pw:api => Expect "toHaveURL" started +4ms
+  pw:api Expect "toHaveURL" with timeout 5000ms +1ms
+  pw:api <= Expect "toHaveURL" succeeded +3ms
+  pw:api => mouse.move started +1ms
+  pw:api <= mouse.move succeeded +9ms
+  pw:api => locator.waitFor started +1ms
+  pw:api waiting for locator('.loader_div') to be hidden +1ms
+  pw:api   locator resolved to visible <div _ngcontent-mcg-c0="" class="loader_div ng-star-inserted">…</div> +3ms
+  pw:api   locator resolved to visible <div _ngcontent-mcg-c0="" class="loader_div ng-star-inserted">…</div> +36ms
+  pw:api   locator resolved to visible <div _ngcontent-mcg-c0="" class="loader_div ng-star-inserted">…</div> +63ms
+  pw:api   locator resolved to visible <div _ngcontent-mcg-c0="" class="loader_div ng-star-inserted">…</div> +117ms
+  pw:api   locator resolved to visible <div _ngcontent-mcg-c0="" class="loader_div ng-star-inserted">…</div> +110ms
+  pw:api   "networkidle" event fired +1s
+  pw:api <= locator.waitFor succeeded +297ms
+  pw:api => Expect "toBeVisible" started +3ms
+  pw:api Expect "toBeVisible" locator('tbody tr').first() with timeout 30000ms +1ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toBeVisible" succeeded +815ms
+  pw:api => Expect "not toContainText" started +2ms
+  pw:api Expect "not toContainText" locator('tbody tr').first() with timeout 5000ms +2ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "not toContainText" succeeded +16ms
+  pw:api => locator.fill started +1ms
+  pw:api waiting for locator('input[type="search"]').first() +1ms
+  pw:api   locator resolved to <input class="" type="search" placeholder="Search users" aria-controls="partnerTable"/> 
++9ms
+  pw:api   fill("SUNMF00000630") +4ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +43ms
+  pw:api => Expect "toContainText" started +2ms
+  pw:api Expect "toContainText" locator('tbody tr').first() with timeout 5000ms +0ms
+  pw:api waiting for locator('tbody tr').first() +1ms
+  pw:api <= Expect "toContainText" succeeded +4ms
+  pw:api => locator.count started +1ms
+  pw:api <= locator.count succeeded +5ms
+  pw:api => locator.innerText started +1ms
+  pw:api waiting for locator('tbody tr').first() +1ms
+  pw:api   locator resolved to <tr role="row" _ngcontent-mcg-c14="" class="ng-star-inserted odd">…</tr> +4ms
+  pw:api <= locator.innerText succeeded +1ms
+  pw:api => locator.click started +0ms
+  pw:api waiting for locator('a[href="/home/rbac-users"]') +1ms
+  pw:api   locator resolved to <a target="_self" class="nav-link" _ngcontent-mcg-c12="" href="/home/rbac-users" 
+ng-reflect-target="_self" ng-reflect-router-link="/home/rbac-users">…</a> +4ms
+  pw:api attempting click action +1ms
+  pw:api   waiting for element to be visible, enabled and stable +0ms
+  pw:api   element is visible, enabled and stable +3ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +1ms
+  pw:api   performing click action +6ms
+  pw:api   click action done +39ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +1ms
+  pw:api <= locator.click succeeded +0ms
+  pw:api => Expect "toHaveURL" started +2ms
+  pw:api Expect "toHaveURL" with timeout 5000ms +2ms
+  pw:api <= Expect "toHaveURL" succeeded +5ms
+  pw:api => mouse.move started +1ms
+  pw:api <= mouse.move succeeded +14ms
+  pw:api => locator.waitFor started +1ms
+  pw:api waiting for locator('.loader_div') to be hidden +1ms
+  pw:api <= locator.waitFor succeeded +9ms
+  pw:api => Expect "toBeVisible" started +3ms
+  pw:api Expect "toBeVisible" locator('tbody tr').first() with timeout 30000ms +6ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toBeVisible" succeeded +5ms
+  pw:api => Expect "not toContainText" started +1ms
+  pw:api Expect "not toContainText" locator('tbody tr').first() with timeout 5000ms +0ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "not toContainText" succeeded +4ms
+  pw:api => locator.fill started +2ms
+  pw:api waiting for locator('input[type="search"]').first() +1ms
+  pw:api   locator resolved to <input class="" type="search" placeholder="Search users" aria-controls="partnerTable"/> 
++4ms
+  pw:api   fill("SUNMF00000630") +2ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +35ms
+  pw:api => Expect "toContainText" started +3ms
+  pw:api Expect "toContainText" locator('tbody tr').first() with timeout 5000ms +1ms
+  pw:api waiting for locator('tbody tr').first() +1ms
+  pw:api <= Expect "toContainText" succeeded +4ms
+  pw:api => locator.innerText started +1ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api   locator resolved to <tr role="row" _ngcontent-mcg-c14="" class="ng-star-inserted odd">…</tr> +4ms
+  pw:api <= locator.innerText succeeded +0ms
+  pw:api => locator.click started +1ms
+  pw:api waiting for locator('a[href="/home/rbac-users"]') +1ms
+  pw:api   locator resolved to <a target="_self" class="nav-link" _ngcontent-mcg-c12="" href="/home/rbac-users" 
+ng-reflect-target="_self" ng-reflect-router-link="/home/rbac-users">…</a> +4ms
+  pw:api attempting click action +4ms
+  pw:api   waiting for element to be visible, enabled and stable +1ms
+  pw:api   element is visible, enabled and stable +30ms
+  pw:api   scrolling into view if needed +0ms
+  pw:api   done scrolling +1ms
+  pw:api   performing click action +4ms
+  pw:api   click action done +51ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +1ms
+  pw:api <= locator.click succeeded +0ms
+  pw:api => Expect "toHaveURL" started +2ms
+  pw:api Expect "toHaveURL" with timeout 5000ms +3ms
+  pw:api <= Expect "toHaveURL" succeeded +3ms
+  pw:api => mouse.move started +1ms
+  pw:api <= mouse.move succeeded +3ms
+  pw:api => locator.waitFor started +1ms
+  pw:api waiting for locator('.loader_div') to be hidden +0ms
+  pw:api <= locator.waitFor succeeded +7ms
+  pw:api => Expect "toBeVisible" started +1ms
+  pw:api Expect "toBeVisible" locator('tbody tr').first() with timeout 30000ms +1ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toBeVisible" succeeded +3ms
+  pw:api => Expect "not toContainText" started +3ms
+  pw:api Expect "not toContainText" locator('tbody tr').first() with timeout 5000ms +2ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "not toContainText" succeeded +5ms
+  pw:api => locator.fill started +1ms
+  pw:api waiting for locator('input[type="search"]').first() +0ms
+  pw:api   locator resolved to <input class="" type="search" placeholder="Search users" aria-controls="partnerTable"/> 
++4ms
+  pw:api   fill("SUNMF00000629") +2ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +52ms
+  pw:api => Expect "toContainText" started +2ms
+  pw:api Expect "toContainText" locator('tbody tr').first() with timeout 5000ms +1ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toContainText" succeeded +6ms
+  pw:api => locator.count started +2ms
+  pw:api <= locator.count succeeded +3ms
+  pw:api => locator.innerText started +2ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api   locator resolved to <tr role="row" _ngcontent-mcg-c14="" class="ng-star-inserted odd">…</tr> +4ms
+  pw:api <= locator.innerText succeeded +0ms
+  pw:api => locator.click started +1ms
+  pw:api waiting for locator('a[href="/home/rbac-users"]') +0ms
+  pw:api   locator resolved to <a target="_self" class="nav-link" _ngcontent-mcg-c12="" href="/home/rbac-users" 
+ng-reflect-target="_self" ng-reflect-router-link="/home/rbac-users">…</a> +6ms
+  pw:api attempting click action +3ms
+  pw:api   waiting for element to be visible, enabled and stable +0ms
+  pw:api   element is visible, enabled and stable +36ms
+  pw:api   scrolling into view if needed +1ms
+  pw:api   done scrolling +3ms
+  pw:api   performing click action +5ms
+  pw:api   click action done +60ms
+  pw:api   waiting for scheduled navigations to finish +0ms
+  pw:api   navigations have finished +2ms
+  pw:api <= locator.click succeeded +0ms
+  pw:api => Expect "toHaveURL" started +1ms
+  pw:api Expect "toHaveURL" with timeout 5000ms +1ms
+  pw:api <= Expect "toHaveURL" succeeded +4ms
+  pw:api => mouse.move started +1ms
+  pw:api <= mouse.move succeeded +7ms
+  pw:api => locator.waitFor started +1ms
+  pw:api waiting for locator('.loader_div') to be hidden +0ms
+  pw:api <= locator.waitFor succeeded +6ms
+  pw:api => Expect "toBeVisible" started +2ms
+  pw:api Expect "toBeVisible" locator('tbody tr').first() with timeout 30000ms +0ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toBeVisible" succeeded +5ms
+  pw:api => Expect "not toContainText" started +2ms
+  pw:api Expect "not toContainText" locator('tbody tr').first() with timeout 5000ms +2ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "not toContainText" succeeded +5ms
+  pw:api => locator.fill started +0ms
+  pw:api waiting for locator('input[type="search"]').first() +1ms
+  pw:api   locator resolved to <input class="" type="search" placeholder="Search users" aria-controls="partnerTable"/> 
++4ms
+  pw:api   fill("SUNMF00000629") +2ms
+  pw:api attempting fill action +0ms
+  pw:api   waiting for element to be visible, enabled and editable +0ms
+  pw:api <= locator.fill succeeded +41ms
+  pw:api => Expect "toContainText" started +2ms
+  pw:api Expect "toContainText" locator('tbody tr').first() with timeout 5000ms +2ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api <= Expect "toContainText" succeeded +4ms
+  pw:api => locator.innerText started +1ms
+  pw:api waiting for locator('tbody tr').first() +0ms
+  pw:api   locator resolved to <tr role="row" _ngcontent-mcg-c14="" class="ng-star-inserted odd">…</tr> +3ms
+  pw:api <= locator.innerText succeeded +0ms
+  pw:api => page.close started +2ms
+  pw:api <= locator.waitFor failed +21ms
+  pw:api <= page.close succeeded +1ms
+  pw:api => tracing.stop started +2ms
+  pw:api <= tracing.stop succeeded +1ms
+  pw:api => browserContext.close started +2ms
+  pw:api <= locator.waitFor failed +67ms
+  pw:api <= browserContext.close succeeded +3ms
+  pw:api => browser.close started +1ms
+  pw:api <= browser.close succeeded +443ms
+
+  1 passed (36.2s)

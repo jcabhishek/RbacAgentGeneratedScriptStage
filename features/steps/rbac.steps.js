@@ -1,6 +1,6 @@
 // Step definitions for the RBAC dashboard features. They reuse the helpers from the
 // spec suite (tests/rbac) so both suites share locators and waits.
-const { expect } = require('@playwright/test');
+const { expect, chromium } = require('@playwright/test');
 const { Given, When, Then, BeforeAll, AfterAll, AfterStep, TOKENS, SHARED_PAGE } = require('./fixtures');
 const { BASE_URL, login, loginAsAdmin } = require('../../tests/rbac/auth');
 const {
@@ -30,12 +30,19 @@ const firstRow = page => page.locator('tbody tr').first();
 
 // Both test users are re-enabled, have any "_PWEDIT" name restored and automation roles removed
 // before and after the Users feature, so a failed run never leaves them changed.
+// The hook after the last test can find the browser already closed (e.g. its window was closed
+// once the run looked finished); it then opens its own browser rather than failing the run.
 async function cleanUpTestUsers(browser) {
-  const page = await browser.newPage();
-  await loginAsAdmin(page);
-  await resetTestUser(page, TOKENS.$USER);
-  await resetTestUser(page, TOKENS.$USER2);
-  await page.close();
+  const own = browser.isConnected() ? null : await chromium.launch({ headless: false, args: ['--start-maximized'] });
+  const page = await (own || browser).newPage({ viewport: null });
+  try {
+    await loginAsAdmin(page);
+    await resetTestUser(page, TOKENS.$USER);
+    await resetTestUser(page, TOKENS.$USER2);
+  } finally {
+    await page.close().catch(() => {});
+    await own?.close();
+  }
 }
 BeforeAll({ tags: '@users', timeout: 600000 }, async ({ browser }) => cleanUpTestUsers(browser));
 AfterAll({ tags: '@users', timeout: 600000 }, async ({ browser }) => cleanUpTestUsers(browser));

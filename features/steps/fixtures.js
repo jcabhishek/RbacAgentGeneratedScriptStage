@@ -98,17 +98,25 @@ const sharedPageFixtures = {
     await limited('start trace', 15000, () => context.tracing.start({
       title: testInfo.titlePath.slice(1).join(' › '), screenshots: true, snapshots: true, sources: true,
     }));
+    // Server errors seen during the test: a passing test keeps its trace only when it saw one, so
+    // the summary email can still show that call's URL, payload and response.
+    let serverErrors = 0;
+    const onResponse = response => { if (response.status() >= 500) serverErrors++; };
+    page.on('response', onResponse);
     await limited('close leftover dialogs', 20000, () => closeLeftoverDialogs(page));
     await use(page);
+    page.off('response', onResponse);
     // Final screenshot of every test (pass or fail), as `screenshot: 'on'` did before.
     const shot = testInfo.outputPath('final-screenshot.png');
     await limited('final screenshot', 20000, async () => {
       await page.screenshot({ path: shot, timeout: 15000 });
       await testInfo.attach('screenshot', { path: shot, contentType: 'image/png' });
     });
+    // Traces only for failures: a passing test's trace is discarded (unless it saw a 5xx error).
+    const failed = testInfo.status !== testInfo.expectedStatus;
     const trace = testInfo.outputPath('trace.zip');
-    await limited('save trace', 30000, () => context.tracing.stop({ path: trace }));
-    if (fs.existsSync(trace)) await testInfo.attach('trace', { path: trace, contentType: 'application/zip' });
+    await limited('save trace', 30000, () => context.tracing.stop(failed || serverErrors ? { path: trace } : {}));
+    if ((failed || serverErrors) && fs.existsSync(trace)) await testInfo.attach('trace', { path: trace, contentType: 'application/zip' });
     await limited('close dialogs after test', 20000, () => closeLeftoverDialogs(page));
   },
 };

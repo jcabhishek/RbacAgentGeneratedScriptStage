@@ -75,8 +75,8 @@ export default defineConfig({
     /* Maximized window: no fixed viewport, so the page fills the browser window */
     viewport: null,
     launchOptions: { args: ['--start-maximized'] },
-    /* Record a trace for every test and attach it to the HTML report. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on',
+    /* Keep a trace only for failed tests (HTML and Allure reports, email). See https://playwright.dev/docs/trace-viewer */
+    trace: 'retain-on-failure',
     /* Step screenshots come from snap() in tests/rbac/helpers.js and the BDD AfterStep hook;
        also keep a final screenshot of every test (pass or fail) */
     screenshot: 'on',
@@ -86,7 +86,7 @@ export default defineConfig({
     /* Plain Playwright specs in tests/ */
     { name: 'spec', testDir: './tests' },
     /* Cucumber scenarios from features/. They share one logged-in page per worker
-       (features/steps/fixtures.js), which records each test's trace and final screenshot itself,
+       (features/steps/fixtures.js), which records each failed test's trace and every test's final screenshot itself,
        so the built-in ones are off here. RBAC_FRESH_LOGIN=true restores a new login per test. */
     {
       name: 'bdd',

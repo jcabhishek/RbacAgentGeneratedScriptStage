@@ -40,3 +40,30 @@ for (const attempts of byHistory.values()) {
   marked++;
 }
 console.log(`allure-mark-healed: ${marked} test(s) passed after an earlier failure`);
+
+// Traces only for failed attempts: a passing test's trace (~4 MB each) is dropped from the Allure
+// results, so the report keeps the traces that explain a failure. Passing tests normally have no
+// trace at all; one that saw an HTTP 5xx keeps its trace in test-results/ for the summary email.
+let dropped = 0;
+let kept = 0;
+const isTrace = a => a.name === 'trace' && /zip|playwright-trace/.test(a.type || '');
+for (const r of results) {
+  const failedAttempt = ['failed', 'broken'].includes(r.data.status);
+  let changed = false;
+  const visit = node => {
+    if (Array.isArray(node.attachments)) {
+      node.attachments = node.attachments.filter(a => {
+        if (!isTrace(a)) return true;
+        if (failedAttempt) { kept++; return true; }
+        fs.rmSync(path.join(dir, a.source), { force: true });
+        dropped++;
+        changed = true;
+        return false;
+      });
+    }
+    (node.steps || []).forEach(visit);
+  };
+  visit(r.data);
+  if (changed) fs.writeFileSync(r.file, JSON.stringify(r.data));
+}
+console.log(`allure-mark-healed: kept ${kept} trace(s) of failed attempts, removed ${dropped} trace(s) of passed tests`);

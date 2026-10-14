@@ -29,6 +29,9 @@ if (fs.existsSync(envFile)) process.loadEnvFile(envFile);
 const env = (name, fallback = '') => (process.env[name] ?? '').trim() || fallback;
 
 const MAX_ATTACHMENT_MB = Number(env('MAIL_MAX_ATTACHMENT_MB', '18'));
+// All attachments together. SendGrid accepts 30 MB per email and attachments grow by a third when
+// encoded, so 20 MB of files is the most that fits.
+const MAX_TOTAL_MB = Number(env('MAIL_MAX_TOTAL_MB', '20'));
 const MAX_SCREENSHOTS = Number(env('MAIL_MAX_SCREENSHOTS', '10'));
 const CELL_LIMIT = 32000; // Excel cell limit is 32,767 characters
 const BODY_SNIPPET = 600;
@@ -183,20 +186,24 @@ async function writeApiWorkbook(calls, file) {
 
 // ---------- 3. Light, single-file Allure report for the email ----------
 // The full report (traces and ~1,200 PNG screenshots) is hundreds of MB. The email copy keeps the
-// results, error texts and the screenshots as compressed JPEGs, and drops the traces:
+// results, error texts, the traces of failed tests and the screenshots as compressed JPEGs:
 //   - key screenshots (failed tests, popups, final screen of each test) at 1280 px,
-//   - per-step screenshots ("step - ...") at 800 px; if the report is still over
-//     MAIL_MAX_ATTACHMENT_MB it is rebuilt without the per-step screenshots of passing tests.
+//   - per-step screenshots ("step - ...") at 800 px.
+// If the report is over MAIL_MAX_ATTACHMENT_MB it is rebuilt without the per-step screenshots of
+// passing tests, then without the traces (those are still attached to the email when they fit).
 
-async function buildMailAllure(withSteps = true) {
+async function buildMailAllure(withSteps = true, withTraces = true) {
   if (!fs.existsSync(ALLURE_RESULTS)) return { note: 'No allure-results found.' };
   const lightDir = path.join(REPORTS, 'allure-mail-results');
   const outDir = path.join(REPORTS, 'allure-mail-report');
   fs.rmSync(lightDir, { recursive: true, force: true });
   fs.mkdirSync(lightDir, { recursive: true });
   const isStep = a => /^step - /.test(a.name);
+  const isTrace = a => a.name === 'trace' && /zip|playwright-trace/.test(a.type || '');
   const keepAttachment = (a, failedTest) => a.type === 'text/plain'
-    || (a.type === 'image/png' && (withSteps || failedTest || !isStep(a)));
+    || (a.type === 'image/png' && (withSteps || failedTest || !isStep(a)))
+    || (isTrace(a) && withTraces && failedTest);
+  let traces = 0;
   const done = new Map(); // source png -> jpg
   const images = [];
   let failedTest = false;
@@ -205,10 +212,11 @@ async function buildMailAllure(withSteps = true) {
       node.attachments = node.attachments.filter(a => keepAttachment(a, failedTest) && fs.existsSync(path.join(ALLURE_RESULTS, a.source)));
       for (const a of node.attachments) {
         if (a.type !== 'image/png') {
+          if (isTrace(a) && !done.has(a.source)) traces++;
           if (!done.has(a.source)) { fs.copyFileSync(path.join(ALLURE_RESULTS, a.source), path.join(lightDir, a.source)); done.set(a.source, a.source); }
           continue;
         }
-        const jpg = a.source.replace(/.png$/i, '.jpg');
+        const jpg = a.source.replace(/\.png$/i, '.jpg');
         if (!done.has(a.source)) {
           done.set(a.source, jpg);
           images.push({ from: path.join(ALLURE_RESULTS, a.source), to: path.join(lightDir, jpg), small: isStep(a) && !failedTest });
@@ -228,7 +236,7 @@ async function buildMailAllure(withSteps = true) {
       (data.befores || []).forEach(filter);
       (data.afters || []).forEach(filter);
       fs.writeFileSync(path.join(lightDir, file), JSON.stringify(data));
-    } else if (/^(environment.properties|categories.json|executor.json)$/.test(file)) {
+    } else if (/^(environment\.properties|categories\.json|executor\.json)$/.test(file)) {
       fs.copyFileSync(full, path.join(lightDir, file));
     }
   }
@@ -249,15 +257,16 @@ async function buildMailAllure(withSteps = true) {
   const mb = fs.statSync(zipFile).size / 1024 / 1024;
   const screenshots = images.length;
   if (mb > MAX_ATTACHMENT_MB) {
-    if (withSteps) return buildMailAllure(false);
+    if (withSteps) return buildMailAllure(false, withTraces);
+    if (withTraces && traces) return buildMailAllure(false, false);
     return { note: `The Allure report is ${mb.toFixed(1)} MB (limit ${MAX_ATTACHMENT_MB} MB), so it is not attached. Find it at ${path.relative(ROOT, zipFile)}.` };
   }
-  return { file: zipFile, mb, screenshots, withSteps };
+  return { file: zipFile, mb, screenshots, withSteps, traces };
 }
 
 // ---------- 4. Email ----------
 
-function buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots }) {
+function buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots, traces = [] }) {
   const passed = stats.expected || 0;
   const failedCount = stats.unexpected || 0;
   const flakyCount = stats.flaky || 0;
@@ -373,11 +382,17 @@ function buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureIn
     + `<td align="right" valign="top" style="padding:12px 0;${top}${F}font-size:13px;font-weight:700;color:${ok ? C.greenInk : warn ? C.amberInk : C.redInk};white-space:nowrap;">${count}</td></tr>`;
   const failureBlocks = failed.map((t, i) => {
     const shot = screenshots.find(s => s.testName === t.name);
+    const trace = traces.find(x => x.testName === t.name);
+    const traceText = !trace || trace.state === 'missing' ? ''
+      : trace.state === 'attached' ? `attached to this email as <b>${fileName(trace.filename)}</b>`
+        : allureInfo.traces ? `too large for the email (${trace.mb.toFixed(1)} MB); included in <b>${fileName('allure-report.zip')}</b>`
+          : `too large for the email (${trace.mb.toFixed(1)} MB); on the test machine at ${esc(path.relative(ROOT, trace.path))}`;
     return `<tr><td colspan="3" style="padding:0 0 12px;"><table ${T} width="100%" bgcolor="#FFFFFF" style="border:1px solid ${C.line};border-left:4px solid ${C.red};border-radius:8px;">
 <tr><td style="padding:12px 14px 6px;${F}"><div style="font-size:11px;font-weight:700;color:${C.redInk};letter-spacing:.6px;text-transform:uppercase;">Failure ${i + 1} · ${esc(moduleOf(t.name))}</div>
 <div style="font-size:14px;font-weight:700;color:${C.ink};padding-top:3px;">${esc(lastPart(t.name))}</div></td></tr>
 <tr><td style="padding:6px 14px 12px;"><pre style="white-space:pre-wrap;word-break:break-word;margin:0;padding:10px 12px;background:${C.redBg};border-radius:6px;${MONO}font-size:12px;line-height:17px;color:#7A271A;">${esc(clip(t.error.split('\n').slice(0, 8).join('\n'), 900))}</pre>
-${shot ? `<div style="${F}font-size:11px;font-weight:700;color:${C.muted};padding:10px 0 4px;text-transform:uppercase;letter-spacing:.6px;">Screenshot at failure</div><img src="cid:${shot.cid}" alt="Screenshot at failure" width="580" style="display:block;width:100%;max-width:580px;height:auto;border:1px solid ${C.line};border-radius:6px;">` : ''}</td></tr></table></td></tr>`;
+${shot ? `<div style="${F}font-size:11px;font-weight:700;color:${C.muted};padding:10px 0 4px;text-transform:uppercase;letter-spacing:.6px;">Screenshot at failure</div><img src="cid:${shot.cid}" alt="Screenshot at failure" width="580" style="display:block;width:100%;max-width:580px;height:auto;border:1px solid ${C.line};border-radius:6px;">` : ''}
+${traceText ? `<div style="${F}font-size:12px;color:${C.muted};padding-top:10px;">&#127902; <b style="color:${C.ink};">Trace:</b> ${traceText}</div>` : ''}</td></tr></table></td></tr>`;
   }).join('');
   const flakyBlock = flaky.length ? `<tr><td colspan="3" style="padding:0 0 12px;"><table ${T} width="100%" bgcolor="${C.amberBg}" style="border-radius:8px;">${flaky.map(t => `<tr><td style="padding:8px 12px;${F}font-size:12px;color:${C.ink};"><b style="color:${C.amberInk};">&#8635;</b>&nbsp; ${esc(lastPart(t.name))} <span style="color:${C.faint};">· ${esc(moduleOf(t.name))}</span></td></tr>`).join('')}</table></td></tr>` : '';
   const pre = s => `<pre style="white-space:pre-wrap;word-break:break-all;margin:0;padding:8px 10px;background:${C.panel};border:1px solid ${C.line};border-radius:6px;${MONO}font-size:11px;line-height:16px;color:${C.ink};">${esc(clip(s, BODY_SNIPPET)) || '-'}</pre>`;
@@ -435,9 +450,12 @@ ${detail('Framework', 'Playwright + playwright-bdd (Gherkin)')}${detail('Browser
 <td style="padding:14px;${F}"><div style="font-size:14px;font-weight:700;color:${C.ink};">${name}${size ? ` <span style="font-weight:400;color:${C.faint};font-size:12px;">&nbsp;${size}</span>` : ''}</div>${text}</td></tr></table>`;
   const attachmentList = [
     allureInfo.file ? attachment('&#128206;', fileName('allure-report.zip'), `${allureInfo.mb.toFixed(1)} MB`,
-      `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:3px;">Interactive Allure report with ${num(allureInfo.screenshots)} ${allureInfo.withSteps ? 'step screenshots' : 'key screenshots (per-step ones are in the full report)'}.</div>`
+      `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:3px;">Interactive Allure report with ${num(allureInfo.screenshots)} ${allureInfo.withSteps ? 'step screenshots' : 'key screenshots (per-step ones are in the full report)'}${allureInfo.traces ? ` and the trace${allureInfo.traces === 1 ? '' : 's'} of ${allureInfo.traces} failed test attempt${allureInfo.traces === 1 ? '' : 's'}` : ''}.</div>`
       + `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:6px;"><b style="color:${C.ink};">How to open:</b> attachment bar &rarr; save &rarr; unzip &rarr; open <b>${fileName('allure-report.html')}</b> in a browser.</div>`)
       : attachment('&#9888;', 'Allure report not attached', '', `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:3px;">${esc(allureInfo.note || '')}</div>`),
+    ...traces.filter(t => t.state === 'attached').map(t => attachment('&#127902;', fileName(t.filename), `${t.mb.toFixed(1)} MB`,
+      `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:3px;">Playwright trace of <b style="color:${C.ink};">${esc(lastPart(t.testName))}</b>: every action, network call and DOM snapshot of the failed run.</div>`
+      + `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:6px;"><b style="color:${C.ink};">How to open:</b> save the file &rarr; go to <a href="https://trace.playwright.dev" style="color:${C.link};text-decoration:none;">trace.playwright.dev</a> &rarr; drop the file there (it stays on your computer).</div>`)),
     allCalls.length ? attachment('&#128202;', fileName('failed-api-calls.xlsx'), '',
       `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:3px;">Every HTTP 5xx call with URL, request payload and full response (credentials redacted).</div>`) : '',
   ].filter(Boolean);
@@ -465,6 +483,8 @@ ${detail('Framework', 'Playwright + playwright-bdd (Gherkin)')}${detail('Browser
 <table ${T} width="100%" bgcolor="${C.soft}"><tr><td align="center" style="padding:28px 8px;">
 <table ${T} class="wrap" width="680" style="width:680px;max-width:680px;">
 
+<tr><td class="px" style="padding:0 28px 18px;${F}font-size:14px;line-height:22px;color:${C.ink};">Hi Team,<br>Here are today's daily regression results for the <b>RBAC Dashboard (Staging)</b>. ${greeting}</td></tr>
+
 <tr><td class="px" style="padding:0 24px;"><table ${T} width="100%" bgcolor="#0A1F3D" style="border-radius:16px 16px 0 0;background:#0A1F3D;background-image:linear-gradient(135deg,#0A1F3D 0%,#13315C 100%);">
 <tr><td style="padding:22px 24px 0;${F}"><table ${T} width="100%"><tr>
 <td style="${F}"><span style="display:inline-block;width:10px;height:10px;border-radius:5px;background:${C.orange};"></span>&nbsp;<span style="font-size:12px;font-weight:700;letter-spacing:2px;color:#FFFFFF;">SUN MOBILITY</span><span class="hs" style="font-size:12px;letter-spacing:2px;color:#8FA3BF;"> &nbsp;|&nbsp; QA AUTOMATION</span></td>
@@ -487,7 +507,6 @@ ${detail('Framework', 'Playwright + playwright-bdd (Gherkin)')}${detail('Browser
 ${kpi('Total', total)}${kpi('Passed', passed, C.greenInk)}${kpi('Failed', failedCount, failedCount ? C.redInk : C.ink)}${kpi('Flaky', flakyCount, flakyCount ? C.amberInk : C.ink)}${kpi('API 5xx', serverErrors, serverErrors ? C.redInk : C.ink)}${kpi('Modules', modules.size)}
 </tr></table></td></tr></table></td></tr>
 
-<tr><td class="px" style="padding:4px 28px 18px;${F}font-size:14px;line-height:22px;color:${C.ink};">Hi Team,<br>Here are today's daily regression results for the <b>RBAC Dashboard (Staging)</b>. ${greeting}</td></tr>
 ${card('Run health', `${passedChecks} of ${checks.length} checks passed`, health)}
 ${card('Module coverage', plural(modules.size, 'module'), `<table ${T} width="100%"><tr>${th('Module')}${th('Pass rate', 'class="hs"')}${th('Passed', 'align="right"')}${th('Time', 'align="right"')}</tr>${moduleRows}${moduleTotal}</table>`)}
 ${card('Failures &amp; server errors', '', issues)}
@@ -525,8 +544,23 @@ async function main() {
   const allureInfo = await buildMailAllure();
   if (allureInfo.file) attachments.push({ filename: 'allure-report.zip', path: allureInfo.file });
 
+  // The Playwright trace of each failed test (its last attempt) as a file of its own, while all
+  // attachments stay within MAIL_MAX_TOTAL_MB.
+  const sizeMb = file => fs.statSync(file).size / 1024 / 1024;
+  let totalMb = attachments.reduce((n, a) => n + sizeMb(a.path), 0);
+  const traces = failed.map((t, i) => {
+    const trace = t.attachments.find(a => a.name === 'trace' && a.path && fs.existsSync(a.path));
+    if (!trace) return { testName: t.name, state: 'missing' };
+    const filename = `trace-${String(i + 1).padStart(2, '0')}-${t.name.split(' › ').pop().replace(/[^\w-]+/g, '_').slice(0, 50)}.zip`;
+    const mb = sizeMb(trace.path);
+    if (totalMb + mb > MAX_TOTAL_MB) return { testName: t.name, filename, mb, state: 'too big', path: trace.path };
+    totalMb += mb;
+    attachments.push({ filename, path: trace.path });
+    return { testName: t.name, filename, mb, state: 'attached' };
+  });
+
   const subject = `Daily Regression Report | RBAC Dashboard | ${new Date(stats.startTime || Date.now()).toLocaleDateString('en-IN', { dateStyle: 'medium' })}`;
-  const html = buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots });
+  const html = buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots, traces });
   fs.writeFileSync(path.join(REPORTS, 'test-summary.html'), html.replace(/src="cid:([^"]+)"/g, (m, cid) => {
     const s = screenshots.find(x => x.cid === cid);
     return s ? `src="file:///${s.path.replace(/\\/g, '/')}"` : m;
@@ -548,7 +582,8 @@ async function main() {
 
   console.log(`Summary: ${subject}`);
   console.log(`Failed tests: ${failed.length}, API server errors (5xx): ${reportable.length}`);
-  console.log(`Allure attachment: ${allureInfo.file ? `${path.relative(ROOT, allureInfo.file)} (${allureInfo.mb.toFixed(1)} MB, ${allureInfo.screenshots} screenshots${allureInfo.withSteps ? '' : ', without per-step screenshots'})` : allureInfo.note}`);
+  console.log(`Allure attachment: ${allureInfo.file ? `${path.relative(ROOT, allureInfo.file)} (${allureInfo.mb.toFixed(1)} MB, ${allureInfo.screenshots} screenshots${allureInfo.withSteps ? '' : ', without per-step screenshots'}, ${allureInfo.traces} trace(s))` : allureInfo.note}`);
+  if (traces.length) console.log(`Traces of failed tests: ${traces.map(t => `${t.filename || t.testName} (${t.state}${t.mb ? `, ${t.mb.toFixed(1)} MB` : ''})`).join('; ')}`);
   console.log(`Email saved: ${path.relative(ROOT, emlFile)} (${(raw.message.length / 1024 / 1024).toFixed(1)} MB), preview: reports/test-summary.html`);
 
   if (!env('MAIL_TO')) {

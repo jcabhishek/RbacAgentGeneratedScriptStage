@@ -19,3 +19,8 @@ node_modules/
 
 # Run summary email (results.json, test-summary.eml, light Allure report)
 /reports/
+
+# Run logs, Excel lock files and browser-exploration output
+*.log
+~$*
+/.playwright-mcp/

@@ -1,5 +1,0 @@
-[     222ms] [WARNING] Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading @ https://maps.google.com/maps/api/js?v=3.exp&key=AIzaSyBLaOvHkluDx8PkmOc1zC-hF6FSR_34acY&libraries=weather,geometry,visualization,places:2700
-[     721ms] [WARNING] Could not find HammerJS. Certain Angular Material components may not work correctly. @ https://sm-rbac-dashboard-staging.azurewebsites.net/vendor-es2015.js:118004
-[     725ms] [LOG] Angular is running in the development mode. Call enableProdMode() to enable the production mode. @ https://sm-rbac-dashboard-staging.azurewebsites.net/vendor-es2015.js:96733
-[     735ms] [LOG] data false @ https://sm-rbac-dashboard-staging.azurewebsites.net/main-es2015.js:3401
-[     749ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ https://sm-rbac-dashboard-staging.azurewebsites.net/:0

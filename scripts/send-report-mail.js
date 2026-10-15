@@ -94,6 +94,14 @@ function readResults() {
           startTime: last.startTime ? Date.parse(last.startTime) : null,
           error: stripAnsi(last.error?.message || (last.errors || []).map(e => e.message).join('\n')),
           attachments: last.attachments || [],
+          // Every attempt (first run and retries): a server error in a failed first attempt is
+          // reported even when the retry passed.
+          attempts: test.results.map(r => ({
+            retry: r.retry || 0,
+            startTime: r.startTime ? Date.parse(r.startTime) : null,
+            duration: r.duration || 0,
+            attachments: r.attachments || [],
+          })),
         });
       }
     }
@@ -109,8 +117,8 @@ const isApi = url => /\/api\/v\d|identitytoolkit|securetoken/.test(url) && !/\.(
 
 function apiFailures(tests) {
   const calls = [];
-  for (const test of tests) {
-    const trace = test.attachments.find(a => a.name === 'trace' && a.path && fs.existsSync(a.path));
+  for (const test of tests) for (const attempt of test.attempts) {
+    const trace = attempt.attachments.find(a => a.name === 'trace' && a.path && fs.existsSync(a.path));
     if (!trace) continue;
     let zip;
     try { zip = new AdmZip(trace.path); } catch { continue; }
@@ -128,13 +136,13 @@ function apiFailures(tests) {
         if (event.type !== 'resource-snapshot' || !s || !isApi(s.request.url)) continue;
         // Only calls made while this test ran (a trace can also hold earlier network activity).
         const at = Date.parse(s.startedDateTime);
-        if (test.startTime && (at < test.startTime - 1000 || at > test.startTime + test.duration + 1000)) continue;
+        if (attempt.startTime && (at < attempt.startTime - 1000 || at > attempt.startTime + attempt.duration + 1000)) continue;
         const status = s.response.status;
         if (!(status >= MIN_API_STATUS)) continue;
         const pd = s.request.postData;
         const content = s.response.content || {};
         calls.push({
-          test: test.name,
+          test: attempt.retry ? `${test.name} (retry #${attempt.retry})` : test.name,
           testResult: test.outcome === 'unexpected' ? 'FAILED' : test.outcome === 'flaky' ? 'FLAKY' : 'passed',
           time: s.startedDateTime,
           method: s.request.method,
@@ -231,6 +239,9 @@ async function buildMailAllure(withSteps = true, withTraces = true) {
     const full = path.join(ALLURE_RESULTS, file);
     if (file.endsWith('-result.json') || file.endsWith('-container.json')) {
       const data = JSON.parse(fs.readFileSync(full, 'utf8'));
+      // The emailed report shows the same run as the email: verification reruns (tag
+      // "rerun-after-fix") stay in the full local report only.
+      if (file.endsWith('-result.json') && (data.labels || []).some(l => l.name === 'tag' && l.value === 'rerun-after-fix')) continue;
       failedTest = file.endsWith('-result.json') && !['passed', 'skipped'].includes(data.status);
       filter(data);
       (data.befores || []).forEach(filter);
@@ -266,7 +277,7 @@ async function buildMailAllure(withSteps = true, withTraces = true) {
 
 // ---------- 4. Email ----------
 
-function buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots, traces = [] }) {
+function buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots, traces = [], apiWorkbook = false }) {
   const passed = stats.expected || 0;
   const failedCount = stats.unexpected || 0;
   const flakyCount = stats.flaky || 0;
@@ -382,11 +393,10 @@ function buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureIn
     + `<td align="right" valign="top" style="padding:12px 0;${top}${F}font-size:13px;font-weight:700;color:${ok ? C.greenInk : warn ? C.amberInk : C.redInk};white-space:nowrap;">${count}</td></tr>`;
   const failureBlocks = failed.map((t, i) => {
     const shot = screenshots.find(s => s.testName === t.name);
-    const trace = traces.find(x => x.testName === t.name);
-    const traceText = !trace || trace.state === 'missing' ? ''
-      : trace.state === 'attached' ? `attached to this email as <b>${fileName(trace.filename)}</b>`
-        : allureInfo.traces ? `too large for the email (${trace.mb.toFixed(1)} MB); included in <b>${fileName('allure-report.zip')}</b>`
-          : `too large for the email (${trace.mb.toFixed(1)} MB); on the test machine at ${esc(path.relative(ROOT, trace.path))}`;
+    const traceText = traces.filter(x => x.testName === t.name).map(trace => `${trace.label}: ${trace.state === 'attached'
+      ? `attached as <b>${fileName(trace.filename)}</b>`
+      : allureInfo.traces ? `too large for the email (${trace.mb.toFixed(1)} MB); included in <b>${fileName('allure-report.zip')}</b>`
+        : `too large for the email (${trace.mb.toFixed(1)} MB); on the test machine at ${esc(path.relative(ROOT, trace.path))}`}`).join('<br>');
     return `<tr><td colspan="3" style="padding:0 0 12px;"><table ${T} width="100%" bgcolor="#FFFFFF" style="border:1px solid ${C.line};border-left:4px solid ${C.red};border-radius:8px;">
 <tr><td style="padding:12px 14px 6px;${F}"><div style="font-size:11px;font-weight:700;color:${C.redInk};letter-spacing:.6px;text-transform:uppercase;">Failure ${i + 1} · ${esc(moduleOf(t.name))}</div>
 <div style="font-size:14px;font-weight:700;color:${C.ink};padding-top:3px;">${esc(lastPart(t.name))}</div></td></tr>
@@ -454,9 +464,9 @@ ${detail('Framework', 'Playwright + playwright-bdd (Gherkin)')}${detail('Browser
       + `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:6px;"><b style="color:${C.ink};">How to open:</b> attachment bar &rarr; save &rarr; unzip &rarr; open <b>${fileName('allure-report.html')}</b> in a browser.</div>`)
       : attachment('&#9888;', 'Allure report not attached', '', `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:3px;">${esc(allureInfo.note || '')}</div>`),
     ...traces.filter(t => t.state === 'attached').map(t => attachment('&#127902;', fileName(t.filename), `${t.mb.toFixed(1)} MB`,
-      `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:3px;">Playwright trace of <b style="color:${C.ink};">${esc(lastPart(t.testName))}</b>: every action, network call and DOM snapshot of the failed run.</div>`
+      `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:3px;">Playwright trace of <b style="color:${C.ink};">${esc(lastPart(t.testName))}</b> (${t.label}): every action, network call and DOM snapshot of that attempt.</div>`
       + `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:6px;"><b style="color:${C.ink};">How to open:</b> save the file &rarr; go to <a href="https://trace.playwright.dev" style="color:${C.link};text-decoration:none;">trace.playwright.dev</a> &rarr; drop the file there (it stays on your computer).</div>`)),
-    allCalls.length ? attachment('&#128202;', fileName('failed-api-calls.xlsx'), '',
+    apiWorkbook ? attachment('&#128202;', fileName('failed-api-calls.xlsx'), '',
       `<div style="font-size:12px;color:${C.muted};line-height:18px;padding-top:3px;">Every HTTP 5xx call with URL, request payload and full response (credentials redacted).</div>`) : '',
   ].filter(Boolean);
 
@@ -536,7 +546,10 @@ async function main() {
   const allCalls = apiFailures(tests);
   const reportable = allCalls.filter(isReportable);
   const attachments = screenshots.map(s => ({ filename: s.filename, path: s.path, cid: s.cid }));
-  if (allCalls.length) {
+  // Attachments: a passing run carries only the Allure report; a run with failed tests also carries
+  // the API error details (failed-api-calls.xlsx, when there were 5xx errors) and the traces.
+  const apiWorkbook = failed.length > 0 && allCalls.length > 0;
+  if (apiWorkbook) {
     const xlsx = path.join(REPORTS, 'failed-api-calls.xlsx');
     await writeApiWorkbook(allCalls, xlsx);
     attachments.push({ filename: 'failed-api-calls.xlsx', path: xlsx });
@@ -544,23 +557,32 @@ async function main() {
   const allureInfo = await buildMailAllure();
   if (allureInfo.file) attachments.push({ filename: 'allure-report.zip', path: allureInfo.file });
 
-  // The Playwright trace of each failed test (its last attempt) as a file of its own, while all
-  // attachments stay within MAIL_MAX_TOTAL_MB.
+  // The Playwright trace of every failed attempt of each failed test (the first try and each
+  // retry: an error such as an HTTP 500 can be in an earlier attempt only), each as a file of its
+  // own, while all attachments stay within MAIL_MAX_TOTAL_MB.
   const sizeMb = file => fs.statSync(file).size / 1024 / 1024;
   let totalMb = attachments.reduce((n, a) => n + sizeMb(a.path), 0);
-  const traces = failed.map((t, i) => {
-    const trace = t.attachments.find(a => a.name === 'trace' && a.path && fs.existsSync(a.path));
-    if (!trace) return { testName: t.name, state: 'missing' };
-    const filename = `trace-${String(i + 1).padStart(2, '0')}-${t.name.split(' › ').pop().replace(/[^\w-]+/g, '_').slice(0, 50)}.zip`;
-    const mb = sizeMb(trace.path);
-    if (totalMb + mb > MAX_TOTAL_MB) return { testName: t.name, filename, mb, state: 'too big', path: trace.path };
-    totalMb += mb;
-    attachments.push({ filename, path: trace.path });
-    return { testName: t.name, filename, mb, state: 'attached' };
+  const traces = [];
+  failed.forEach((t, i) => {
+    for (const attempt of t.attempts) {
+      const trace = attempt.attachments.find(a => a.name === 'trace' && a.path && fs.existsSync(a.path));
+      if (!trace) continue;
+      const label = attempt.retry ? `retry #${attempt.retry}` : '1st attempt';
+      const tag = attempt.retry ? `retry${attempt.retry}` : 'attempt1';
+      const filename = `trace-${String(i + 1).padStart(2, '0')}-${tag}-${t.name.split(' › ').pop().replace(/[^\w-]+/g, '_').slice(0, 40)}.zip`;
+      const mb = sizeMb(trace.path);
+      if (totalMb + mb > MAX_TOTAL_MB) {
+        traces.push({ testName: t.name, label, filename, mb, state: 'too big', path: trace.path });
+        continue;
+      }
+      totalMb += mb;
+      attachments.push({ filename, path: trace.path });
+      traces.push({ testName: t.name, label, filename, mb, state: 'attached' });
+    }
   });
 
   const subject = `Daily Regression Report | RBAC Dashboard | ${new Date(stats.startTime || Date.now()).toLocaleDateString('en-IN', { dateStyle: 'medium' })}`;
-  const html = buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots, traces });
+  const html = buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots, traces, apiWorkbook });
   fs.writeFileSync(path.join(REPORTS, 'test-summary.html'), html.replace(/src="cid:([^"]+)"/g, (m, cid) => {
     const s = screenshots.find(x => x.cid === cid);
     return s ? `src="file:///${s.path.replace(/\\/g, '/')}"` : m;
@@ -637,7 +659,8 @@ async function sendWithSendGrid(message) {
   if (response.status !== 202) {
     throw new Error(`SendGrid returned HTTP ${response.status}: ${redact(await response.text())}`);
   }
-  console.log(`Email sent via SendGrid to ${to.map(t => t.email).join(', ')}${cc.length ? ` (cc ${cc.map(c => c.email).join(', ')})` : ''} (HTTP 202)`);
+  // The message id lets the delivery be checked in SendGrid's Activity (or /v3/messages).
+  console.log(`Email sent via SendGrid to ${to.map(t => t.email).join(', ')}${cc.length ? ` (cc ${cc.map(c => c.email).join(', ')})` : ''} (HTTP 202, message id ${response.headers.get('x-message-id') || 'n/a'})`);
 }
 
 main().catch(error => {

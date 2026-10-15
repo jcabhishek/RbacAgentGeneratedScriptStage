@@ -1,30 +1,18 @@
 ﻿
 Running 4 tests using 1 worker
 
-node.exe : (node:37324) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+node.exe : (node:41584) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 At C:\Program Files\nodejs\npx.ps1:29 char:3
 +   & $NODE_EXE $NPX_CLI_JS $args
 +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: ((node:37324) Wa... env being set.:String) [], RemoteException
+    + CategoryInfo          : NotSpecified: ((node:41584) Wa... env being set.:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
  
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ok 1 [bdd] › .features-gen\features\02-applications.feature.spec.js:17:7 › 2. Application › Add application (16.3s)
-  ok 2 [bdd] › .features-gen\features\02-applications.feature.spec.js:61:7 › 2. Application › Duplicate application name in a different letter case is accepted (8.8s)
-  ok 3 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:38:9 › 8. Cleanup - delete role, page and application › Cancel delete keeps the <type> › Cancel delete keeps the application (5.0s)
-  ok 4 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:101:7 › 8. Cleanup - delete role, page and application › Delete application (7.3s)
+  ok 1 [bdd] › .features-gen\features\02-applications.feature.spec.js:17:7 › 2. Application › Add application (15.1s)
+  ok 2 [bdd] › .features-gen\features\02-applications.feature.spec.js:61:7 › 2. Application › Duplicate application name in a different letter case is accepted (6.7s)
+  ok 3 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:38:9 › 8. Cleanup - delete role, page and application › Cancel delete keeps the <type> › Cancel delete keeps the application (3.4s)
+  ok 4 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:101:7 › 8. Cleanup - delete role, page and application › Delete application (6.2s)
 
-  4 passed (40.7s)
+  4 passed (35.8s)
 EXIT 0
-
-> playwrightpractice@1.0.0 allure:generate
-> node scripts/allure-mark-healed.js && allure generate allure-results --clean -o allure-report
-
-allure-mark-healed: 3 test(s) passed after an earlier failure
-Report successfully generated to allure-report
-Summary: [RBAC Automation] PASSED - 4 tests: 4 passed, 0 failed - 12/10/2026, 2:19:52 pm
-Failed tests: 0, failed API calls: 0 (+0 expected 4xx)
-Allure attachment: reports\allure-report.zip (11.9 MB)
-Email saved: reports\test-summary.eml (16.3 MB), preview: reports/test-summary.html
-SMTP_HOST / MAIL_TO not set in .env - the email was saved but NOT sent.
-WALL 1.0 min

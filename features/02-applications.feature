@@ -64,6 +64,8 @@ Feature: 2. Application
   Scenario: Duplicate application name in a different letter case is accepted
     # Finding: the duplicate check is case-sensitive. The extra record is deleted right away,
     # by its exact lower-case name, so the original $APP is never touched.
+    # A copy left by a failed earlier attempt (e.g. staging failed the delete) is removed first.
+    Given I remove leftover letter-case copies of "$APP"
     When I open the "Add Application" form
     And I enter "$APP_LOWER" in "Enter app name"
     And I enter "lower-case duplicate, deleted in this scenario" in "Enter app description"

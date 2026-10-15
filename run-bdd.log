@@ -1,174 +1,212 @@
 ﻿
-> playwrightpractice@1.0.0 test:bdd:mail
-> node scripts/run-and-mail.js --project=bdd
-
-
-> npx bddgen
-
-> npx playwright test --project=bdd
-
 Running 91 tests using 1 worker
 
-node.exe : (node:20028) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
-At C:\Program Files\nodejs\npm.ps1:29 char:3
-+   & $NODE_EXE $NPM_CLI_JS $args
+node.exe : (node:6216) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+At C:\Program Files\nodejs\npx.ps1:29 char:3
++   & $NODE_EXE $NPX_CLI_JS $args
 +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: ((node:20028) Wa... env being set.:String) [], RemoteException
+    + CategoryInfo          : NotSpecified: ((node:6216) War... env being set.:String) [], RemoteException
     + FullyQualifiedErrorId : NativeCommandError
  
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ok  1 [bdd] › .features-gen\features\01-login.feature.spec.js:6:7 › 1. Login › Login with valid credentials lands on dashboard (22.5s)
-  ok  2 [bdd] › .features-gen\features\01-login.feature.spec.js:14:7 › 1. Login › Login with invalid password shows error (9.4s)
-  ok  3 [bdd] › .features-gen\features\01-login.feature.spec.js:22:7 › 1. Login › Login with empty fields stays on login page (5.0s)
-  ok  4 [bdd] › .features-gen\features\02-applications.feature.spec.js:11:7 › 2. Application › Applications grid loads with expected columns (7.6s)
-  ok  5 [bdd] › .features-gen\features\02-applications.feature.spec.js:17:7 › 2. Application › Add application (7.0s)
-  ok  6 [bdd] › .features-gen\features\02-applications.feature.spec.js:31:7 › 2. Application › Edit application is not available (6.2s)
-  ok  7 [bdd] › .features-gen\features\02-applications.feature.spec.js:41:7 › 2. Application › Add duplicate application shows error (6.5s)
-  ok  8 [bdd] › .features-gen\features\02-applications.feature.spec.js:50:7 › 2. Application › Add duplicate application with a trailing space is rejected (6.7s)
-  ok  9 [bdd] › .features-gen\features\02-applications.feature.spec.js:61:7 › 2. Application › Duplicate application name in a different letter case is accepted (8.9s)
-  ok 10 [bdd] › .features-gen\features\02-applications.feature.spec.js:80:7 › 2. Application › Add application with empty fields shows required errors (4.2s)
-  ok 11 [bdd] › .features-gen\features\02-applications.feature.spec.js:88:7 › 2. Application › Add application without description shows required error (4.3s)
-  ok 12 [bdd] › .features-gen\features\02-applications.feature.spec.js:97:7 › 2. Application › Add application without name shows required error (4.6s)
-  ok 13 [bdd] › .features-gen\features\02-applications.feature.spec.js:106:7 › 2. Application › Cancel add application does not create a record (3.7s)
-  ok 14 [bdd] › .features-gen\features\02-applications.feature.spec.js:116:7 › 2. Application › Search applications with no match shows empty state (2.4s)
-  ok 15 [bdd] › .features-gen\features\02-applications.feature.spec.js:123:7 › 2. Application › Search applications is case-insensitive (2.3s)
-  ok 16 [bdd] › .features-gen\features\02-applications.feature.spec.js:129:7 › 2. Application › Page size selector limits rows to 50 (2.4s)
-  ok 17 [bdd] › .features-gen\features\02-applications.feature.spec.js:135:7 › 2. Application › Sorting by app name toggles sort order (2.7s)
-  ok 18 [bdd] › .features-gen\features\03-pages.feature.spec.js:11:7 › 3. Pages › Pages grid loads with expected columns (2.6s)
-  ok 19 [bdd] › .features-gen\features\03-pages.feature.spec.js:17:7 › 3. Pages › Add page mapped to application (6.4s)
-  ok 20 [bdd] › .features-gen\features\03-pages.feature.spec.js:31:7 › 3. Pages › Add a second page mapped to the same application (6.2s)
-  ok 21 [bdd] › .features-gen\features\03-pages.feature.spec.js:45:7 › 3. Pages › Both pages are listed under the application (2.3s)
-  ok 22 [bdd] › .features-gen\features\03-pages.feature.spec.js:52:7 › 3. Pages › Add page with a duplicate name in the same application is rejected (6.1s)
-  ok 23 [bdd] › .features-gen\features\03-pages.feature.spec.js:66:7 › 3. Pages › Add page with empty fields shows mandatory alert (9.5s)
-  ok 24 [bdd] › .features-gen\features\03-pages.feature.spec.js:72:7 › 3. Pages › Add page without application shows mandatory alert (9.9s)
-  ok 25 [bdd] › .features-gen\features\03-pages.feature.spec.js:80:7 › 3. Pages › Cancel add page does not create a record (3.6s)
-  ok 26 [bdd] › .features-gen\features\03-pages.feature.spec.js:89:7 › 3. Pages › Search pages with no match shows empty state (2.4s)
-  ok 27 [bdd] › .features-gen\features\04-features.feature.spec.js:11:7 › 4. Features › Features grid loads with expected columns (2.7s)
-  ok 28 [bdd] › .features-gen\features\04-features.feature.spec.js:17:7 › 4. Features › Add feature mapped to page (6.3s)
-  ok 29 [bdd] › .features-gen\features\04-features.feature.spec.js:31:7 › 4. Features › Add feature mapped to the second page (6.0s)
-  ok 30 [bdd] › .features-gen\features\04-features.feature.spec.js:45:7 › 4. Features › Cancel delete feature keeps it (4.0s)
-  ok 31 [bdd] › .features-gen\features\04-features.feature.spec.js:56:7 › 4. Features › Delete a feature that is not the last on its page (10.8s)
-  ok 32 [bdd] › .features-gen\features\04-features.feature.spec.js:73:7 › 4. Features › Delete the last feature of a page is blocked (5.1s)
-  ok 33 [bdd] › .features-gen\features\04-features.feature.spec.js:88:7 › 4. Features › Add feature with a duplicate name on the same page is rejected (7.0s)
-  ok 34 [bdd] › .features-gen\features\04-features.feature.spec.js:102:7 › 4. Features › Same feature name on a different page is accepted (9.8s)
-  ok 35 [bdd] › .features-gen\features\04-features.feature.spec.js:122:7 › 4. Features › Add feature with empty fields shows mandatory alert (10.2s)
-  ok 36 [bdd] › .features-gen\features\04-features.feature.spec.js:128:7 › 4. Features › Add feature without page shows mandatory alert (5.8s)
-  ok 37 [bdd] › .features-gen\features\04-features.feature.spec.js:136:7 › 4. Features › Cancel add feature does not create a record (4.0s)
-  ok 38 [bdd] › .features-gen\features\04-features.feature.spec.js:145:7 › 4. Features › Search features with no match shows empty state (2.6s)
-  ok 39 [bdd] › .features-gen\features\05-roles.feature.spec.js:11:7 › 5. Roles › Roles grid loads with expected columns (4.3s)
-  ok 40 [bdd] › .features-gen\features\05-roles.feature.spec.js:17:7 › 5. Roles › Add role with page and feature access (13.2s)
-  ok 41 [bdd] › .features-gen\features\05-roles.feature.spec.js:37:7 › 5. Roles › Add role with a duplicate name for the same application is rejected (9.2s)
-  ok 42 [bdd] › .features-gen\features\05-roles.feature.spec.js:52:7 › 5. Roles › Add role with empty fields asks for application (5.7s)
-  ok 43 [bdd] › .features-gen\features\05-roles.feature.spec.js:58:7 › 5. Roles › Add role without page asks for at least one page (7.3s)
-  ok 44 [bdd] › .features-gen\features\05-roles.feature.spec.js:67:7 › 5. Roles › Cancel add role does not create a record (5.7s)
-  ok 45 [bdd] › .features-gen\features\05-roles.feature.spec.js:76:7 › 5. Roles › Search roles with no match shows empty state (3.5s)
-  ok 46 [bdd] › .features-gen\features\06-users.feature.spec.js:11:7 › 6. Users › Users search filters the grid @users (5.6s)
-  ok 47 [bdd] › .features-gen\features\06-users.feature.spec.js:19:7 › 6. Users › Users search with no match shows empty state @users (5.4s)
-  ok 48 [bdd] › .features-gen\features\06-users.feature.spec.js:26:7 › 6. Users › Edit user first name and restore it @users (23.7s)
-  ok 49 [bdd] › .features-gen\features\06-users.feature.spec.js:47:7 › 6. Users › Edit user with empty first name is rejected @users (8.6s)
-  ok 50 [bdd] › .features-gen\features\06-users.feature.spec.js:60:7 › 6. Users › Edit user first name is limited to 50 characters @users (15.8s)
-  ok 51 [bdd] › .features-gen\features\06-users.feature.spec.js:72:7 › 6. Users › Cancel edit user leaves user unchanged @users (9.2s)
-  ok 52 [bdd] › .features-gen\features\06-users.feature.spec.js:85:9 › 6. Users › Edit user mobile with <digits> digits is rejected › Edit user mobile with 1 digits is rejected @users (9.3s)
-  ok 53 [bdd] › .features-gen\features\06-users.feature.spec.js:100:9 › 6. Users › Edit user mobile with <digits> digits is rejected › Edit user mobile with 5 digits is rejected @users (9.3s)
-  ok 54 [bdd] › .features-gen\features\06-users.feature.spec.js:115:9 › 6. Users › Edit user mobile with <digits> digits is rejected › Edit user mobile with 9 digits is rejected @users (9.4s)
-  ok 55 [bdd] › .features-gen\features\06-users.feature.spec.js:132:7 › 6. Users › Edit user mobile cannot exceed 10 digits @users (7.8s)
-  ok 56 [bdd] › .features-gen\features\06-users.feature.spec.js:141:7 › 6. Users › Edit user mobile does not accept letters @users (8.1s)
-  ok 57 [bdd] › .features-gen\features\06-users.feature.spec.js:150:7 › 6. Users › Edit user mobile with exactly 10 digits is valid @users (6.6s)
-  ok 58 [bdd] › .features-gen\features\06-users.feature.spec.js:161:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate mobile is rejected @users (11.6s)
-  ok 59 [bdd] › .features-gen\features\06-users.feature.spec.js:178:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate email id is rejected @users (11.2s)
-  ok 60 [bdd] › .features-gen\features\06-users.feature.spec.js:195:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate employee id is rejected @users (12.0s)
-  ok 61 [bdd] › .features-gen\features\06-users.feature.spec.js:216:9 › 6. Users › Edit user with <case> email is not submitted › Edit user with an empty email is not submitted @users (9.6s)
-  ok 62 [bdd] › .features-gen\features\06-users.feature.spec.js:231:9 › 6. Users › Edit user with <case> email is not submitted › Edit user with a malformed email is not submitted @users (9.6s)
-  ok 63 [bdd] › .features-gen\features\06-users.feature.spec.js:248:7 › 6. Users › Assign role with empty fields shows mandatory alert @users (8.5s)
-  ok 64 [bdd] › .features-gen\features\06-users.feature.spec.js:256:7 › 6. Users › Assign role with application but no role shows mandatory alert @users (10.1s)
-  ok 65 [bdd] › .features-gen\features\06-users.feature.spec.js:264:7 › 6. Users › Role list is empty for an application with no roles @users (8.1s)
-  ok 66 [bdd] › .features-gen\features\06-users.feature.spec.js:273:7 › 6. Users › Cancel assign role leaves user unchanged @users (6.9s)
-  ok 67 [bdd] › .features-gen\features\06-users.feature.spec.js:284:7 › 6. Users › Assign role to user @users (13.1s)
-  ok 68 [bdd] › .features-gen\features\06-users.feature.spec.js:299:7 › 6. Users › Assigning a second role for the same application is blocked @users (9.1s)
-  ok 69 [bdd] › .features-gen\features\06-users.feature.spec.js:310:7 › 6. Users › Unassign with no role ticked keeps the role @users (7.6s)
-  ok 70 [bdd] › .features-gen\features\06-users.feature.spec.js:321:7 › 6. Users › Unassign role from user @users (10.9s)
-  ok 71 [bdd] › .features-gen\features\06-users.feature.spec.js:334:7 › 6. Users › Assign Role button appears only when users are selected @users (7.1s)
-  ok 72 [bdd] › .features-gen\features\06-users.feature.spec.js:346:7 › 6. Users › Bulk assign with no application or role shows mandatory alert @users (10.5s)
-  ok 73 [bdd] › .features-gen\features\06-users.feature.spec.js:355:7 › 6. Users › Cancel bulk assign leaves users unchanged @users (9.6s)
-  ok 74 [bdd] › .features-gen\features\06-users.feature.spec.js:368:7 › 6. Users › Bulk assign role to multiple selected users @users (15.2s)
-  ok 75 [bdd] › .features-gen\features\06-users.feature.spec.js:384:7 › 6. Users › No bulk unassign action exists for selected users @users (8.1s)
-  ok 76 [bdd] › .features-gen\features\06-users.feature.spec.js:395:7 › 6. Users › Unassign role from each of the selected users @users (17.2s)
-  x  77 [bdd] › .features-gen\features\06-users.feature.spec.js:412:7 › 6. Users › Cancel disable keeps user active @users (18.0s)
-(node:31680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+  ok  1 [bdd] › .features-gen\features\01-login.feature.spec.js:6:7 › 1. Login › Login with valid credentials lands on dashboard (12.3s)
+  ok  2 [bdd] › .features-gen\features\01-login.feature.spec.js:14:7 › 1. Login › Login with invalid password shows error (8.0s)
+  ok  3 [bdd] › .features-gen\features\01-login.feature.spec.js:22:7 › 1. Login › Login with empty fields stays on login page (5.2s)
+  ok  4 [bdd] › .features-gen\features\02-applications.feature.spec.js:11:7 › 2. Application › Applications grid loads with expected columns (8.0s)
+  ok  5 [bdd] › .features-gen\features\02-applications.feature.spec.js:17:7 › 2. Application › Add application (6.0s)
+  ok  6 [bdd] › .features-gen\features\02-applications.feature.spec.js:31:7 › 2. Application › Edit application is not available (5.1s)
+  ok  7 [bdd] › .features-gen\features\02-applications.feature.spec.js:41:7 › 2. Application › Add duplicate application shows error (11.3s)
+  ok  8 [bdd] › .features-gen\features\02-applications.feature.spec.js:50:7 › 2. Application › Add duplicate application with a trailing space is rejected (5.6s)
+  ok  9 [bdd] › .features-gen\features\02-applications.feature.spec.js:61:7 › 2. Application › Duplicate application name in a different letter case is accepted (8.1s)
+  ok 10 [bdd] › .features-gen\features\02-applications.feature.spec.js:81:7 › 2. Application › Add application with empty fields shows required errors (4.1s)
+  ok 11 [bdd] › .features-gen\features\02-applications.feature.spec.js:89:7 › 2. Application › Add application without description shows required error (5.0s)
+  ok 12 [bdd] › .features-gen\features\02-applications.feature.spec.js:98:7 › 2. Application › Add application without name shows required error (10.3s)
+  ok 13 [bdd] › .features-gen\features\02-applications.feature.spec.js:107:7 › 2. Application › Cancel add application does not create a record (6.5s)
+  ok 14 [bdd] › .features-gen\features\02-applications.feature.spec.js:117:7 › 2. Application › Search applications with no match shows empty state (3.9s)
+  ok 15 [bdd] › .features-gen\features\02-applications.feature.spec.js:124:7 › 2. Application › Search applications is case-insensitive (4.4s)
+  ok 16 [bdd] › .features-gen\features\02-applications.feature.spec.js:130:7 › 2. Application › Page size selector limits rows to 50 (6.0s)
+  ok 17 [bdd] › .features-gen\features\02-applications.feature.spec.js:136:7 › 2. Application › Sorting by app name toggles sort order (4.8s)
+  ok 18 [bdd] › .features-gen\features\03-pages.feature.spec.js:11:7 › 3. Pages › Pages grid loads with expected columns (5.8s)
+  ok 19 [bdd] › .features-gen\features\03-pages.feature.spec.js:17:7 › 3. Pages › Add page mapped to application (10.8s)
+  ok 20 [bdd] › .features-gen\features\03-pages.feature.spec.js:31:7 › 3. Pages › Add a second page mapped to the same application (10.5s)
+  ok 21 [bdd] › .features-gen\features\03-pages.feature.spec.js:45:7 › 3. Pages › Both pages are listed under the application (4.3s)
+  ok 22 [bdd] › .features-gen\features\03-pages.feature.spec.js:52:7 › 3. Pages › Add page with a duplicate name in the same application is rejected (11.2s)
+  ok 23 [bdd] › .features-gen\features\03-pages.feature.spec.js:66:7 › 3. Pages › Add page with empty fields shows mandatory alert (14.6s)
+  ok 24 [bdd] › .features-gen\features\03-pages.feature.spec.js:72:7 › 3. Pages › Add page without application shows mandatory alert (14.3s)
+  ok 25 [bdd] › .features-gen\features\03-pages.feature.spec.js:80:7 › 3. Pages › Cancel add page does not create a record (6.4s)
+  ok 26 [bdd] › .features-gen\features\03-pages.feature.spec.js:89:7 › 3. Pages › Search pages with no match shows empty state (4.2s)
+  ok 27 [bdd] › .features-gen\features\04-features.feature.spec.js:11:7 › 4. Features › Features grid loads with expected columns (5.1s)
+  ok 28 [bdd] › .features-gen\features\04-features.feature.spec.js:17:7 › 4. Features › Add feature mapped to page (13.4s)
+  ok 29 [bdd] › .features-gen\features\04-features.feature.spec.js:31:7 › 4. Features › Add feature mapped to the second page (12.1s)
+  ok 30 [bdd] › .features-gen\features\04-features.feature.spec.js:45:7 › 4. Features › Cancel delete feature keeps it (7.5s)
+  ok 31 [bdd] › .features-gen\features\04-features.feature.spec.js:56:7 › 4. Features › Delete a feature that is not the last on its page (15.0s)
+  ok 32 [bdd] › .features-gen\features\04-features.feature.spec.js:73:7 › 4. Features › Delete the last feature of a page is blocked (8.5s)
+  ok 33 [bdd] › .features-gen\features\04-features.feature.spec.js:88:7 › 4. Features › Add feature with a duplicate name on the same page is rejected (15.6s)
+  ok 34 [bdd] › .features-gen\features\04-features.feature.spec.js:102:7 › 4. Features › Same feature name on a different page is accepted (17.4s)
+  ok 35 [bdd] › .features-gen\features\04-features.feature.spec.js:122:7 › 4. Features › Add feature with empty fields shows mandatory alert (8.5s)
+  ok 36 [bdd] › .features-gen\features\04-features.feature.spec.js:128:7 › 4. Features › Add feature without page shows mandatory alert (9.6s)
+  ok 37 [bdd] › .features-gen\features\04-features.feature.spec.js:136:7 › 4. Features › Cancel add feature does not create a record (8.7s)
+  ok 38 [bdd] › .features-gen\features\04-features.feature.spec.js:145:7 › 4. Features › Search features with no match shows empty state (6.5s)
+  ok 39 [bdd] › .features-gen\features\05-roles.feature.spec.js:11:7 › 5. Roles › Roles grid loads with expected columns (6.2s)
+  ok 40 [bdd] › .features-gen\features\05-roles.feature.spec.js:17:7 › 5. Roles › Add role with page and feature access (19.5s)
+  ok 41 [bdd] › .features-gen\features\05-roles.feature.spec.js:37:7 › 5. Roles › Add role with a duplicate name for the same application is rejected (14.5s)
+  ok 42 [bdd] › .features-gen\features\05-roles.feature.spec.js:52:7 › 5. Roles › Add role with empty fields asks for application (9.3s)
+  ok 43 [bdd] › .features-gen\features\05-roles.feature.spec.js:58:7 › 5. Roles › Add role without page asks for at least one page (11.9s)
+  ok 44 [bdd] › .features-gen\features\05-roles.feature.spec.js:67:7 › 5. Roles › Cancel add role does not create a record (8.9s)
+  ok 45 [bdd] › .features-gen\features\05-roles.feature.spec.js:76:7 › 5. Roles › Search roles with no match shows empty state (4.9s)
+  ok 46 [bdd] › .features-gen\features\06-users.feature.spec.js:11:7 › 6. Users › Users search filters the grid @users (8.9s)
+  ok 47 [bdd] › .features-gen\features\06-users.feature.spec.js:19:7 › 6. Users › Users search with no match shows empty state @users (7.6s)
+  ok 48 [bdd] › .features-gen\features\06-users.feature.spec.js:26:7 › 6. Users › Edit user first name and restore it @users (29.1s)
+  ok 49 [bdd] › .features-gen\features\06-users.feature.spec.js:47:7 › 6. Users › Edit user with empty first name is rejected @users (15.9s)
+  ok 50 [bdd] › .features-gen\features\06-users.feature.spec.js:60:7 › 6. Users › Edit user first name is limited to 50 characters @users (24.8s)
+  ok 51 [bdd] › .features-gen\features\06-users.feature.spec.js:72:7 › 6. Users › Cancel edit user leaves user unchanged @users (11.1s)
+  ok 52 [bdd] › .features-gen\features\06-users.feature.spec.js:85:9 › 6. Users › Edit user mobile with <digits> digits is rejected › Edit user mobile with 1 digits is rejected @users (15.7s)
+  ok 53 [bdd] › .features-gen\features\06-users.feature.spec.js:100:9 › 6. Users › Edit user mobile with <digits> digits is rejected › Edit user mobile with 5 digits is rejected @users (15.5s)
+  ok 54 [bdd] › .features-gen\features\06-users.feature.spec.js:115:9 › 6. Users › Edit user mobile with <digits> digits is rejected › Edit user mobile with 9 digits is rejected @users (16.5s)
+  ok 55 [bdd] › .features-gen\features\06-users.feature.spec.js:132:7 › 6. Users › Edit user mobile cannot exceed 10 digits @users (13.8s)
+  ok 56 [bdd] › .features-gen\features\06-users.feature.spec.js:141:7 › 6. Users › Edit user mobile does not accept letters @users (12.9s)
+  ok 57 [bdd] › .features-gen\features\06-users.feature.spec.js:150:7 › 6. Users › Edit user mobile with exactly 10 digits is valid @users (11.4s)
+  ok 58 [bdd] › .features-gen\features\06-users.feature.spec.js:161:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate mobile is rejected @users (19.5s)
+  x  59 [bdd] › .features-gen\features\06-users.feature.spec.js:178:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate email id is rejected @users (47.4s)
+(node:492) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
 (Use `node --trace-warnings ...` to show where the warning was created)
-  ok 78 [bdd] › .features-gen\features\06-users.feature.spec.js:412:7 › 6. Users › Cancel disable keeps user active @users (retry #1) (15.4s)
-  ok 79 [bdd] › .features-gen\features\06-users.feature.spec.js:423:7 › 6. Users › Disable user then enable user @users (14.8s)
-  ok 80 [bdd] › .features-gen\features\07-user-logs.feature.spec.js:11:7 › 7. User Logs › User logs grid loads with expected columns (30.5s)
-  ok 81 [bdd] › .features-gen\features\07-user-logs.feature.spec.js:17:7 › 7. User Logs › User logs record the role assignment (6.2s)
-  ok 82 [bdd] › .features-gen\features\07-user-logs.feature.spec.js:25:7 › 7. User Logs › User logs record the changes made to the test user (6.0s)
-  ok 83 [bdd] › .features-gen\features\07-user-logs.feature.spec.js:32:7 › 7. User Logs › Search user logs filters by activity (5.1s)
-  ok 84 [bdd] › .features-gen\features\07-user-logs.feature.spec.js:38:7 › 7. User Logs › Search user logs with no match shows empty state (5.0s)
-  ok 85 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:12:9 › 8. Cleanup - delete role, page and application › Cancel delete keeps the <type> › Cancel delete keeps the role (5.1s)
-  ok 86 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:25:9 › 8. Cleanup - delete role, page and application › Cancel delete keeps the <type> › Cancel delete keeps the page (3.8s)
-  ok 87 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:38:9 › 8. Cleanup - delete role, page and application › Cancel delete keeps the <type> › Cancel delete keeps the application (4.2s)
-  ok 88 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:53:7 › 8. Cleanup - delete role, page and application › Delete role (6.1s)
-  ok 89 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:67:9 › 8. Cleanup - delete role, page and application › Delete <label> also removes its feature › Delete page 1 also removes its feature (7.1s)
-  ok 90 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:83:9 › 8. Cleanup - delete role, page and application › Delete <label> also removes its feature › Delete page 2 also removes its feature (9.1s)
-  ok 91 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:101:7 › 8. Cleanup - delete role, page and application › Delete application (6.4s)
-  ok 92 [bdd] › .features-gen\features\09-logout.feature.spec.js:6:7 › 9. Logout › Logout returns to login page (1.8s)
+  ok 60 [bdd] › .features-gen\features\06-users.feature.spec.js:178:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate email id is rejected @users (retry #1) (26.5s)
+  ok 61 [bdd] › .features-gen\features\06-users.feature.spec.js:195:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate employee id is rejected @users (15.9s)
+  ok 62 [bdd] › .features-gen\features\06-users.feature.spec.js:216:9 › 6. Users › Edit user with <case> email is not submitted › Edit user with an empty email is not submitted @users (14.0s)
+  ok 63 [bdd] › .features-gen\features\06-users.feature.spec.js:231:9 › 6. Users › Edit user with <case> email is not submitted › Edit user with a malformed email is not submitted @users (13.5s)
+  ok 64 [bdd] › .features-gen\features\06-users.feature.spec.js:248:7 › 6. Users › Assign role with empty fields shows mandatory alert @users (11.8s)
+  ok 65 [bdd] › .features-gen\features\06-users.feature.spec.js:256:7 › 6. Users › Assign role with application but no role shows mandatory alert @users (12.6s)
+  ok 66 [bdd] › .features-gen\features\06-users.feature.spec.js:264:7 › 6. Users › Role list is empty for an application with no roles @users (12.2s)
+  ok 67 [bdd] › .features-gen\features\06-users.feature.spec.js:273:7 › 6. Users › Cancel assign role leaves user unchanged @users (11.2s)
+  ok 68 [bdd] › .features-gen\features\06-users.feature.spec.js:284:7 › 6. Users › Assign role to user @users (19.4s)
+  ok 69 [bdd] › .features-gen\features\06-users.feature.spec.js:299:7 › 6. Users › Assigning a second role for the same application is blocked @users (12.9s)
+  ok 70 [bdd] › .features-gen\features\06-users.feature.spec.js:310:7 › 6. Users › Unassign with no role ticked keeps the role @users (10.9s)
+  ok 71 [bdd] › .features-gen\features\06-users.feature.spec.js:321:7 › 6. Users › Unassign role from user @users (17.3s)
+  ok 72 [bdd] › .features-gen\features\06-users.feature.spec.js:334:7 › 6. Users › Assign Role button appears only when users are selected @users (10.7s)
+  ok 73 [bdd] › .features-gen\features\06-users.feature.spec.js:346:7 › 6. Users › Bulk assign with no application or role shows mandatory alert @users (13.7s)
+  ok 74 [bdd] › .features-gen\features\06-users.feature.spec.js:355:7 › 6. Users › Cancel bulk assign leaves users unchanged @users (14.0s)
+  ok 75 [bdd] › .features-gen\features\06-users.feature.spec.js:368:7 › 6. Users › Bulk assign role to multiple selected users @users (22.8s)
+  ok 76 [bdd] › .features-gen\features\06-users.feature.spec.js:384:7 › 6. Users › No bulk unassign action exists for selected users @users (11.4s)
+  ok 77 [bdd] › .features-gen\features\06-users.feature.spec.js:395:7 › 6. Users › Unassign role from each of the selected users @users (26.4s)
+  ok 78 [bdd] › .features-gen\features\06-users.feature.spec.js:412:7 › 6. Users › Cancel disable keeps user active @users (11.0s)
+  ok 79 [bdd] › .features-gen\features\06-users.feature.spec.js:423:7 › 6. Users › Disable user then enable user @users (27.3s)
+  ok 80 [bdd] › .features-gen\features\07-user-logs.feature.spec.js:11:7 › 7. User Logs › User logs grid loads with expected columns (29.7s)
+  ok 81 [bdd] › .features-gen\features\07-user-logs.feature.spec.js:17:7 › 7. User Logs › User logs record the role assignment (12.2s)
+  ok 82 [bdd] › .features-gen\features\07-user-logs.feature.spec.js:25:7 › 7. User Logs › User logs record the changes made to the test user (11.5s)
+  ok 83 [bdd] › .features-gen\features\07-user-logs.feature.spec.js:32:7 › 7. User Logs › Search user logs filters by activity (10.6s)
+  ok 84 [bdd] › .features-gen\features\07-user-logs.feature.spec.js:38:7 › 7. User Logs › Search user logs with no match shows empty state (10.0s)
+  ok 85 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:12:9 › 8. Cleanup - delete role, page and application › Cancel delete keeps the <type> › Cancel delete keeps the role (10.0s)
+  ok 86 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:25:9 › 8. Cleanup - delete role, page and application › Cancel delete keeps the <type> › Cancel delete keeps the page (10.1s)
+  ok 87 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:38:9 › 8. Cleanup - delete role, page and application › Cancel delete keeps the <type> › Cancel delete keeps the application (7.3s)
+  ok 88 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:53:7 › 8. Cleanup - delete role, page and application › Delete role (12.6s)
+  ok 89 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:67:9 › 8. Cleanup - delete role, page and application › Delete <label> also removes its feature › Delete page 1 also removes its feature (12.9s)
+  ok 90 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:83:9 › 8. Cleanup - delete role, page and application › Delete <label> also removes its feature › Delete page 2 also removes its feature (12.3s)
+  ok 91 [bdd] › .features-gen\features\08-cleanup.feature.spec.js:101:7 › 8. Cleanup - delete role, page and application › Delete application (8.2s)
+  ok 92 [bdd] › .features-gen\features\09-logout.feature.spec.js:6:7 › 9. Logout › Logout returns to login page (3.1s)
 
 
-  1) [bdd] › .features-gen\features\06-users.feature.spec.js:412:7 › 6. Users › Cancel disable keeps user active @users 
+  1) [bdd] › .features-gen\features\06-users.feature.spec.js:178:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate email id is rejected @users › Then I should see the error popup "already mapped to a different user" 
 
-    Error: expect(page).toHaveURL(expected) failed
+    Error: expect(locator).toBeVisible() failed
 
-    Expected pattern: /\/home\/rbac-users$/
-    Received string:  "https://sm-rbac-dashboard-staging.azurewebsites.net/"
-    Timeout: 15000ms
+    Locator: getByText('already mapped to a different user')
+    Expected: visible
+    Timeout: 30000ms
+    Error: element(s) not found
 
     Call log:
-      - Expect "toHaveURL" with timeout 15000ms
-        33 × locator resolved to <html lang="en" class="swal2-shown swal2-height-auto">…</html>
-           - unexpected value "https://sm-rbac-dashboard-staging.azurewebsites.net/"
+      - Expect "toBeVisible" getByText('already mapped to a different user') with timeout 30000ms
+      - waiting for getByText('already mapped to a different user')
 
 
-       at rbac\helpers.js:54
+       at ..\features\steps\rbac.steps.js:189
 
-      52 | async function openModule(page, href) {
-      53 |   await page.locator(`a[href="${href}"]`).click();
-    > 54 |   await expect(page).toHaveURL(new RegExp(`${href}$`));
-         |                      ^
-      55 |   await waitForIdle(page);
-      56 |   // Wait for the grid data (User Logs has no "Showing N entries" status, so check rows)
-      57 |   await expect(page.locator('tbody tr').first()).toBeVisible({ timeout: 30000 });
-        at openModule (D:\playwrightpractice\tests\rbac\helpers.js:54:22)
-        at Object.<anonymous> (D:\playwrightpractice\features\steps\rbac.steps.js:114:3)
-        at D:\playwrightpractice\.features-gen\features\06-users.feature.spec.js:8:5
+      187 | Then('I should see the error popup {string}', async ({ page, ctx, $testInfo }, raw) => {
+      188 |   const message = ctx.resolve(raw);
+    > 189 |   await expect(page.getByText(message)).toBeVisible({ timeout: 30000 });
+          |                                         ^
+      190 |   await attachPopupText(page, $testInfo, `Error text - ${message}`);
+      191 |   await expectAlert(page, $testInfo, 'Error', `Error popup - ${message}`);
+      192 | });
+        at Object.<anonymous> (D:\playwrightpractice\features\steps\rbac.steps.js:189:41)
+        at D:\playwrightpractice\.features-gen\features\06-users.feature.spec.js:189:7
 
     attachment #3: step - I am logged in as RBAC admin (image/png) ─────────────────────────────────
-    test-results\features-06-users.feature--b9537-l-disable-keeps-user-active-bdd\attachments\step---I-am-logged-in-as-RBAC-admin-f3fdac2d1bcf5e9bef97b8f4354056becb9c9b61.png
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-am-logged-in-as-RBAC-admin-34534f8d7dd12ba9a36279102652da07d8156263.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #4: step - I open the "Users" module (image/png) ────────────────────────────────────
-    test-results\features-06-users.feature--b9537-l-disable-keeps-user-active-bdd\attachments\step---I-open-the-Users-module-fd57ead96eede2a2840ca8083ad152ba50585bf4.png
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-open-the-Users-module-ae3cedc836cf7c928f3028e276fdf1dd21f3d54a.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    attachment #5: screenshot (image/png) ──────────────────────────────────────────────────────────
-    test-results\features-06-users.feature--b9537-l-disable-keeps-user-active-bdd\attachments\screenshot-89c603f632ebcbc50a578fa2d1462cd79c071ec1.png
+    attachment #5: step - I search for "$USER2" (image/png) ────────────────────────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-search-for-USER2--21b0cdcf73326dc6a2748c38668dfb6efac46c20.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    attachment #6: trace (application/zip) ─────────────────────────────────────────────────────────
-    test-results\features-06-users.feature--b9537-l-disable-keeps-user-active-bdd\attachments\trace-49587e33e2533187af823f51ddfb87a6df0e9e13.zip
+    attachment #6: step - I click the "edit" icon (image/png) ──────────────────────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-click-the-edit-icon-68b5e31edecdb5c3fc05c7a2e9aa2b6f105e2fac.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #7: step - I remember the value of "Enter email id" (image/png) ─────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-remember-the-value-of-Enter-email-id--c2986c3c288ab63f4287d5d71e7f1bb85a2dd7bd.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #8: step - I cancel the form (image/png) ────────────────────────────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-cancel-the-form-82e53e976991c0dbe8ccdebcc787e360c2574341.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #9: step - I search for "$USER" (image/png) ─────────────────────────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-search-for-USER--45478b432b9bc0d7355d72e29e04c7a43adf368d.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #10: step - I remember the first row (image/png) ────────────────────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-remember-the-first-row-60d783972e5c6ac09b8eeadc944ae66f82ec6b70.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #11: step - I click the "edit" icon (image/png) ─────────────────────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-click-the-edit-icon-c54d83bbd7672434c0d101ba42145a7e91f1c1bc.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #12: step - I enter "$REMEMBERED" in "Enter email id" (image/png) ───────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-enter-REMEMBERED-in-Enter-email-id--9a5cfb6e45162590ea4a1116dfaf7160d8afeaf3.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #13: duplicate email id entered (image/png) ─────────────────────────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\duplicate-email-id-entered-50653281024051d87f6f5a0b50c31025e819cbe3.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #14: step - I capture a screenshot "duplicate email id entered" (image/png) ─────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-capture-a-screenshot-duplicate-email-id-entered--6440a2a96ce71cd6969d22c5b4637b9ae96a043b.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #15: step - I submit the form (image/png) ───────────────────────────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-submit-the-form-051e5cb3ef9fd18d8d4ee8366068358e5eea7bde.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #16: step - I should see the error popup "already mapped to a different user" (image/png) 
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\step---I-should-see-the-error-popup-already-mapped-to-a-different-user--5850f256b393bd8b0b95284642ac9e227f3e6231.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #17: screenshot (image/png) ─────────────────────────────────────────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\screenshot-4b1c800a086c36d3de473a3bb18fd6d540fa2059.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #18: trace (application/zip) ────────────────────────────────────────────────────────
+    test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\trace-af9206ad98daf10312dad7de93a9fa02912b4a04.zip
     Usage:
 
-        npx playwright show-trace test-results\features-06-users.feature--b9537-l-disable-keeps-user-active-bdd\attachments\trace-49587e33e2533187af823f51ddfb87a6df0e9e13.zip
+        npx playwright show-trace test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\attachments\trace-af9206ad98daf10312dad7de93a9fa02912b4a04.zip
 
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: test-results\features-06-users.feature--b9537-l-disable-keeps-user-active-bdd\error-context.md
+    Error Context: test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\error-context.md
 
-    Error Context: test-results\features-06-users.feature--b9537-l-disable-keeps-user-active-bdd\error-context.md
+    Error Context: test-results\features-06-users.feature--4df5e-licate-email-id-is-rejected-bdd\error-context.md
 
   1 flaky
-    [bdd] › .features-gen\features\06-users.feature.spec.js:412:7 › 6. Users › Cancel disable keeps user active @users 
-  90 passed (13.4m)
-
-> npm run allure:generate
+    [bdd] › .features-gen\features\06-users.feature.spec.js:178:9 › 6. Users › Edit user with a duplicate <field> is rejected › Edit user with a duplicate email id is rejected @users 
+  90 passed (20.0m)
+EXIT 0
 
 > playwrightpractice@1.0.0 allure:generate
 > node scripts/allure-mark-healed.js && allure generate allure-results --clean -o allure-report
@@ -176,12 +214,4 @@ At C:\Program Files\nodejs\npm.ps1:29 char:3
 allure-mark-healed: 1 test(s) passed after an earlier failure
 allure-mark-healed: kept 1 trace(s) of failed attempts, removed 0 trace(s) of passed tests
 Report successfully generated to allure-report
-
-> node scripts/send-report-mail.js
-Summary: Daily Regression Report | RBAC Dashboard | 14 Oct 2026
-Failed tests: 0, API server errors (5xx): 0
-Allure attachment: reports\allure-report.zip (10.0 MB, 273 screenshots, without per-step screenshots, 1 trace(s))
-Email saved: reports\test-summary.eml (13.8 MB), preview: reports/test-summary.html
-Email sent via SendGrid to abhishek.jc@sunmobility.com (HTTP 202)
-EXIT 0
-WALL 15.6 min
+WALL 20.5 min

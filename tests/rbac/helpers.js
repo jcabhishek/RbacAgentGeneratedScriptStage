@@ -111,6 +111,37 @@ async function ngSelect(page, dialog, value) {
 // Automation roles: current naming plus the old PW_AUTO_ROLE_* records from earlier runs.
 const AUTOMATION_ROLE = new RegExp(`${PREFIX} Role |PW_AUTO_ROLE_`);
 
+// Click Submit and make sure the click did something. Staging occasionally drops the click (the
+// Angular form was not bound yet): then nothing at all happens. A save request or a popup (success
+// or a validation alert) counts as a result, and so does a field marked invalid; only when there is
+// none of these is Submit clicked once more.
+async function submitDialog(page, dialog) {
+  const isWrite = r => r.method() !== 'GET' && /\/api\/v1\//.test(r.url());
+  const submit = dialog.getByRole('button', { name: 'Submit' });
+  const reacted = () => Promise.any([
+    page.waitForRequest(isWrite, { timeout: 5000 }),
+    page.locator('.swal2-popup').first().waitFor({ state: 'visible', timeout: 5000 }),
+  ]).then(() => true, () => false);
+  const result = reacted();
+  await submit.click();
+  if (await result) return;
+  if (await dialog.locator('.ng-invalid:not(form)').count()) return;
+  if (!(await dialog.isVisible())) return;
+  const retry = reacted();
+  await submit.click({ timeout: 5000 }).catch(() => {});
+  await retry;
+}
+
+// Edit dialogs load the user before the form is usable: wait until the first name is populated.
+// Returns the field; the edit is only filled after the data binding finished (a late bind would overwrite it).
+async function waitForEditDialogReady(page, dialog) {
+  await expect(dialog).toBeVisible();
+  const first = dialog.getByPlaceholder('Enter first name');
+  await expect(first).toHaveValue(/.+/, { timeout: 30000 });
+  await waitForIdle(page);
+  return first;
+}
+
 // Remove any automation roles still assigned to a user, e.g. after a failed run.
 async function unassignAutomationRoles(page, userId) {
   await openModule(page, '/home/rbac-users');
@@ -127,7 +158,7 @@ async function unassignAutomationRoles(page, userId) {
   for (let i = 0; i < await items.count(); i++) {
     await items.nth(i).getByRole('checkbox').check();
   }
-  await dialog.getByRole('button', { name: 'Submit' }).click();
+  await submitDialog(page, dialog);
   await page.getByRole('button', { name: 'OK' }).click({ timeout: 30000 });
   await waitForIdle(page);
 }
@@ -152,14 +183,16 @@ async function resetTestUser(page, userId) {
   }
   if ((await row.innerText()).includes('_PWEDIT')) {
     await row.locator('.fa-edit').click();
-    await waitForIdle(page);
-    const first = page.getByRole('dialog').getByPlaceholder('Enter first name');
-    await first.fill((await first.inputValue()).replace(/(_PWEDIT)+$/, ''));
-    await page.getByRole('dialog').getByRole('button', { name: 'Submit' }).click();
+    const dialog = page.getByRole('dialog');
+    const first = await waitForEditDialogReady(page, dialog);
+    const stripped = (await first.inputValue()).replace(/(_PWEDIT)+$/, '');
+    await first.fill(stripped);
+    await expect(first).toHaveValue(stripped);
+    await submitDialog(page, dialog);
     await page.getByRole('button', { name: 'OK' }).click({ timeout: 30000 });
     await waitForIdle(page);
   }
   await unassignAutomationRoles(page, userId);
 }
 
-module.exports = { PREFIX, resetTestUser, runNames, tempName, unassignAutomationRoles, uniqueSuffix, waitForIdle, openModule, searchGrid, snap, expectAlert, openForm, ngSelect };
+module.exports = { PREFIX, submitDialog, waitForEditDialogReady, resetTestUser, runNames, tempName, unassignAutomationRoles, uniqueSuffix, waitForIdle, openModule, searchGrid, snap, expectAlert, openForm, ngSelect };

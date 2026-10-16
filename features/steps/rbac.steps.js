@@ -4,7 +4,7 @@ const { expect, chromium } = require('@playwright/test');
 const { Given, When, Then, BeforeAll, AfterAll, AfterStep, TOKENS, SHARED_PAGE } = require('./fixtures');
 const { BASE_URL, login, loginAsAdmin } = require('../../tests/rbac/auth');
 const {
-  PREFIX, waitForIdle, openModule, searchGrid, snap, expectAlert, openForm, ngSelect, resetTestUser,
+  PREFIX, waitForIdle, openModule, searchGrid, snap, expectAlert, openForm, ngSelect, resetTestUser, submitDialog, waitForEditDialogReady,
 } = require('../../tests/rbac/helpers');
 
 const MODULES = {
@@ -147,8 +147,8 @@ When('I grant page {string} with write access to feature {string}', async ({ pag
   await featureItem.getByRole('checkbox').nth(1).check();
 });
 
-When('I submit the form', async ({ ctx }) => {
-  await ctx.dialog.getByRole('button', { name: 'Submit' }).click();
+When('I submit the form', async ({ page, ctx }) => {
+  await submitDialog(page, ctx.dialog);
 });
 
 When('I cancel the form', async ({ ctx }) => {
@@ -295,22 +295,46 @@ When('I open the unassign role dialog', async ({ page, ctx }) => {
 
 // The assign dialog loads roles and applications in parallel. If the app is picked before the
 // role list arrives, the list stays "No data available"; picking the app again rebuilds it.
-When('I select the role {string}', async ({ page, ctx }, role) => {
-  const name = ctx.resolve(role);
-  const option = ctx.dialog.locator('li.multiselect-item-checkbox', { hasText: name });
+async function selectRole(page, dialog, name) {
+  const option = dialog.locator('li.multiselect-item-checkbox', { hasText: name });
   for (let attempt = 1; ; attempt++) {
-    await ctx.dialog.locator('.dropdown-btn').click();
+    await dialog.locator('.dropdown-btn').click();
     if (await option.waitFor({ state: 'visible', timeout: 10000 }).then(() => true, () => false)) break;
     if (attempt === 3) throw new Error(`Role "${name}" is not offered for the chosen application`);
-    await ctx.dialog.locator('.dropdown-btn').click();
-    const app = (await ctx.dialog.locator('.ng-value-label').first().textContent()).trim();
-    await ctx.dialog.locator('.ng-clear-wrapper').first().click();
-    await ngSelect(page, ctx.dialog, app);
+    await dialog.locator('.dropdown-btn').click();
+    const app = (await dialog.locator('.ng-value-label').first().textContent()).trim();
+    await dialog.locator('.ng-clear-wrapper').first().click();
+    await ngSelect(page, dialog, app);
     await waitForIdle(page);
   }
   await option.click();
   // Close the dropdown so it does not cover the Submit button
-  await ctx.dialog.locator('.dropdown-btn').click();
+  await dialog.locator('.dropdown-btn').click();
+}
+
+When('I select the role {string}', async ({ page, ctx }, role) => {
+  await selectRole(page, ctx.dialog, ctx.resolve(role));
+});
+
+// Precondition for the scenarios that follow "Assign role to user": the user must hold the run's
+// role. A retry runs in a new browser whose setup hook removes automation roles from the test
+// users, so the role is assigned again here when it is missing.
+Given('{string} has the role {string} for {string}', async ({ page, ctx, $testInfo }, rawUser, rawRole, rawApp) => {
+  const [user, role, app] = [rawUser, rawRole, rawApp].map(v => ctx.resolve(v));
+  await searchGrid(page, user);
+  await expect(firstRow(page)).toContainText(user, { timeout: 30000 });
+  if ((await firstRow(page).innerText()).includes(role)) return;
+  await firstRow(page).locator('.fa-link').click();
+  await waitForIdle(page);
+  const dialog = page.getByRole('dialog', { name: /assignRole/ });
+  await expect(dialog).toBeVisible();
+  await ngSelect(page, dialog, app);
+  await waitForIdle(page);
+  await selectRole(page, dialog, role);
+  await submitDialog(page, dialog);
+  await expectAlert(page, $testInfo, /success|assigned/i, `Precondition - ${role} assigned again`);
+  await searchGrid(page, user);
+  await expect(firstRow(page)).toContainText(role, { timeout: 30000 });
 });
 
 When('I open the role list', async ({ ctx }) => {
@@ -345,6 +369,8 @@ When('I click the {string} icon', async ({ page, ctx }, name) => {
   await waitForIdle(page);
   ctx.dialog = page.getByRole('dialog').first();
   await expect(ctx.dialog).toBeVisible();
+  // Edit dialog: wait for its data to bind before any step fills the form.
+  if (name === 'edit') await waitForEditDialogReady(page, ctx.dialog);
 });
 
 Then('the first row should have the {string} icon', async ({ page }, name) => {

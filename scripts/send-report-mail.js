@@ -277,7 +277,7 @@ async function buildMailAllure(withSteps = true, withTraces = true) {
 
 // ---------- 4. Email ----------
 
-function buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots, traces = [], apiWorkbook = false }) {
+function buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots, traces = [], apiWorkbook = false, history = [], donutCid = null }) {
   const passed = stats.expected || 0;
   const failedCount = stats.unexpected || 0;
   const flakyCount = stats.flaky || 0;
@@ -351,23 +351,68 @@ function buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureIn
   }
   const split = m => { const x = m.match(/^(\d+)\.\s*(.*)$/); return x ? [x[1], x[2]] : ['', m]; };
   const rateColor = r => (r.failed ? [C.red, C.redInk] : r.flaky ? [C.amber, C.amberInk] : [C.green, C.greenInk]);
-  const th = (label, extra = '') => `<td ${extra} style="${F}font-size:11px;color:${C.faint};text-transform:uppercase;letter-spacing:.6px;padding:0 0 8px;">${label}</td>`;
   const top = `border-top:1px solid ${C.line};`;
-  const moduleRows = [...modules].map(([m, r]) => {
-    const [n, label] = split(m);
-    const ok = r.total ? ((r.passed + r.flaky) / r.total) * 100 : 0;
-    const [col, ink] = rateColor(r);
-    return `<tr><td style="${top}padding:10px 8px 10px 0;${F}font-size:13px;color:${C.ink};">${n ? `<span style="display:inline-block;width:20px;height:20px;line-height:20px;border-radius:6px;background:${C.soft};color:${C.muted};font-size:11px;font-weight:700;text-align:center;">${n}</span>&nbsp; ` : ''}${esc(label)}</td>
-<td class="hs" width="150" style="${top}padding:10px 8px;"><table ${T} width="100%"><tr><td width="100">${bar(ok, col, C.line)}</td><td align="right" style="${F}font-size:12px;font-weight:700;color:${ink};">${Math.round(ok)}%</td></tr></table></td>
-<td align="right" style="${top}padding:10px 8px;${F}font-size:13px;color:${C.ink};white-space:nowrap;"><b style="color:${ink};">${r.passed + r.flaky}</b><span style="color:${C.faint};">/${r.total}</span>${r.failed ? ` <span style="color:${C.redInk};font-size:11px;font-weight:700;">${r.failed} failed</span>` : ''}</td>
-<td align="right" style="${top}padding:10px 0 10px 8px;${F}font-size:12px;color:${C.muted};white-space:nowrap;">${fmtDuration(r.ms)}</td></tr>`;
-  }).join('');
   const totalInk = failedCount ? C.redInk : flakyCount ? C.amberInk : C.greenInk;
-  const top2 = `border-top:2px solid ${C.line};`;
-  const moduleTotal = `<tr><td style="${top2}padding:10px 0;${F}font-size:13px;font-weight:700;color:${C.ink};">Total</td>`
-    + `<td class="hs" align="right" style="${top2}padding:10px 8px;${F}font-size:12px;font-weight:700;color:${totalInk};">${passRate}%</td>`
-    + `<td align="right" style="${top2}padding:10px 8px;${F}font-size:13px;font-weight:700;color:${totalInk};">${passed + flakyCount}<span style="color:${C.faint};">/${total}</span></td>`
-    + `<td align="right" style="${top2}padding:10px 0;${F}font-size:12px;font-weight:700;color:${C.ink};white-space:nowrap;">${duration}</td></tr>`;
+
+  // ---------- module tiles (3 per row) ----------
+  const tile = ([m, r]) => {
+    const [n, label] = split(m);
+    const [col, ink] = rateColor(r);
+    const bg = r.failed ? C.redBg : r.flaky ? C.amberBg : C.greenBg;
+    const status = r.failed ? `${r.failed} failed` : r.flaky ? `${r.flaky} flaky` : 'all passed';
+    return `<td class="full" width="33.3%" valign="top" style="padding:4px;"><table ${T} width="100%" bgcolor="${bg}" style="border-radius:10px;border-top:3px solid ${col};"><tr><td style="padding:12px 12px 10px;${F}">
+<div style="font-size:10px;font-weight:700;color:${C.muted};letter-spacing:.8px;">MODULE ${n}</div>
+<div style="font-size:13px;font-weight:700;color:${C.ink};padding-top:2px;line-height:17px;height:34px;overflow:hidden;">${esc(label)}</div>
+<table ${T} width="100%" style="margin-top:6px;"><tr><td style="${F}"><span style="font-size:22px;font-weight:800;color:${ink};">${r.passed + r.flaky}</span><span style="font-size:12px;color:${C.faint};">/${r.total}</span></td>
+<td align="right" valign="bottom" style="${F}font-size:11px;color:${C.muted};white-space:nowrap;">${status}<br>${fmtDuration(r.ms)}</td></tr></table></td></tr></table></td>`;
+  };
+  const moduleList = [...modules];
+  const tileRows = [];
+  for (let i = 0; i < moduleList.length; i += 3) {
+    const row = moduleList.slice(i, i + 3).map(tile);
+    while (row.length < 3) row.push('<td class="full" width="33.3%" style="padding:4px;"></td>');
+    tileRows.push(`<tr>${row.join('')}</tr>`);
+  }
+  const greenModules = moduleList.filter(([, r]) => !r.failed && !r.flaky).length;
+  const moduleTiles = `<table ${T} width="100%">${tileRows.join('')}</table>
+<div style="${F}font-size:12px;color:${C.muted};padding:10px 4px 0;">Total <b style="color:${totalInk};">${passed + flakyCount}/${total}</b> passed in <b style="color:${C.ink};">${duration}</b> · ${greenModules} of ${modules.size} modules fully green</div>`;
+
+  // ---------- trend of the last runs and change since the previous run ----------
+  const runs = history.slice(-7);
+  const prev = history.length > 1 ? history[history.length - 2] : null;
+  const rateOf = h => (h.total ? ((h.passed + h.flaky) / h.total) * 100 : 0);
+  let streak = 0;
+  for (let i = history.length - 1; i >= 0 && !history[i].failed; i--) streak++;
+  const chip = (text, color, bg) => `<span style="display:inline-block;background:${bg};color:${color};font-size:11px;font-weight:700;padding:4px 10px;border-radius:12px;margin:0 6px 6px 0;white-space:nowrap;">${text}</span>`;
+  const changes = [];
+  if (prev) {
+    const dMin = ((stats.duration || 0) - prev.durationMs) / 60000;
+    if (Math.abs(dMin) >= 0.1) changes.push(dMin < 0 ? chip(`&#9660; ${Math.abs(dMin).toFixed(1)} min faster than last run`, C.greenInk, C.greenBg) : chip(`&#9650; ${dMin.toFixed(1)} min slower than last run`, C.amberInk, C.amberBg));
+    const dFail = failedCount - prev.failed;
+    changes.push(dFail > 0 ? chip(`&#9650; ${dFail} more failure${dFail === 1 ? '' : 's'} than last run`, C.redInk, C.redBg)
+      : dFail < 0 ? chip(`&#9660; ${-dFail} fewer failure${dFail === -1 ? '' : 's'} than last run`, C.greenInk, C.greenBg)
+        : chip(failedCount ? `${failedCount} failure${failedCount === 1 ? '' : 's'}, same as last run` : 'No failures, same as last run', failedCount ? C.redInk : C.greenInk, failedCount ? C.redBg : C.greenBg));
+  }
+  if (streak > 1) changes.push(chip(`&#128293; ${streak} runs in a row without failures`, C.greenInk, C.greenBg));
+  const changeRow = changes.length ? `<tr><td style="padding:14px 24px 0;${F}">${changes.join('')}</td></tr>` : '';
+  const maxDur = Math.max(1, ...runs.map(r => r.durationMs));
+  const runLabel = r => esc(new Date(r.start).toLocaleDateString('en-IN', { ...IST, day: 'numeric', month: 'short' }));
+  const runTime = r => esc(new Date(r.start).toLocaleTimeString('en-IN', { ...IST, hour: 'numeric', minute: '2-digit' }));
+  const trendCols = runs.map((r, i) => {
+    const h = Math.max(10, Math.round((r.durationMs / maxDur) * 72));
+    const [col, ink] = r.failed ? [C.red, C.redInk] : r.flaky ? [C.amber, C.amberInk] : [C.green, C.greenInk];
+    const current = i === runs.length - 1;
+    return `<td align="center" valign="bottom" width="${(100 / runs.length).toFixed(1)}%" style="padding:0 3px;${F}">
+<div style="font-size:11px;font-weight:700;color:${ink};padding-bottom:4px;">${Math.round(rateOf(r) * 10) / 10}%</div>
+<table ${T} width="26" align="center"><tr><td height="${h}" bgcolor="${col}" style="height:${h}px;font-size:0;line-height:0;border-radius:4px 4px 0 0;${current ? '' : 'opacity:.75;'}">&nbsp;</td></tr></table>
+<div style="font-size:11px;color:${current ? C.ink : C.muted};font-weight:${current ? 700 : 400};padding-top:6px;white-space:nowrap;">${current ? 'This run' : runLabel(r)}</div>
+<div style="font-size:10px;color:${C.faint};white-space:nowrap;">${r.seeded ? '' : `${runTime(r)} · `}${(r.durationMs / 60000).toFixed(1)}m</div></td>`;
+  }).join('');
+  const avgMin = runs.reduce((n, r) => n + r.durationMs, 0) / Math.max(1, runs.length) / 60000;
+  const cleanRuns = runs.filter(r => !r.failed).length;
+  const trend = runs.length > 1 ? `<table ${T} width="100%"><tr>${trendCols}</tr></table>
+<div style="${F}font-size:12px;color:${C.muted};padding-top:12px;line-height:18px;">Bar height = run time · colour = result (<span style="color:${C.greenInk};">&#9679;</span> passed <span style="color:${C.amberInk};">&#9679;</span> flaky <span style="color:${C.redInk};">&#9679;</span> failures)<br>
+<b style="color:${C.ink};">${cleanRuns} of ${runs.length}</b> runs without failures · average run time <b style="color:${C.ink};">${avgMin.toFixed(1)} min</b></div>` : '';
 
   // ---------- run health ----------
   const cleanup = tests.filter(t => /cleanup/i.test(moduleOf(t.name)));
@@ -496,6 +541,7 @@ ${detail('Framework', 'Playwright + playwright-bdd (Gherkin)')}${detail('Browser
 <tr><td class="px" style="padding:0 28px 18px;${F}font-size:14px;line-height:22px;color:${C.ink};">Hi Team,<br>Here are today's daily regression results for the <b>RBAC Dashboard (Staging)</b>. ${greeting}</td></tr>
 
 <tr><td class="px" style="padding:0 24px;"><table ${T} width="100%" bgcolor="#0A1F3D" style="border-radius:16px 16px 0 0;background:#0A1F3D;background-image:linear-gradient(135deg,#0A1F3D 0%,#13315C 100%);">
+<tr><td height="6" bgcolor="${state.big}" style="height:6px;font-size:0;line-height:0;border-radius:16px 16px 0 0;background:${state.big};">&nbsp;</td></tr>
 <tr><td style="padding:22px 24px 0;${F}"><table ${T} width="100%"><tr>
 <td style="${F}"><span style="display:inline-block;width:10px;height:10px;border-radius:5px;background:${C.orange};"></span>&nbsp;<span style="font-size:12px;font-weight:700;letter-spacing:2px;color:#FFFFFF;">SUN MOBILITY</span><span class="hs" style="font-size:12px;letter-spacing:2px;color:#8FA3BF;"> &nbsp;|&nbsp; QA AUTOMATION</span></td>
 <td align="right" style="${F}"><span style="display:inline-block;background:rgba(247,147,30,.15);border:1px solid ${C.orange};color:${C.orange};font-size:11px;font-weight:700;letter-spacing:1px;padding:4px 10px;border-radius:20px;">&#9679; STAGING</span></td></tr></table></td></tr>
@@ -509,24 +555,56 @@ ${detail('Framework', 'Playwright + playwright-bdd (Gherkin)')}${detail('Browser
 <td class="full" valign="middle" style="${F}"><span style="display:inline-block;background:${state.bg};color:${state.ink};font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px;">${state.pill}</span>
 <div style="font-size:15px;line-height:22px;color:${C.ink};padding-top:10px;">${state.line}</div>
 <div style="font-size:13px;color:${C.muted};padding-top:2px;">${esc(state.sub)}</div></td>
-<td class="st" align="right" valign="middle" style="${F}"><div style="font-size:48px;line-height:48px;font-weight:800;color:${state.big};letter-spacing:-1px;">${passRate}<span style="font-size:24px;">%</span></div><div style="font-size:12px;color:${C.muted};padding-top:4px;">pass rate</div></td>
+<td class="st" align="right" valign="middle" style="${F}">${donutCid
+    ? `<img src="cid:${donutCid}" width="140" height="140" alt="${passRate}% pass rate" style="display:inline-block;width:140px;height:140px;border:0;">`
+    : `<div style="font-size:48px;line-height:48px;font-weight:800;color:${state.big};letter-spacing:-1px;">${passRate}<span style="font-size:24px;">%</span></div><div style="font-size:12px;color:${C.muted};padding-top:4px;">pass rate</div>`}</td>
 </tr></table></td></tr>
 <tr><td style="padding:12px 24px 0;">${distribution}</td></tr>
 <tr><td style="padding:8px 24px 0;${F}font-size:12px;color:${C.muted};">${legend}</td></tr>
+${changeRow}
 <tr><td style="padding:18px 18px 20px;"><table ${T} width="100%"><tr>
 ${kpi('Total', total)}${kpi('Passed', passed, C.greenInk)}${kpi('Failed', failedCount, failedCount ? C.redInk : C.ink)}${kpi('Flaky', flakyCount, flakyCount ? C.amberInk : C.ink)}${kpi('API 5xx', serverErrors, serverErrors ? C.redInk : C.ink)}${kpi('Modules', modules.size)}
 </tr></table></td></tr></table></td></tr>
 
+${trend ? card('Trend', `last ${runs.length} runs`, trend) : ''}
 ${card('Run health', `${passedChecks} of ${checks.length} checks passed`, health)}
-${card('Module coverage', plural(modules.size, 'module'), `<table ${T} width="100%"><tr>${th('Module')}${th('Pass rate', 'class="hs"')}${th('Passed', 'align="right"')}${th('Time', 'align="right"')}</tr>${moduleRows}${moduleTotal}</table>`)}
+${card('Module coverage', plural(modules.size, 'module'), moduleTiles)}
 ${card('Failures &amp; server errors', '', issues)}
 ${card('Slowest test cases', `top ${slowest.length}`, `<table ${T} width="100%">${slowRows}</table>${insight}`)}
 ${card('Test case details', caseNote, `<table ${T} width="100%">${caseRows}</table>`)}
 ${card('Run details', '', runDetails)}
 ${card(attachmentList.length > 1 ? 'Attachments' : 'Attachment', '', attachmentList.join(''))}
-<tr><td class="px" style="padding:6px 28px 20px;${F}font-size:14px;line-height:22px;color:${C.ink};">Regards,<br><b>QA Automation Team</b><br><span style="color:${C.muted};">SUN Mobility</span></td></tr>
+<tr><td class="px" style="padding:6px 28px 20px;${F}font-size:14px;line-height:22px;color:${C.ink};">Regards,<br><b>J C Abhishek</b> <span style="color:${C.muted};">(Software Test Engineer)</span><br><span style="color:${C.muted};">Smart Network, SUN Mobility</span></td></tr>
 <tr><td class="px" align="center" style="padding:0 28px 8px;${F}font-size:11px;line-height:17px;color:${C.faint};">This report is sent automatically after every daily regression run.<br>For queries, please reach out to the QA team.</td></tr>
 </table></td></tr></table></body></html>`;
+}
+
+// Donut of the run's results (passed / flaky / failed / skipped) with the pass rate in the middle,
+// drawn as SVG and saved as a PNG at twice its display size so it stays sharp.
+async function writeDonut(file, stats, testCount) {
+  const passed = stats.expected || 0;
+  const flaky = stats.flaky || 0;
+  const failed = stats.unexpected || 0;
+  const skipped = stats.skipped || 0;
+  const total = passed + flaky + failed + skipped || testCount || 1;
+  const rate = Math.round(((passed + flaky) / total) * 1000) / 10;
+  const color = failed ? '#F04438' : flaky ? '#F79009' : '#12B76A';
+  const size = 280, c = size / 2, r = 106, w = 26, circ = 2 * Math.PI * r;
+  let offset = 0;
+  const arcs = [[passed, '#12B76A'], [flaky, '#F79009'], [failed, '#F04438'], [skipped, '#98A2B3']]
+    .filter(([n]) => n > 0)
+    .map(([n, stroke]) => {
+      const len = (n / total) * circ;
+      const arc = `<circle cx="${c}" cy="${c}" r="${r}" fill="none" stroke="${stroke}" stroke-width="${w}" stroke-linecap="butt" stroke-dasharray="${len} ${circ - len}" stroke-dashoffset="${-offset}" transform="rotate(-90 ${c} ${c})"/>`;
+      offset += len;
+      return arc;
+    }).join('');
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}">
+<circle cx="${c}" cy="${c}" r="${r}" fill="none" stroke="#EAECF0" stroke-width="${w}"/>${arcs}
+<text x="${c}" y="${c + 6}" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="60" font-weight="800" fill="${color}">${rate}<tspan font-size="30">%</tspan></text>
+<text x="${c}" y="${c + 44}" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#667085">${passed + flaky} of ${total} passed</text>
+</svg>`;
+  await sharp(Buffer.from(svg)).png().toFile(file);
 }
 
 async function main() {
@@ -582,11 +660,33 @@ async function main() {
   });
 
   const subject = `Daily Regression Report | RBAC Dashboard | ${new Date(stats.startTime || Date.now()).toLocaleDateString('en-IN', { dateStyle: 'medium' })}`;
-  const html = buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots, traces, apiWorkbook });
-  fs.writeFileSync(path.join(REPORTS, 'test-summary.html'), html.replace(/src="cid:([^"]+)"/g, (m, cid) => {
-    const s = screenshots.find(x => x.cid === cid);
-    return s ? `src="file:///${s.path.replace(/\\/g, '/')}"` : m;
-  }));
+  // Run history for the trend chart and the "since last run" changes: one entry per run, keyed by
+  // its start time (re-sending the email for the same run replaces its entry). Last 30 runs kept.
+  const historyFile = path.join(REPORTS, 'run-history.json');
+  let history = [];
+  try { history = JSON.parse(fs.readFileSync(historyFile, 'utf8')); } catch { /* first run */ }
+  const runStart = new Date(stats.startTime || Date.now()).toISOString();
+  history = history.filter(h => h.start !== runStart).concat({
+    start: runStart, total: tests.length, passed: stats.expected || 0, failed: stats.unexpected || 0,
+    flaky: stats.flaky || 0, skipped: stats.skipped || 0, durationMs: stats.duration || 0, serverErrors: reportable.length,
+  }).sort((a, b) => a.start.localeCompare(b.start)).slice(-30);
+  fs.writeFileSync(historyFile, JSON.stringify(history, null, 2));
+
+  // Pass-rate donut shown in the email header (an image, so it looks the same in every mail client).
+  const donut = path.join(REPORTS, 'pass-rate.png');
+  let donutCid = null;
+  try {
+    await writeDonut(donut, stats, tests.length);
+    donutCid = 'passrate@rbac';
+    attachments.push({ filename: 'pass-rate.png', path: donut, cid: donutCid });
+  } catch (error) {
+    console.log(`Pass-rate chart not created (${error.message}); the email shows the number instead.`);
+  }
+
+  const html = buildHtml({ stats, tests, failed, flaky, reportable, allCalls, allureInfo, screenshots, traces, apiWorkbook, history, donutCid });
+  const inline = new Map(attachments.filter(a => a.cid).map(a => [a.cid, a.path]));
+  fs.writeFileSync(path.join(REPORTS, 'test-summary.html'), html.replace(/src="cid:([^"]+)"/g, (m, cid) =>
+    (inline.has(cid) ? `src="file:///${inline.get(cid).replace(/\\/g, '/')}"` : m)));
 
   const message = {
     from: env('MAIL_FROM', env('SMTP_USER', 'rbac-automation@localhost')),
@@ -660,7 +760,7 @@ async function sendWithSendGrid(message) {
     throw new Error(`SendGrid returned HTTP ${response.status}: ${redact(await response.text())}`);
   }
   // The message id lets the delivery be checked in SendGrid's Activity (or /v3/messages).
-  console.log(`Email sent via SendGrid to ${to.map(t => t.email).join(', ')}${cc.length ? ` (cc ${cc.map(c => c.email).join(', ')})` : ''} (HTTP 202, message id ${response.headers.get('x-message-id') || 'n/a'})`);
+  console.log(`Email sent via SendGrid to ${to.map(t => t.email).join(', ')}${cc.length ? ` (cc ${cc.map(c => c.email).join(', ')})` : ''} (HTTP 202, message id ${response.headers?.get?.('x-message-id') || 'n/a'})`);
 }
 
 main().catch(error => {

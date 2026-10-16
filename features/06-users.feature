@@ -225,7 +225,8 @@ Feature: 6. Users
     And I capture a screenshot "user row with role"
 
   Scenario: Assigning a second role for the same application is blocked
-    # The user already has $ROLE for $APP from the previous scenario
+    Given "$USER" has the role "$ROLE" for "$APP"
+    # The user already has $ROLE for $APP from "Assign role to user" (re-assigned above on a retry)
     When I search for "$USER"
     And I open the assign role dialog
     And I choose "$APP" from the dropdown
@@ -236,6 +237,7 @@ Feature: 6. Users
     And I capture a screenshot "role still assigned once"
 
   Scenario: Unassign with no role ticked keeps the role
+    Given "$USER" has the role "$ROLE" for "$APP"
     When I search for "$USER"
     And I open the unassign role dialog
     And I submit the form
@@ -246,6 +248,7 @@ Feature: 6. Users
     Then the first row should contain "$ROLE"
 
   Scenario: Unassign role from user
+    Given "$USER" has the role "$ROLE" for "$APP"
     When I search for "$USER"
     Then the first row should contain "$ROLE"
     When I open the unassign role dialog

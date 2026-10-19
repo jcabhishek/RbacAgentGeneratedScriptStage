@@ -132,13 +132,40 @@ async function submitDialog(page, dialog) {
   await retry;
 }
 
-// Edit dialogs load the user before the form is usable: wait until the first name is populated.
-// Returns the field; the edit is only filled after the data binding finished (a late bind would overwrite it).
+// Wait until no API call has been in flight for `quietMs` (capped at `maxMs`). The edit dialog keeps
+// loading lists after its fields show values, and a Submit during that time is silently ignored.
+async function waitForApiQuiet(page, quietMs = 1000, maxMs = 10000) {
+  const inFlight = new Set();
+  const isApi = r => /\/api\/v\d/.test(r.url());
+  const start = r => { if (isApi(r)) inFlight.add(r); };
+  const end = r => inFlight.delete(r);
+  page.on('request', start);
+  page.on('requestfinished', end);
+  page.on('requestfailed', end);
+  try {
+    const deadline = Date.now() + maxMs;
+    let quietSince = Date.now();
+    while (Date.now() < deadline) {
+      if (inFlight.size) quietSince = Date.now();
+      else if (Date.now() - quietSince >= quietMs) return;
+      await page.waitForTimeout(100);
+    }
+  } finally {
+    page.off('request', start);
+    page.off('requestfinished', end);
+    page.off('requestfailed', end);
+  }
+}
+
+// Edit dialogs load the user before the form is usable: wait until the first name is populated and
+// the dialog's remaining API calls have finished. Returns the field; the edit is only filled after
+// the data binding finished (a late bind would overwrite it, an early Submit is ignored).
 async function waitForEditDialogReady(page, dialog) {
   await expect(dialog).toBeVisible();
   const first = dialog.getByPlaceholder('Enter first name');
   await expect(first).toHaveValue(/.+/, { timeout: 30000 });
   await waitForIdle(page);
+  await waitForApiQuiet(page);
   return first;
 }
 

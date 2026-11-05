@@ -1,34 +1,26 @@
-name: "Copilot Setup Steps"
-
+name: Playwright Tests
 on:
-  workflow_dispatch:
   push:
-    paths:
-      - .github/workflows/copilot-setup-steps.yml
+    branches: [ main, master ]
   pull_request:
-    paths:
-      - .github/workflows/copilot-setup-steps.yml
-
+    branches: [ main, master ]
 jobs:
-  copilot-setup-steps:
+  test:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-
     steps:
     - uses: actions/checkout@v6
-
     - uses: actions/setup-node@v6
       with:
         node-version: lts/*
-
     - name: Install dependencies
       run: npm ci
-
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-
-    # Customize this step as needed
-    - name: Build application
-      run: npx run build
+    - name: Run Playwright tests
+      run: npx playwright test
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 30
